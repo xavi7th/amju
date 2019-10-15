@@ -1,0 +1,25 @@
+{
+    "name": "minds&machines/basicsite",
+    "description": "",
+    "authors": [
+        {
+            "name": "Leinad Ose",
+            "email": "xavi7th@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "App\\Modules\\BasicSite\\Providers\\BasicSiteServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Modules\\BasicSite\\": ""
+        }
+    }
+}

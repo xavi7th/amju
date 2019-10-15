@@ -1,0 +1,16 @@
+{
+    "name": "AppUser",
+    "alias": "appuser",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "App\\Modules\\AppUser\\Providers\\AppUserServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

@@ -1,0 +1,16 @@
+{
+    "name": "BasicSite",
+    "alias": "basicsite",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "App\\Modules\\BasicSite\\Providers\\BasicSiteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}
