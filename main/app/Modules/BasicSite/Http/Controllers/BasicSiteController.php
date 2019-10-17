@@ -26,8 +26,9 @@ class BasicSiteController extends Controller
 		Route::group(['middleware' => 'web', 'namespace' => 'App\\Modules\BasicSite\Http\Controllers'], function () {
 
 			Route::get('/{subcat?}', function () {
+				d();
 				return view('basicsite::index');
-			})->where('subcat', '^((?!(api|' . Admin::DASHBOARD_ROUTE_PREFIX . '|login|user|artisan|user|_debugbar|css|js)).)*')->name('home'); //Matches all routes except routes that start with the list provided.
+			})->where('subcat', '^((?!(api|' . Admin::DASHBOARD_ROUTE_PREFIX . '|login|user|artisan|user|_debugbar|css|js|_ignition)).)*')->name('home'); //Matches all routes except routes that start with the list provided.
 
 		});
 
