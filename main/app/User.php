@@ -97,4 +97,12 @@ class User extends Authenticatable
 		$this->attributes['password'] = bcrypt($value);
 		$this->unenc_password = $value;
 	}
+
+	public function toFlare(): array
+	{
+		// Only `id` will be sent to Flare.
+		return [
+			'id' => $this->id
+		];
+	}
 }
