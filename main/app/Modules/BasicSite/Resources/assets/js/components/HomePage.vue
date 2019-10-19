@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hero-section></hero-section>
+    <!-- <hero-section></hero-section>
     <about-section></about-section>
     <features-section></features-section>
     <how-it-works-section></how-it-works-section>
@@ -9,7 +9,7 @@
     <testimonial-section></testimonial-section>
     <final-charts-section></final-charts-section>
     <contact-us></contact-us>
-    <latest-news></latest-news>
+    <latest-news></latest-news>-->
   </div>
 </template>
 

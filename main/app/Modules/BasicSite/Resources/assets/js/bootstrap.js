@@ -6,7 +6,7 @@ window.Toast = swal.mixin( {
 	toast: true,
 	position: 'top-end',
 	showConfirmButton: false,
-	timer: 3000000,
+	timer: 5000,
 	type: "success"
 } );
 
@@ -16,6 +16,29 @@ window.BlockToast = swal.mixin( {
 	allowOutsideClick: false,
 	allowEscapeKey: false
 } );
+
+window.swalPreconfirm = swal.mixin( {
+	title: 'Are you sure?',
+	text: "Implement this when you call the mixin",
+	type: 'question',
+	showCloseButton: false,
+	allowOutsideClick: () => !swal.isLoading(),
+	allowEscapeKey: false,
+	showCancelButton: true,
+	focusCancel: true,
+	cancelButtonColor: '#d33',
+	confirmButtonColor: '#3085d6',
+	confirmButtonText: 'To be implemented',
+	showLoaderOnConfirm: true,
+	preConfirm: () => {
+		/** Implement this when you call the mixin */
+	},
+} )
+/**
+ * Implement this when you call the mixin
+ * .then( ( result ) => {} );
+ */
+
 
 window.axios.defaults.headers.common[ 'X-Requested-With' ] = 'XMLHttpRequest'
 
@@ -78,7 +101,7 @@ window.axios.interceptors.response.use(
 				} )
 			} else if ( err.response.status == 429 ) {
 				swal.fire( {
-					title: 'Too many attempts',
+					title: 'Spam Protection Activated!',
 					text: 'You have made too many attempts. Try again later.',
 					type: 'error',
 				} )

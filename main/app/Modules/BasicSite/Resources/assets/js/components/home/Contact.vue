@@ -20,8 +20,8 @@
 </template>
 
 <script>
-  import CONSTANTS from "@assets/js/config";
-  import { siteContact } from "@assets/js/config/endpoints";
+  import { CONSTANTS } from "@assets/js/config";
+  import { siteContact } from "@assets/js/config";
   export default {
     name: "ContactUs",
     data() {

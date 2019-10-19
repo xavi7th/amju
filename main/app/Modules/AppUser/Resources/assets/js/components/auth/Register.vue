@@ -387,8 +387,8 @@
 </template>
 
 <script>
-  import { siteRegister } from "@user-assets/js/config/endpoints";
-  import mixins from "@user-assets/js/config/mixins";
+  import { siteRegister } from "@user-assets/js/config";
+  import { mixins } from "@user-assets/js/config";
   export default {
     mixins: [mixins],
     data: () => ({

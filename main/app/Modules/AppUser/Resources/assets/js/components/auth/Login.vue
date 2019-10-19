@@ -63,8 +63,8 @@
 </template>
 
 <script>
-  import { siteLogin } from "@user-assets/js/config/endpoints";
-  import mixins from "@user-assets/js/config/mixins";
+  import { siteLogin } from "@user-assets/js/config";
+  import { mixins } from "@user-assets/js/config";
   export default {
     data: () => ({
       details: {}

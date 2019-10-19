@@ -27,7 +27,7 @@
 </template>
 
 <script>
-  import { siteTestimonials } from "@assets/js/config/endpoints";
+  import { siteTestimonials } from "@assets/js/config";
   export default {
     data: () => ({
       testimonials: {}

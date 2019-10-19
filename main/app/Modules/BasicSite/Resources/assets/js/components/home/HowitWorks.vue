@@ -56,8 +56,7 @@
 </template>
 
 <script>
-  import CONSTANTS from "@assets/js/config";
-  import { tickerBarChart } from "@assets/js/config/endpoints";
+  import { CONSTANTS } from "@assets/js/config";
   export default {
     name: "WorksSection",
     data() {
@@ -67,15 +66,6 @@
     },
     created() {
       this.$emit("works-loaded");
-      axios.get(tickerBarChart).then(rsp => {
-        /**
-         *? Convert string to DOM Nodes
-         */
-        let frag = document
-          .createRange()
-          .createContextualFragment(rsp.data.template);
-        document.querySelector("#chartTickerBar").replaceWith(frag);
-      });
     }
   };
 </script>

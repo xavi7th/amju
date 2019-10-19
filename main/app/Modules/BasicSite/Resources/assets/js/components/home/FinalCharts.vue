@@ -14,30 +14,8 @@
 </template>
 
 <script>
-  import { testimonialChart, tokensChart3 } from "@assets/js/config/endpoints";
   export default {
     name: "FinalChartsSection",
-    created() {
-      this.$emit("charts-loaded");
-      axios.get(testimonialChart).then(rsp => {
-        /**
-         *? Convert string to DOM Nodes
-         */
-        let frag = document
-          .createRange()
-          .createContextualFragment(rsp.data.template);
-        document.querySelector("#chart1").replaceWith(frag);
-      });
-
-      axios.get(tokensChart3).then(rsp => {
-        /**
-         *? Convert string to DOM Nodes
-         */
-        let frag = document
-          .createRange()
-          .createContextualFragment(rsp.data.template);
-        document.querySelector("#chart4").replaceWith(frag);
-      });
-    }
+    created() {}
   };
 </script>

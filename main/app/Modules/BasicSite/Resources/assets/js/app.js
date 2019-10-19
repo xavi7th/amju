@@ -18,7 +18,7 @@ import LoadScript from 'vue-plugin-load-script'
 // Vue.use( VeeValidate )
 Vue.use( LoadScript )
 
-import App from '@components/AppComponent.vue';
+import App from '@components/BasicSiteAppComponent.vue';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

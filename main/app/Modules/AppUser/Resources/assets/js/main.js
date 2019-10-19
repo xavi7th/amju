@@ -3,7 +3,7 @@
 import '@assets/js/bootstrap';
 import Vue from 'vue'
 import VeeValidate from 'vee-validate'
-import App from './AppComponent'
+import App from './DashboardAppComponent'
 import router from './router'
 import LoadScript from 'vue-plugin-load-script'
 // import Vue2Filters from 'vue2-filters'

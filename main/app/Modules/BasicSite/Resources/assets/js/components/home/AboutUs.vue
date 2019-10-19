@@ -20,8 +20,7 @@
 </template>
 
 <script>
-  import CONSTANTS from "@assets/js/config";
-  import { aboutChart } from "@assets/js/config/endpoints";
+  import { CONSTANTS } from "@assets/js/config";
   export default {
     name: "AboutSection",
     data() {
@@ -31,15 +30,6 @@
     },
     created() {
       this.$emit("about-loaded");
-      axios.get(aboutChart).then(rsp => {
-        /**
-         *? Convert string to DOM Nodes
-         */
-        let frag = document
-          .createRange()
-          .createContextualFragment(rsp.data.template);
-        document.querySelector("#chartAbout").replaceWith(frag);
-      });
     }
   };
 </script>

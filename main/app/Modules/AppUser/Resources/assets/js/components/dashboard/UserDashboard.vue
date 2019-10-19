@@ -455,8 +455,6 @@
 </template>
 
 <script>
-  import { howItWorksChart } from "@assets/js/config/endpoints";
-
   export default {
     name: "UserDashboard",
     components: {},
@@ -481,26 +479,6 @@
       this.$emit("page-loaded");
     },
     methods: {
-      getForexRatesChart() {
-        axios
-          .get("/api/testimonial-chart")
-          .then(rsp => {
-            let frag = document
-              .createRange()
-              .createContextualFragment(rsp.data.template);
-            document.querySelector("#chart2").replaceWith(frag);
-          })
-          .catch(err => {
-            console.log(err.response);
-            if (err.response) {
-              swal.fire("Server Error", `${err.response.message}`, "error");
-            } else if (err.request) {
-              swal.fire("Request Error", `${err.request}`, "error");
-            } else {
-              swal.fire("Requset Error", `${err.message}`, "error");
-            }
-          });
-      },
       getChart1() {
         axios.get("/api/user-dashboard-chart1").then(rsp => {
           let frag = document

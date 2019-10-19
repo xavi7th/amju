@@ -43,7 +43,7 @@
     },
     methods: {
       logoutUser() {
-        logout("Could not retrieve user details. Logging you out.");
+        logout();
       }
     }
   };

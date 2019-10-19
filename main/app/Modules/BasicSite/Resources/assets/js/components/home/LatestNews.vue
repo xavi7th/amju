@@ -19,7 +19,7 @@
               <div class="post-meta">
                 <a>
                   <span>by</span>
-                  {{ item.author || 'CFxPro.com' }}
+                  {{ item.author }}
                 </a>
                 <a>
                   <span>source</span>

@@ -48,7 +48,7 @@
 </template>
 
 <script>
-  import CONSTANTS from "@assets/js/config";
+  import { CONSTANTS } from "@assets/js/config";
   export default {
     name: "PlatformStatistics",
     data() {

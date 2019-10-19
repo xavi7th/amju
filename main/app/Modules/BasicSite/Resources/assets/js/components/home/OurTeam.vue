@@ -24,7 +24,7 @@
 </template>
 
 <script>
-  import { siteTeam } from "@assets/js/config/endpoints";
+  import { siteTeam } from "@assets/js/config";
   export default {
     name: "TeamSection",
     data: () => ({

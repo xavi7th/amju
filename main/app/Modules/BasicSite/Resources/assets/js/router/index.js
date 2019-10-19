@@ -10,7 +10,7 @@ import {
 	siteContactPage,
 	sitePrivacyPage,
 	siteFAQPage
-} from '@assets/js/config/endpoints'
+} from '@assets/js/config'
 
 // import App from '@components/AppComponent'
 
