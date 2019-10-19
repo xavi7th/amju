@@ -31,6 +31,7 @@ function view( name ) {
 export function createRouter() {
 	return new VueRouter( {
 		mode: 'history',
+		linkActiveClass: 'active',
 		scrollBehavior( to, from, savedPosition ) {
 			if ( savedPosition ) {
 				return savedPosition

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <site-header v-on:logout-user="logoutUser()"></site-header>
 
     <transition name="nav-transition" mode="out-in">
@@ -30,11 +30,7 @@
         logout();
       },
       pageLoaded() {
-        // this.$loadScript("/js/particles-app.js").then(() => {
-        this.$loadScript("/js/main.js").then(() => {
-          // $(".preloader").fadeOut(300);
-        });
-        // });
+        this.$loadScript("/js/main.js");
       }
     }
   };

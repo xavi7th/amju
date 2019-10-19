@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="body">
     <!-- <hero-section></hero-section>
     <about-section></about-section>
     <features-section></features-section>
@@ -53,4 +53,8 @@
 </script>
 
 <style scoped>
+  .body {
+    min-height: 100vh;
+    background-color: rebeccapurple;
+  }
 </style>
