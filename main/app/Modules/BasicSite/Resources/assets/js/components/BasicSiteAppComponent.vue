@@ -19,7 +19,9 @@
     name: "BasicSiteApp",
     created() {},
     data() {
-      return {};
+      return {
+        freshLoad: true
+      };
     },
     components: {
       SiteHeader,
@@ -30,7 +32,16 @@
         logout();
       },
       pageLoaded() {
-        this.$loadScript("/js/main.js");
+        this.$loadScript("/js/main.js").then(() => {
+          if (this.freshLoad) {
+            this.freshLoad = false;
+            $(".rd-dropdown-item").click(function() {
+              $(".rd-nav-item").addClass(
+                "rd-navbar--has-dropdown rd-navbar-submenu"
+              );
+            });
+          }
+        });
       }
     },
     computed: {
