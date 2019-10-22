@@ -47,9 +47,6 @@
 													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
 														<a class="rd-dropdown-link" data-nav>Ways to bank</a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
-														<a class="rd-dropdown-link" data-nav>Amju Account</a>
-													</router-link>
 												</ul>
 											</router-link>
 											<router-link tag="li" class="rd-nav-item" :to="{name:'site.root'}">
