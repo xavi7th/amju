@@ -143,6 +143,16 @@
 						</div>
 					</nav>
 				</div>
+				<!-- Breadcrumbs -->
+			<section class="section section-bredcrumbs" v-if="!isHome">
+				<div class="container context-dark breadcrumb-wrapper">
+					<h1>{{ breadcrumb }}</h1>
+					<ul class="breadcrumbs-custom">
+						<li><router-link data-nav :to="{name:'site.root'}">Home</router-link></li>
+						<li class="active">{{ breadcrumb }}</li>
+					</ul>
+				</div>
+			</section>
 			</header>
 
 </template>
@@ -150,10 +160,21 @@
 <script>
   export default {
     name: "Header",
+    props: {
+      isHome: {
+        type: Boolean,
+        default: false,
+        required: true
+      }
+    },
     data() {
       return {};
     },
-    computed: {}
+    computed: {
+      breadcrumb() {
+        return this.$route.meta.breadcrumb;
+      }
+    }
   };
 </script>
 

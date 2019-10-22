@@ -74,6 +74,7 @@ export function createRouter() {
 				name: 'site.contact',
 				meta: {
 					title: 'Contacts - ' + APP_NAME,
+					breadcrumb: 'Contact Us'
 				},
 			},
 			{
@@ -82,6 +83,7 @@ export function createRouter() {
 				name: 'site.pb.amju-account',
 				meta: {
 					title: 'Personal Amju Accounts - ' + APP_NAME,
+					breadcrumb: 'Personal Amju Accounts'
 				},
 			},
 			{
@@ -90,6 +92,7 @@ export function createRouter() {
 				name: 'site.pb.services',
 				meta: {
 					title: 'Amju Services - ' + APP_NAME,
+					breadcrumb: 'Services'
 				},
 			},
 			{
@@ -98,6 +101,7 @@ export function createRouter() {
 				name: 'site.pb.cards',
 				meta: {
 					title: 'Bank Cards - ' + APP_NAME,
+					breadcrumb: 'Bank Cards'
 				},
 			},
 			{
@@ -106,6 +110,7 @@ export function createRouter() {
 				name: 'site.pb.loans',
 				meta: {
 					title: 'Personal Loans - ' + APP_NAME,
+					breadcrumb: 'Personal Loans'
 				},
 			},
 			{
@@ -114,6 +119,7 @@ export function createRouter() {
 				name: 'site.pb.ways-to-bank',
 				meta: {
 					title: 'Personal Ways To Bank - ' + APP_NAME,
+					breadcrumb: 'Personal Ways To Bank'
 				},
 			},
 			{
@@ -122,6 +128,7 @@ export function createRouter() {
 				name: 'site.sme-banking',
 				meta: {
 					title: 'SME Banking - ' + APP_NAME,
+					breadcrumb: 'SME Banking'
 				},
 			},
 			{
@@ -130,6 +137,7 @@ export function createRouter() {
 				name: 'site.cb.bank-account',
 				meta: {
 					title: 'Corporate Bank Account - ' + APP_NAME,
+					breadcrumb: 'Corporate Bank Account'
 				},
 			},
 			{
@@ -138,6 +146,7 @@ export function createRouter() {
 				name: 'site.cb.loans-investment',
 				meta: {
 					title: 'Corporate Bank Loans and Investment - ' + APP_NAME,
+					breadcrumb: 'Corporate Bank Loans and Investment'
 				},
 			},
 			{
@@ -146,6 +155,7 @@ export function createRouter() {
 				name: 'site.cb.electronic-banking',
 				meta: {
 					title: 'Corporate Electronic Banking - ' + APP_NAME,
+					breadcrumb: 'Corporate Electronic Banking'
 				},
 			},
 			{
@@ -154,6 +164,7 @@ export function createRouter() {
 				name: 'site.media.news',
 				meta: {
 					title: 'News - ' + APP_NAME,
+					breadcrumb: 'News'
 				},
 			},
 			{
@@ -162,6 +173,7 @@ export function createRouter() {
 				name: 'site.media.videos',
 				meta: {
 					title: 'Videos - ' + APP_NAME,
+					breadcrumb: 'Videos'
 				},
 			},
 			{
@@ -170,6 +182,7 @@ export function createRouter() {
 				name: 'site.media.gallery',
 				meta: {
 					title: 'Amju Gallery - ' + APP_NAME,
+					breadcrumb: 'Amju Gallery'
 				},
 			},
 			{
@@ -178,6 +191,7 @@ export function createRouter() {
 				name: 'site.ir.finInfo',
 				meta: {
 					title: 'Financial Info - ' + APP_NAME,
+					breadcrumb: 'Financial Info'
 				},
 			},
 			{
@@ -186,6 +200,7 @@ export function createRouter() {
 				name: 'site.ir.investorNews',
 				meta: {
 					title: 'Investor News - ' + APP_NAME,
+					breadcrumb: 'Investor News'
 				},
 			},
 			{
@@ -194,6 +209,7 @@ export function createRouter() {
 				name: 'site.ir.outlookInsights',
 				meta: {
 					title: 'Outlook and Insights - ' + APP_NAME,
+					breadcrumb: 'Outlook and Insights'
 				},
 			},
 			{
@@ -202,6 +218,7 @@ export function createRouter() {
 				name: 'site.ir.events',
 				meta: {
 					title: 'Investor Relation Events - ' + APP_NAME,
+					breadcrumb: 'Investor Relation Events'
 				},
 			},
 			{
@@ -210,6 +227,7 @@ export function createRouter() {
 				name: 'site.ir.shareholders',
 				meta: {
 					title: 'Shareholders - ' + APP_NAME,
+					breadcrumb: 'Shareholders'
 				},
 			},
 			{
@@ -218,6 +236,7 @@ export function createRouter() {
 				name: 'site.ir.information',
 				meta: {
 					title: 'Investor Relations Information - ' + APP_NAME,
+					breadcrumb: 'Investor Relations Information'
 				},
 			},
 			{
@@ -226,6 +245,7 @@ export function createRouter() {
 				name: 'site.about.our-company',
 				meta: {
 					title: 'Our Company - ' + APP_NAME,
+					breadcrumb: 'Our Company'
 				},
 			},
 			{
@@ -234,6 +254,7 @@ export function createRouter() {
 				name: 'site.AboutCorpGov',
 				meta: {
 					title: 'Corporate Governance - ' + APP_NAME,
+					breadcrumb: 'Corporate Governance'
 				},
 			},
 			{
@@ -242,6 +263,7 @@ export function createRouter() {
 				name: 'site.about.bizfocus',
 				meta: {
 					title: 'Business Focus - ' + APP_NAME,
+					breadcrumb: 'Business Focus'
 				},
 			},
 			{
@@ -250,6 +272,7 @@ export function createRouter() {
 				name: 'site.about.awards',
 				meta: {
 					title: 'Awards - ' + APP_NAME,
+					breadcrumb: 'Awards'
 				},
 			},
 			{
@@ -258,6 +281,7 @@ export function createRouter() {
 				name: 'site.about.career',
 				meta: {
 					title: 'Career - ' + APP_NAME,
+					breadcrumb: 'Career'
 				},
 			},
 			{
@@ -266,6 +290,7 @@ export function createRouter() {
 				name: 'site.privacy',
 				meta: {
 					title: 'Privacy - ' + APP_NAME,
+					breadcrumb: 'Privacy'
 				},
 			},
 			{
@@ -274,6 +299,7 @@ export function createRouter() {
 				name: 'site.terms',
 				meta: {
 					title: 'Terms - ' + APP_NAME,
+					breadcrumb: 'Terms'
 				},
 			},
 			{
