@@ -26,7 +26,8 @@ import {
 	siteAboutAwards,
 	siteAboutCareer,
 	sitePrivacy,
-	siteTerms
+	siteTerms,
+	siteContactUs
 } from '@assets/js/config'
 
 // import App from '@components/AppComponent'
@@ -65,6 +66,14 @@ export function createRouter() {
 				name: 'site.root',
 				meta: {
 					title: APP_NAME,
+				},
+			},
+			{
+				path: siteContactUs,
+				component: view( 'ContactUsPage' ),
+				name: 'site.contact',
+				meta: {
+					title: 'Contacts - ' + APP_NAME,
 				},
 			},
 			{

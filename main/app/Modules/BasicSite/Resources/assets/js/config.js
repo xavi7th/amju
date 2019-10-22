@@ -15,7 +15,14 @@ export const logout = ( msg = 'Logging you out....' ) => {
 	} )
 }
 
-export const CONSTANTS = {}
+export const CONSTANTS = {
+	facebook: 'amju-facebook',
+	twitter: 'amju-twitter',
+	instagram: 'amju-instagram',
+	facebookMessenger: 'amju-facebook-messenger',
+	linkedin: 'amju-linkedin',
+	snapchat: 'amju-snapchat',
+}
 
 export const siteRootUrl = rootUrl()
 export const sitePBAmjuAccount = rootUrl( 'personal-banking/amju-account' )
@@ -43,6 +50,7 @@ export const siteAboutAwards = rootUrl( 'about-us/awards-and-achievements' )
 export const siteAboutCareer = rootUrl( 'about-us/career' )
 export const sitePrivacy = rootUrl( 'privacy-policy' )
 export const siteTerms = rootUrl( 'terms-and-conditions' )
+export const siteContactUs = rootUrl( 'contact-us' )
 
 
 /**
