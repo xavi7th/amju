@@ -38,5 +38,22 @@
 		transform: translateX(80%);
 		opacity: 0;
 	}
+
+	.nav-transition-enter-active {
+		transition: all 0.5s ease;
+	}
+
+	.nav-transition-leave-active {
+		transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+	}
+
+	.nav-transition-enter,
+	.nav-transition-leave-to
+
+	/* .nav-transition-leave-active below version 2.1.8 */
+		{
+		transform: translateY(-10px);
+		opacity: 0;
+	}
 </style>
 @endsection
