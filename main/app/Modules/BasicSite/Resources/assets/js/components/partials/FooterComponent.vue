@@ -5,12 +5,12 @@
 				<div class="col-md-6 col-lg-3 text-center">
 					<img src="img/logo-round.png" alt="" width="100" height="58" />
 					<div class="group-md group-middle social-items">
-						<a class="icon icon-md novi-icon mdi mdi-facebook" data-nav target="_blank" :href="CONSTANTS.facebook"></a>
-						<a class="icon icon-md novi-icon mdi mdi-twitter" data-nav target="_blank" :href="CONSTANTS.twitter"></a>
-						<a class="icon icon-md novi-icon mdi mdi-instagram" data-nav target="_blank" :href="CONSTANTS.instagram"></a>
-						<a class="icon icon-md novi-icon mdi mdi-facebook-messenger" data-nav target="_blank" :href="CONSTANTS.facebookMessenger"></a>
-						<a class="icon icon-md novi-icon mdi mdi-linkedin" data-nav target="_blank" :href="CONSTANTS.linkedin"></a>
-						<a class="icon icon-md novi-icon mdi mdi-snapchat" data-nav target="_blank" :href="CONSTANTS.snapchat"></a>
+						<a data-nav class="icon icon-md novi-icon mdi mdi-facebook"  target="_blank" :href="CONSTANTS.facebook"></a>
+						<a data-nav class="icon icon-md novi-icon mdi mdi-twitter"  target="_blank" :href="CONSTANTS.twitter"></a>
+						<a data-nav class="icon icon-md novi-icon mdi mdi-instagram"  target="_blank" :href="CONSTANTS.instagram"></a>
+						<a data-nav class="icon icon-md novi-icon mdi mdi-facebook-messenger"  target="_blank" :href="CONSTANTS.facebookMessenger"></a>
+						<a data-nav class="icon icon-md novi-icon mdi mdi-linkedin"  target="_blank" :href="CONSTANTS.linkedin"></a>
+						<a data-nav class="icon icon-md novi-icon mdi mdi-snapchat"  target="_blank" :href="CONSTANTS.snapchat"></a>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3">
@@ -20,32 +20,32 @@
 							<div class="unit unit-horizontal unit-spacing-xxs">
 								<div class="unit-body">
 									<ul class="list-links">
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Help Center</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Help Center</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Internet Banking Security</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Internet Banking Security</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Card Security</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Card Security</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Online Security</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Online Security</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Bank Verification Number (BVN)</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Bank Verification Number (BVN)</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Whistle Blower</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Whistle Blower</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Dispense Error</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Dispense Error</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.contact'}" tag="li">
-											<a>Contact Us</a>
+										<router-link  :to="{name: 'site.contact'}" tag="li">
+											<a data-nav>Contact Us</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Locate a Branch</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Locate a Branch</a>
 										</router-link>
 									</ul>
 								</div>
@@ -60,29 +60,29 @@
 							<div class="unit unit-horizontal unit-spacing-xxs">
 								<div class="unit-body">
 									<ul class="list-links">
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Scam Alert</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Scam Alert</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Replace Your Card</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Replace Your Card</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>e-Channels Products</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>e-Channels Products</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.contact'}" tag="li">
-											<a>Amju Mobile App</a>
+										<router-link  :to="{name: 'site.contact'}" tag="li">
+											<a data-nav>Amju Mobile App</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.contact'}" tag="li">
-											<a>Verve Cards</a>
+										<router-link  :to="{name: 'site.contact'}" tag="li">
+											<a data-nav>Verve Cards</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Reactivate Dormant Account</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Reactivate Dormant Account</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Request Cheque Book</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Request Cheque Book</a>
 										</router-link>
-										<router-link data-nav :to="{name: 'site.root'}" tag="li">
-											<a>Letter of Credit Application Form</a>
+										<router-link  :to="{name: 'site.root'}" tag="li">
+											<a data-nav>Letter of Credit Application Form</a>
 										</router-link>
 									</ul>
 								</div>
@@ -121,7 +121,7 @@
 				<span>&nbsp;</span>
 				<span>All rights reserved</span>
 				<span>.&nbsp;</span>
-				<router-link data-nav :to="{name: 'site.privacy'}">Privacy Policy</router-link>\
+				<router-link data-nav :to="{name: 'site.privacy'}">Privacy Policy</router-link>
 			</p>
 		</div>
 	</footer>
