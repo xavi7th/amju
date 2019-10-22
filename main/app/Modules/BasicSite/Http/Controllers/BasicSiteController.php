@@ -44,6 +44,12 @@ class BasicSiteController extends Controller
 				return (new TeamMemberTransformer)->collectionTransformer($teams, 'transformForHomePage');
 			});
 
+			Route::get('faq', function () {
+				// $teams = TeamMember::all();
+
+				// return (new TeamMemberTransformer)->collectionTransformer($teams, 'transformForHomePage');
+			});
+
 			Route::post('/contact', function (ContactFormValidation $request) {
 				Message::create($request->all());
 				return response()->json(['status' => true], 201);

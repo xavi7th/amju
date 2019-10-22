@@ -78,6 +78,13 @@ export function createRouter() {
 				},
 			},
 			{
+				path: '/personal-banking',
+				name: 'site.pb',
+				redirect: {
+					name: 'site.pb.amju-account',
+				},
+			},
+			{
 				path: sitePBAmjuAccount,
 				component: view( 'PBAmjuAccountPage' ),
 				name: 'site.pb.amju-account',
@@ -132,6 +139,13 @@ export function createRouter() {
 				},
 			},
 			{
+				path: '/corporate-banking',
+				name: 'site.cb',
+				redirect: {
+					name: 'site.cb.bank-account',
+				},
+			},
+			{
 				path: siteCBBankAccount,
 				component: view( 'CBBankAccountPage' ),
 				name: 'site.cb.bank-account',
@@ -157,6 +171,13 @@ export function createRouter() {
 					title: 'Corporate Electronic Banking - ' + APP_NAME,
 					breadcrumb: 'Corporate Electronic Banking'
 				},
+			},
+			{
+				path: '/media',
+				redirect: {
+					name: 'site.media.news',
+				},
+				name: 'site.media',
 			},
 			{
 				path: siteMediaNews,
@@ -186,9 +207,16 @@ export function createRouter() {
 				},
 			},
 			{
+				path: '/investor-relations',
+				name: 'site.ir',
+				redirect: {
+					name: 'site.ir.fin-info',
+				},
+			},
+			{
 				path: siteIRFinInfo,
 				component: view( 'IRFinInfoPage' ),
-				name: 'site.ir.finInfo',
+				name: 'site.ir.fin-info',
 				meta: {
 					title: 'Financial Info - ' + APP_NAME,
 					breadcrumb: 'Financial Info'
@@ -197,7 +225,7 @@ export function createRouter() {
 			{
 				path: siteIRInvestorNews,
 				component: view( 'IRInvestorNewsPage' ),
-				name: 'site.ir.investorNews',
+				name: 'site.ir.investor-news',
 				meta: {
 					title: 'Investor News - ' + APP_NAME,
 					breadcrumb: 'Investor News'
@@ -206,7 +234,7 @@ export function createRouter() {
 			{
 				path: siteIROutlookInsights,
 				component: view( 'IROutlookInsightsPage' ),
-				name: 'site.ir.outlookInsights',
+				name: 'site.ir.outlook-insights',
 				meta: {
 					title: 'Outlook and Insights - ' + APP_NAME,
 					breadcrumb: 'Outlook and Insights'
@@ -223,25 +251,23 @@ export function createRouter() {
 			},
 			{
 				path: siteIRShareholders,
-				component: view( 'IRShareholdersPage' ),
-				name: 'site.ir.shareholders',
+				component: view( 'IRShareholdersInfoPage' ),
+				name: 'site.ir.shareholders-info',
 				meta: {
-					title: 'Shareholders - ' + APP_NAME,
-					breadcrumb: 'Shareholders'
+					title: 'Shareholders Information - ' + APP_NAME,
+					breadcrumb: 'Shareholders Information'
 				},
 			},
 			{
-				path: siteIRInformation,
-				component: view( 'IRInformationPage' ),
-				name: 'site.ir.information',
-				meta: {
-					title: 'Investor Relations Information - ' + APP_NAME,
-					breadcrumb: 'Investor Relations Information'
+				path: '/about-us',
+				name: 'site.about',
+				redirect: {
+					name: 'site.about.our-company',
 				},
 			},
 			{
 				path: siteAboutOurCompany,
-				component: view( 'AboutOurCompanyPage' ),
+				component: view( 'OurCompanyPage' ),
 				name: 'site.about.our-company',
 				meta: {
 					title: 'Our Company - ' + APP_NAME,
@@ -250,8 +276,8 @@ export function createRouter() {
 			},
 			{
 				path: siteAboutCorpGov,
-				component: view( 'AboutCorpGovPage' ),
-				name: 'site.AboutCorpGov',
+				component: view( 'CorpGovPage' ),
+				name: 'site.about.corp-gov',
 				meta: {
 					title: 'Corporate Governance - ' + APP_NAME,
 					breadcrumb: 'Corporate Governance'
@@ -259,7 +285,7 @@ export function createRouter() {
 			},
 			{
 				path: siteAboutBizFocus,
-				component: view( 'AboutBizFocusPage' ),
+				component: view( 'BizFocusPage' ),
 				name: 'site.about.bizfocus',
 				meta: {
 					title: 'Business Focus - ' + APP_NAME,
@@ -268,7 +294,7 @@ export function createRouter() {
 			},
 			{
 				path: siteAboutAwards,
-				component: view( 'AboutAwardsPage' ),
+				component: view( 'AwardsPage' ),
 				name: 'site.about.awards',
 				meta: {
 					title: 'Awards - ' + APP_NAME,
@@ -277,7 +303,7 @@ export function createRouter() {
 			},
 			{
 				path: siteAboutCareer,
-				component: view( 'AboutCareerPage' ),
+				component: view( 'CareerPage' ),
 				name: 'site.about.career',
 				meta: {
 					title: 'Career - ' + APP_NAME,

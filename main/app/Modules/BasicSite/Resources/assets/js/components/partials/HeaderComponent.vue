@@ -29,94 +29,94 @@
 											<li class="rd-nav-item">
 												<a class="rd-nav-link" href="https://ibank.amjuuniquemfbng.com" target="_blank">Internet banking</a>
 											</li>
-											<router-link tag="li" :to="{name:'site.root'}" class="rd-nav-item">
+											<router-link tag="li" :to="{name:'site.pb'}" class="rd-nav-item">
 												<a class="rd-nav-link" href="#" data-nav>Personal Banking</a>
 												<ul class="rd-menu rd-navbar-dropdown">
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.pb.amju-account'}">
 														<a class="rd-dropdown-link" data-nav>Amju Account</a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.pb.services'}">
 														<a class="rd-dropdown-link" data-nav>Services</a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.pb.cards'}">
 														<a class="rd-dropdown-link" data-nav>Cards</a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.pb.loans'}">
 														<a class="rd-dropdown-link" data-nav>Loans</a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.pb.ways-to-bank'}">
 														<a class="rd-dropdown-link" data-nav>Ways to bank</a>
 													</router-link>
 												</ul>
 											</router-link>
-											<router-link tag="li" class="rd-nav-item" :to="{name:'site.root'}">
+											<router-link tag="li" class="rd-nav-item" :to="{name:'site.sme-banking'}">
 												<a class="rd-nav-link" data-nav>SME Banking</a>
 											</router-link>
-											<router-link tag="li" :to="{name:'site.root'}" class="rd-nav-item">
+											<router-link tag="li" :to="{name:'site.cb'}" class="rd-nav-item">
 												<a class="rd-nav-link" href="#" data-nav>Corporate Banking</a>
 												<ul class="rd-menu rd-navbar-dropdown">
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.cb.bank-account'}">
 														<a class="rd-dropdown-link" data-nav>Bank Account</a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.cb.loans-investment'}">
 														<a class="rd-dropdown-link" data-nav>Loan &amp; Investment </a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.cb.electronic-banking'}">
 														<a class="rd-dropdown-link" data-nav>Electronic Banking </a>
 													</router-link>
 												</ul>
 											</router-link>
-											<router-link tag="li" :to="{name:'site.root'}" class="rd-nav-item">
+											<router-link tag="li" :to="{name:'site.media'}" class="rd-nav-item">
 												<a class="rd-nav-link" href="#" data-nav>Media</a>
 												<ul class="rd-menu rd-navbar-dropdown">
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.media.news'}">
 														<a class="rd-dropdown-link" data-nav>News</a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.media.videos'}">
 														<a class="rd-dropdown-link" data-nav>Videos </a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.media.gallery'}">
 														<a class="rd-dropdown-link" data-nav>Gallery </a>
 													</router-link>
 												</ul>
 											</router-link>
 
-											<router-link tag="li" :to="{name:'site.root'}" class="rd-nav-item">
+											<router-link tag="li" :to="{name:'site.ir'}" class="rd-nav-item">
 												<a class="rd-nav-link" href="#" data-nav>Investor Relations</a>
 												<ul class="rd-menu rd-navbar-dropdown">
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.ir.fin-info'}">
 														<a class="rd-dropdown-link" data-nav>Financial Information</a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.ir.investor-news'}">
 														<a class="rd-dropdown-link" data-nav>Investor News </a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.ir.outlook-insights'}">
 														<a class="rd-dropdown-link" data-nav>Outlook and Insight </a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.ir.events'}">
 														<a class="rd-dropdown-link" data-nav>Events </a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.ir.shareholders-info'}">
 														<a class="rd-dropdown-link" data-nav>Shareholder Information </a>
 													</router-link>
 												</ul>
 											</router-link>
-											<router-link tag="li" :to="{name:'site.root'}" class="rd-nav-item">
+											<router-link tag="li" :to="{name:'site.about'}" class="rd-nav-item">
 												<a class="rd-nav-link" href="#" data-nav>About Us</a>
 												<ul class="rd-menu rd-navbar-dropdown">
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.about.our-company'}">
 														<a class="rd-dropdown-link" data-nav>Our Company</a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.about.corp-gov'}">
 														<a class="rd-dropdown-link" data-nav>Corporate Governance </a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.about.bizfocus'}">
 														<a class="rd-dropdown-link" data-nav>Business Focus </a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.about.awards'}">
 														<a class="rd-dropdown-link" data-nav>Awards and Achievements </a>
 													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.root'}">
+													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.about.career'}">
 														<a class="rd-dropdown-link" data-nav>Career </a>
 													</router-link>
 												</ul>
