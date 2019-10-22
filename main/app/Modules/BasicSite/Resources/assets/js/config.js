@@ -23,5 +23,5 @@ export const siteRootUrl = rootUrl()
  * API endpoints
  */
 export const siteTestimonials = apiRootUrl( 'testimonials' )
-export const siteTeam = apiRootUrl( 'team' )
+export const siteFAQ = apiRootUrl( 'faq' )
 export const siteContact = apiRootUrl( 'contact' )

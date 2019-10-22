@@ -1,43 +1,45 @@
 <template>
-  <div class="body">
-    <!-- <hero-section></hero-section>
+  <div>
+    <hero-section></hero-section>
+    <amju-highlights></amju-highlights>
     <about-section></about-section>
-    <features-section></features-section>
-    <how-it-works-section></how-it-works-section>
-    <platform-statistics></platform-statistics>
-    <team-section></team-section>
     <testimonial-section></testimonial-section>
-    <final-charts-section></final-charts-section>
+    <!-- <platform-statistics></platform-statistics> -->
+    <create-account-cta></create-account-cta>
+    <order-card-section></order-card-section>
+    <faq-section></faq-section>
+    <!-- <latest-news></latest-news> -->
+    <!-- <subscribe-section></subscribe-section> -->
     <contact-us></contact-us>
-    <latest-news></latest-news>-->
   </div>
 </template>
 
 <script>
   import HeroSection from "@components/home/Hero";
+  import AmjuHighlights from "@components/home/Highlights";
   import AboutSection from "@components/home/AboutUs";
-  import HowItWorksSection from "@components/home/HowitWorks";
-  import FeaturesSection from "@components/home/Features";
+  import SubscribeSection from "@components/home/Subscribe";
+  import CreateAccountCta from "@components/home/CreateAccount";
   import PlatformStatistics from "@components/home/PlatformStatistics";
-  import TeamSection from "@components/home/OurTeam";
+  import FaqSection from "@components/home/FAQ";
   import TestimonialSection from "@components/home/Testimonials";
   import ContactUs from "@components/home/Contact";
   import LatestNews from "@components/home/LatestNews";
-  // import TokenSection from "@components/home/Token";
-  import FinalChartsSection from "@components/home/FinalCharts";
+  import OrderCardSection from "@components/home/OrderCard";
   export default {
     name: "HomePage",
     components: {
       HeroSection,
+      AmjuHighlights,
       AboutSection,
-      HowItWorksSection,
-      FeaturesSection,
+      SubscribeSection,
+      CreateAccountCta,
       PlatformStatistics,
-      TeamSection,
+      FaqSection,
       TestimonialSection,
       ContactUs,
       LatestNews,
-      FinalChartsSection
+      OrderCardSection
       // TokenSection,
     },
     data() {
@@ -53,8 +55,4 @@
 </script>
 
 <style scoped>
-  .body {
-    min-height: 100vh;
-    background-color: rebeccapurple;
-  }
 </style>

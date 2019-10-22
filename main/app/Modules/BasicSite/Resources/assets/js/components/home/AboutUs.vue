@@ -1,18 +1,97 @@
 <template>
-  <section class="about-section spad" id="about-us">
+  <section class="section section-lg bg-gray-100">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div id="chartAbout"></div>
+      <div class="row row-fix justify-content-center text-center">
+        <div class="col-md-10 col-xl-7">
+          <h2 class="custom-title">
+            <span>Who We Are</span>
+          </h2>
         </div>
-        <div class="col-lg-6 about-text">
-          <h2>About {{ CONSTANTS.appName }}</h2>
-          <h5>{{ CONSTANTS.appName }} is an innovative brand with a unique vision to provide unparalleled superior trading conditions, advanced education and state-of-the-art trading tools in the forex industry.</h5>
-          <p>
-            With over 7+ years on the market, expert analytical reviews and more than 200,000 clients, {{ CONSTANTS.appName }} service allows you earn on the
-            Forex market without having to make trades yourself; by investing in the accounts of experienced traders
-          </p>
-          <a href="/login" class="site-btn sb-gradients sbg-line mt-5">Get Started</a>
+      </div>
+      <div class="row row-20 justify-content-center justify-content-lg-between pb-5">
+        <div class="col-md-10 col-lg-6">
+          <img class="img-bordered" src="img/index-1-2-570x352.jpg" alt width="570" height="352" />
+        </div>
+        <div class="col-md-10 col-lg-6 col-xl-5">
+          <div class="text-block-2">
+            <h6>
+              Amju Unique Micro Finance Bank was founded in ???? to introduce the new level of financial services in Nigeria. We are still
+              dedicated to the success of our clients.
+            </h6>
+            <p>
+              At Amju Unique Micro Finance Bank, we are guided by a common purpose to help make financial lives better by connecting
+              clients and communities to the resource they need to be successful. We are driving growth – helping to
+              create jobs, develop communities, foster economic mobility and address our society’s biggest challenges –
+              while managing risk and providing a return to our clients and our shareholders.
+            </p>
+            <router-link
+              class="button button-lg button-primary"
+              :to="{name: 'site.about'}"
+            >Learn More</router-link>
+          </div>
+        </div>
+      </div>
+      <div class="row row-30 row-flex mt-5">
+        <div class="col-sm-6 col-lg-3 wow fadeInRight">
+          <blockquote class="quote quote-default">
+            <div class="quote-icon mdi mdi-format-quote"></div>
+            <div class="quote-body">
+              <q class="heading-6">
+                At Amju Unique Micro Finance Bank, we aim to provide top quality banking services to a greater number of
+                individual and corporate customers than any other microfinance bank in Nigeria.
+              </q>
+            </div>
+            <div class="quote-meta">
+              <div class="author">
+                <cite>Ososuakpor Jonathan</cite>
+              </div>
+              <div class="position">MD/CEO, Amju Unique Micro Finance Bank</div>
+            </div>
+          </blockquote>
+        </div>
+
+        <!-- pick from DB -->
+        <div class="col-sm-6 col-lg-3 wow fadeInRight">
+          <article class="post-modern">
+            <div class="media-wrapper">
+              <router-link data-nav :to="{name: 'site.root'}">
+                <img src="img/slider-2-1920x879.jpg" alt width="370" height="240" />
+              </router-link>
+              <ul class="list-tags">
+                <li>
+                  <router-link data-nav class="tag" :to="{name: 'site.root'}">Read More</router-link>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-lg-3 wow fadeInRight" data-wow-delay="0.1s">
+          <article class="post-modern">
+            <div class="media-wrapper">
+              <router-link data-nav :to="{name: 'site.root'}">
+                <img src="img/modern-blog-2-370x240.jpg" alt width="370" height="240" />
+              </router-link>
+              <ul class="list-tags">
+                <li>
+                  <router-link data-nav class="tag" :to="{name: 'site.root'}">Read More</router-link>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-lg-3 wow fadeInRight" data-wow-delay="0.1s">
+          <article class="post-modern">
+            <div class="media-wrapper">
+              <router-link data-nav :to="{name: 'site.root'}">
+                <img src="img/modern-blog-3-370x240.jpg" alt width="370" height="240" />
+              </router-link>
+              <ul class="list-tags">
+                <li>
+                  <router-link data-nav class="tag" :to="{name: 'site.root'}">Read More</router-link>
+                </li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
     </div>
@@ -34,23 +113,26 @@
   };
 </script>
 
-<style scoped lang="scss">
-  .res_sm_mb_30 {
-    height: 500px;
-  }
-  .service__text {
-    margin-bottom: 1em;
-  }
-
-  .spad {
-    @media (max-width: 576px) {
-      padding-top: 40px;
-      padding-bottom: 50px;
-      text-align: center;
-
-      .about-text {
-        margin-top: 20px;
-      }
+<style lang="scss" scoped>
+  .post-modern {
+    *:not(ul) {
+      height: 100%;
+    }
+    ul {
+      bottom: 0;
+      left: 0;
+      top: auto;
+    }
+    img {
+      object-fit: cover;
+      object-position: top;
+    }
+    .tag {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      font-size: 125%;
+      font-weight: bold;
+      padding: 5px 20px;
     }
   }
 </style>

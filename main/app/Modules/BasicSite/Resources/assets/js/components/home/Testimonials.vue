@@ -1,26 +1,66 @@
 <template>
-  <section class="review-section spad" id="testimonials">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 push-8">
-          <img src="/img/quote.png" alt class="quote mb-5" />
-          <div class="review-text-slider owl-carousel">
-            <div class="review-text" v-for="testimonial in testimonials" :key="testimonial.id">
-              <p>{{ testimonial.testimonial }}</p>
-            </div>
+  <section class="section section-md">
+    <div class="container text-center">
+      <h2 class="custom-title">
+        <span>Testimonials</span>
+      </h2>
+      <!-- Owl Carousel-->
+      <div
+        class="owl-carousel owl-carousel-1"
+        data-items="1"
+        data-dots="true"
+        data-nav="true"
+        data-md-stage-padding="0"
+        data-loop="true"
+        data-margin="30"
+        data-mouse-drag="false"
+        data-autoplay="true"
+      >
+        <blockquote class="quote quote-large">
+          <div class="quote-meta">
+            <img class="img-bordered" src="img/index-1-3-220x220.jpg" alt width="220" height="220" />
           </div>
-        </div>
-        <div class="col-lg-4 pr-0 pull-3">
-          <div class="review-meta-slider owl-carousel pt-5">
-            <div class="author-meta" v-for="testimonial in testimonials" :key="testimonial.id">
-              <div class="author-avatar set-bg" :data-setbg="testimonial.img"></div>
-              <div class="author-name">
-                <h4>{{ testimonial.name }}</h4>
-                <p>{{ testimonial.city }}, {{ testimonial.country }}</p>
-              </div>
+          <div class="quote-body">
+            <div class="author heading-6">
+              <cite>Mildred Bates</cite>
             </div>
+            <div class="position">Jewelry Shop Owner</div>
+            <q class="heading-5">
+              When I needed financial assistance to expand my shop, I went directly to Banque.
+              Securing financing helped us renovate and expand my jewelry shop and attract more clients.
+            </q>
           </div>
-        </div>
+        </blockquote>
+        <blockquote class="quote quote-large">
+          <div class="quote-meta">
+            <img class="img-bordered" src="img/index-1-4-220x220.jpg" alt width="220" height="220" />
+          </div>
+          <div class="quote-body">
+            <div class="author heading-6">
+              <cite>Marie Hanson</cite>
+            </div>
+            <div class="position">Charity Organization Manager</div>
+            <q class="heading-5">
+              I chose Banque because I know they share my values of putting community first. Not
+              only do they make banking easy, I see them out volunteering and investing in our community.
+            </q>
+          </div>
+        </blockquote>
+        <blockquote class="quote quote-large">
+          <div class="quote-meta">
+            <img class="img-bordered" src="img/index-1-5-220x220.jpg" alt width="220" height="220" />
+          </div>
+          <div class="quote-body">
+            <div class="author heading-6">
+              <cite>Ann Smith</cite>
+            </div>
+            <div class="position">International Company Owner</div>
+            <q class="heading-5">
+              Finding Banque, a reliable bank with the international reputation and specialized
+              lending programs allowed me to finance my business and open a new office in California. Thank you!
+            </q>
+          </div>
+        </blockquote>
       </div>
     </div>
   </section>

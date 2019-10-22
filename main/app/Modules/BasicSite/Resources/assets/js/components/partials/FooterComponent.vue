@@ -85,11 +85,22 @@
 </template>
 
 <script>
+  import { siteContact } from "@assets/js/config";
   export default {
     name: "SiteFooter",
+    data: () => ({
+      details: {}
+    }),
     methods: {
       sendMessage() {
-        Toast.fire("Message not implemented");
+        axios.post(siteContact, { ...this.details }).then(rsp => {
+          console.log(rsp);
+
+          if (rsp && rsp.status == 201) {
+            this.details = {};
+            swal.fire("Sent", `You will be contacted shortly`, "success");
+          }
+        });
       }
     }
   };

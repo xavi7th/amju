@@ -3936,7 +3936,7 @@ blockquote .position {
 	font-size: 44px;
 	font-style: normal;
 	line-height: 1;
-	color: #36f1f8;
+	color: #1e90ff;
 }
 
 .quote-large *+.position {
@@ -6759,7 +6759,7 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-primary-gradient {
-	background-image: linear-gradient(to right, #006ad1, #1A6793);
+	background-image: linear-gradient(to right, #1A6793, #1E90FF);
 }
 
 /**
@@ -7477,6 +7477,7 @@ html:not(.lt-ie10) .not-animated {
 	-webkit-animation-name: slideOutDown;
 	animation-name: slideOutDown;
 }
+
 /*
 *
 * ToTop
