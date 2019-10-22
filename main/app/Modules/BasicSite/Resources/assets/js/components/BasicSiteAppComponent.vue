@@ -1,12 +1,12 @@
 <template>
   <div class="page">
-    <site-header v-on:logout-user="logoutUser()"></site-header>
+    <site-header v-on:logout-user="logoutUser()" v-if="!is404"></site-header>
 
     <transition name="nav-transition" mode="out-in">
       <router-view @page-loaded="pageLoaded" />
     </transition>
 
-    <site-footer></site-footer>
+    <site-footer v-if="!is404"></site-footer>
   </div>
 </template>
 
@@ -31,6 +31,15 @@
       },
       pageLoaded() {
         this.$loadScript("/js/main.js");
+      }
+    },
+    computed: {
+      is404() {
+        // console.log(this.$route);
+
+        return this.$route.name ? this.$route.name.match("site.error") : false;
+        // (this.$route.name || "").match("site.error") ||
+        // this.$route.path.match("login")
       }
     }
   };
