@@ -127,6 +127,8 @@
 
 		@yield('customJS')
 
+		<script src="//code.tidio.co/ulsas2pny13snt0hhxsfk16uzaw8bedu.js" defer async></script>
+
 	</body>
 
 </html>

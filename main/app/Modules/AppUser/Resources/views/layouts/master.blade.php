@@ -25,7 +25,8 @@
 		<script src="{{ mix('js/dashboard-app.js') }}"></script>
 
 		@yield('customJS')
-		<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+
+		<script src="//code.tidio.co/ulsas2pny13snt0hhxsfk16uzaw8bedu.js" defer async></script>
 
 	</body>
 
