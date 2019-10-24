@@ -123,8 +123,7 @@
 											</router-link>
 										</ul>
 									</div>
-									<!-- RD Navbar Search-->
-									<div class="rd-navbar-search">
+									<!-- <div class="rd-navbar-search">
 										<button class="rd-navbar-search-toggle rd-navbar-fixed-element-1"
 											data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
 										<form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live"
@@ -137,7 +136,7 @@
 											</div>
 											<button class="rd-search-form-submit mdi mdi-magnify" type="submit"></button>
 										</form>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
