@@ -14,10 +14,10 @@ class ContactFormValidation extends FormRequest
 	public function rules()
 	{
 		return [
-			'phone' => 'required|max:35|string',
-			'email' => 'required|email',
-			'subject' => 'required|max:255|string',
-			// 'msg' => 'required|string',
+			// 'phone' => 'required|max:35|string',
+			'email' => 'required|email|max:100',
+			'name' => 'required|max:255|string',
+			'msg' => 'required|string',
 		];
 	}
 
@@ -42,8 +42,9 @@ class ContactFormValidation extends FormRequest
 	{
 		return [
 			'email.required' => 'Your email cannot be empty',
-			'phone.required' => 'We need a number to contact you',
-			'phone.required' => 'Tell us what you want to talk about',
+			'email.email' => 'The email you supplied is invalid',
+			'name.required' => 'Your name is required',
+			'msg.required' => 'Tell us what you want to talk about',
 		];
 	}
 }

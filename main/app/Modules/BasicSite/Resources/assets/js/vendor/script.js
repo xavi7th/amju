@@ -362,67 +362,73 @@
 	 * @param {object} elements - jQuery object
 	 */
 	function attachFormValidator( elements ) {
-		// Custom validator - phone number
-		regula.custom( {
-			name: 'PhoneNumber',
-			defaultMessage: 'Invalid phone number format',
-			validator: function () {
-				if ( this.value === '' ) return true;
-				else return /^(\+\d)?[0-9\-\(\) ]{5,}$/i.test( this.value );
-			}
-		} );
-
-		for ( var i = 0; i < elements.length; i++ ) {
-			var o = $( elements[ i ] ),
-				v;
-			o.addClass( "form-control-has-validation" ).after( "<span class='form-validation'></span>" );
-			v = o.parent().find( ".form-validation" );
-			if ( v.is( ":last-child" ) ) o.addClass( "form-control-last-child" );
-		}
-
-		elements.on( 'input change propertychange blur', function ( e ) {
-			var $this = $( this ),
-				results;
-
-			if ( e.type !== "blur" )
-				if ( !$this.parent().hasClass( "has-error" ) ) return;
-			if ( $this.parents( '.rd-mailform' ).hasClass( 'success' ) ) return;
-
-			if ( ( results = $this.regula( 'validate' ) ).length ) {
-				for ( i = 0; i < results.length; i++ ) {
-					$this.siblings( ".form-validation" ).text( results[ i ].message ).parent().addClass( "has-error" );
+		if ( undefined === window.validatorAttached ) {
+			window.validatorAttached = true;
+			window.hasValidationErrors = false;
+			// Custom validator - phone number
+			regula.custom( {
+				name: 'PhoneNumber',
+				defaultMessage: 'Invalid phone number format',
+				validator: function () {
+					if ( this.value === '' ) return true;
+					else return /^(\+\d)?[0-9\-\(\) ]{5,}$/i.test( this.value );
 				}
-			} else {
-				$this.siblings( ".form-validation" ).text( "" ).parent().removeClass( "has-error" )
-			}
-		} ).regula( 'bind' );
-
-		var regularConstraintsMessages = [ {
-				type: regula.Constraint.Required,
-				newMessage: "The text field is required."
-			},
-			{
-				type: regula.Constraint.Email,
-				newMessage: "The email is not a valid email."
-			},
-			{
-				type: regula.Constraint.Numeric,
-				newMessage: "Only numbers are required"
-			},
-			{
-				type: regula.Constraint.Selected,
-				newMessage: "Please choose an option."
-			}
-		];
-
-
-		for ( var i = 0; i < regularConstraintsMessages.length; i++ ) {
-			var regularConstraint = regularConstraintsMessages[ i ];
-
-			regula.override( {
-				constraintType: regularConstraint.type,
-				defaultMessage: regularConstraint.newMessage
 			} );
+
+			for ( var i = 0; i < elements.length; i++ ) {
+				var o = $( elements[ i ] ),
+					v;
+				o.addClass( "form-control-has-validation" ).after( "<span class='form-validation'></span>" );
+				v = o.parent().find( ".form-validation" );
+				if ( v.is( ":last-child" ) ) o.addClass( "form-control-last-child" );
+			}
+
+			elements.on( 'input change propertychange blur', function ( e ) {
+				var $this = $( this ),
+					results;
+
+				if ( e.type !== "blur" )
+					if ( !$this.parent().hasClass( "has-error" ) ) return;
+				if ( $this.parents( '.rd-mailform' ).hasClass( 'success' ) ) return;
+
+				if ( ( results = $this.regula( 'validate' ) ).length ) {
+					window.hasValidationErrors = true;
+					for ( i = 0; i < results.length; i++ ) {
+						$this.siblings( ".form-validation" ).text( results[ i ].message ).parent().addClass( "has-error" );
+					}
+				} else {
+					window.hasValidationErrors = false
+					$this.siblings( ".form-validation" ).text( "" ).parent().removeClass( "has-error" )
+				}
+			} ).regula( 'bind' );
+
+			var regularConstraintsMessages = [ {
+					type: regula.Constraint.Required,
+					newMessage: "The text field is required."
+				},
+				{
+					type: regula.Constraint.Email,
+					newMessage: "The email is not a valid email."
+				},
+				{
+					type: regula.Constraint.Numeric,
+					newMessage: "Only numbers are required"
+				},
+				{
+					type: regula.Constraint.Selected,
+					newMessage: "Please choose an option."
+				}
+			];
+
+
+			for ( var i = 0; i < regularConstraintsMessages.length; i++ ) {
+				var regularConstraint = regularConstraintsMessages[ i ];
+
+				regula.override( {
+					constraintType: regularConstraint.type,
+					defaultMessage: regularConstraint.newMessage
+				} );
+			}
 		}
 	}
 

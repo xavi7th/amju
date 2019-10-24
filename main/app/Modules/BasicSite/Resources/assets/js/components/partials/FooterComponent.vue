@@ -92,22 +92,21 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<h5 class="title">Get in Touch</h5>
-					<!-- RD Mailform-->
 					<form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact"
 						method="post" @submit.prevent="sendMessage">
 						<div class="form-wrap">
-							<input class="form-input" id="contact-name-footer" type="text" name="name"
+							<input class="form-input" id="contact-name-footer" type="text" name="name" v-model="details.name"
 								data-constraints="@Required">
 							<label class="form-label" for="contact-name-footer">Name</label>
 						</div>
 						<div class="form-wrap">
-							<input class="form-input" id="contact-email-footer" type="email" name="email"
+							<input class="form-input" id="contact-email-footer" type="email" name="email" v-model="details.email"
 								data-constraints="@Email @Required">
 							<label class="form-label" for="contact-email-footer">E-mail</label>
 						</div>
 						<div class="form-wrap">
 							<label class="form-label" for="contact-message-footer">Message</label>
-							<textarea class="form-input" id="contact-message-footer" name="message"
+							<textarea class="form-input" id="contact-message-footer" name="message" v-model="details.msg"
 								data-constraints="@Required"></textarea>
 						</div>
 						<button class="button button-primary" type="submit">Send</button>
@@ -137,14 +136,22 @@
     }),
     methods: {
       sendMessage() {
-        axios.post(siteContact, { ...this.details }).then(rsp => {
-          console.log(rsp);
+        if (window.hasValidationErrors) {
+          Toast.fire({
+            type: "error",
+            text: "There are errors in the form",
+            title: "Oops! "
+          });
+        } else {
+          axios.post(siteContact, { ...this.details }).then(rsp => {
+            console.log(rsp);
 
-          if (rsp && rsp.status == 201) {
-            this.details = {};
-            swal.fire("Sent", `You will be contacted shortly`, "success");
-          }
-        });
+            if (rsp && rsp.status == 201) {
+              this.details = {};
+              swal.fire("Sent", `You will be contacted shortly`, "success");
+            }
+          });
+        }
       }
     }
   };
