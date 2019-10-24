@@ -19,12 +19,12 @@ import {
 	siteIROutlookInsights,
 	siteIREvents,
 	siteIRShareholders,
-	siteIRInformation,
 	siteAboutOurCompany,
 	siteAboutCorpGov,
 	siteAboutBizFocus,
 	siteAboutAwards,
 	siteAboutCareer,
+	siteAboutApply,
 	sitePrivacy,
 	siteTerms,
 	siteContactUs
@@ -308,6 +308,15 @@ export function createRouter() {
 				meta: {
 					title: 'Career - ' + APP_NAME,
 					breadcrumb: 'Career'
+				},
+			},
+			{
+				path: siteAboutApply,
+				component: view( 'ApplicationPage' ),
+				name: 'site.about.career.apply',
+				meta: {
+					title: 'Send Us Your Resume - ' + APP_NAME,
+					breadcrumb: 'Submit Resume'
 				},
 			},
 			{

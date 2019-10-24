@@ -1,3 +1,11 @@
 @import './vendor/bootstrap';
 @import './vendor/fonts';
 @import './vendor/style';
+
+
+.temp-page {
+	min-height: 40vh;
+	padding-top: 10vh;
+	background-color: #f5f5f5;
+	text-align: center;
+}

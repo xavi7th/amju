@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: "MediaNewsPage",
+    name: "UploadResumePage",
     mounted() {
       this.$emit("page-loaded");
     },
@@ -17,6 +17,3 @@
     }
   };
 </script>
-
-<style lang="scss" scoped>
-</style>

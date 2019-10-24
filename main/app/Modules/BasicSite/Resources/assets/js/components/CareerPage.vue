@@ -104,7 +104,8 @@
           <div class="box-cta-inner">
             <router-link
               class="button button-lg button-primary-dark"
-              :to="{name:'about.career.apply'}"
+              data-nav
+              :to="{name:'site.about.career.apply'}"
             >Get Started</router-link>
           </div>
         </div>
@@ -159,49 +160,49 @@
             <div class="isotope" data-isotope-layout="fitRows" data-isotope-group="gallery">
               <div class="row">
                 <div class="col-sm-6 col-md-4 isotope-item" data-filter="*">
-                  <router-link class="box-minimal" :to="{name:'about.career.apply'}">
+                  <router-link class="box-minimal" data-nav :to="{name:'site.about.career.apply'}">
                     <div class="hot">Immediate resumption</div>
                     <div class="box-minimal-title">Strategist</div>
                   </router-link>
                 </div>
                 <div class="col-sm-6 col-md-4 isotope-item" data-filter="Category 3">
-                  <router-link class="box-minimal" :to="{name:'about.career.apply'}">
+                  <router-link class="box-minimal" data-nav :to="{name:'site.about.career.apply'}">
                     <div class="hot">Immediate resumption</div>
                     <div class="box-minimal-title">Marketer</div>
                   </router-link>
                 </div>
                 <div class="col-sm-6 col-md-4 isotope-item" data-filter="Category 3">
-                  <router-link class="box-minimal" :to="{name:'about.career.apply'}">
+                  <router-link class="box-minimal" data-nav :to="{name:'site.about.career.apply'}">
                     <div class="box-minimal-title">Reporting Analyst</div>
                   </router-link>
                 </div>
                 <div class="col-sm-6 col-md-4 isotope-item" data-filter="Category 3">
-                  <router-link class="box-minimal" :to="{name:'about.career.apply'}">
+                  <router-link class="box-minimal" data-nav :to="{name:'site.about.career.apply'}">
                     <div class="box-minimal-title">Finance Analyst</div>
                   </router-link>
                 </div>
                 <div class="col-sm-6 col-md-4 isotope-item" data-filter="Category 2">
-                  <router-link class="box-minimal" :to="{name:'about.career.apply'}">
+                  <router-link class="box-minimal" data-nav :to="{name:'site.about.career.apply'}">
                     <div class="box-minimal-title">Office Manager</div>
                   </router-link>
                 </div>
                 <div class="col-sm-6 col-md-4 isotope-item" data-filter="Category 2">
-                  <router-link class="box-minimal" :to="{name:'about.career.apply'}">
+                  <router-link class="box-minimal" data-nav :to="{name:'site.about.career.apply'}">
                     <div class="box-minimal-title">PR Manager</div>
                   </router-link>
                 </div>
                 <div class="col-sm-6 col-md-4 isotope-item" data-filter="Category 1">
-                  <router-link class="box-minimal" :to="{name:'about.career.apply'}">
+                  <router-link class="box-minimal" data-nav :to="{name:'site.about.career.apply'}">
                     <div class="box-minimal-title">Wealth Strategy Associate</div>
                   </router-link>
                 </div>
                 <div class="col-sm-6 col-md-4 isotope-item" data-filter="Category 1">
-                  <router-link class="box-minimal" :to="{name:'about.career.apply'}">
+                  <router-link class="box-minimal" data-nav :to="{name:'site.about.career.apply'}">
                     <div class="box-minimal-title">Accountant</div>
                   </router-link>
                 </div>
                 <div class="col-sm-6 col-md-4 isotope-item" data-filter="Category 1">
-                  <router-link class="box-minimal" :to="{name:'about.career.apply'}">
+                  <router-link class="box-minimal" data-nav :to="{name:'site.about.career.apply'}">
                     <div class="box-minimal-title">Customer Care Manager</div>
                   </router-link>
                 </div>

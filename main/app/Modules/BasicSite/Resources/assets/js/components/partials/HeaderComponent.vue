@@ -146,7 +146,10 @@
 				<!-- Breadcrumbs -->
 			<section class="section section-bredcrumbs" v-if="!isHome">
 				<div class="container context-dark breadcrumb-wrapper">
-					<h1>{{ breadcrumb }}</h1>
+
+					<transition name="slide-left" mode="out-in">
+  					<h1 :key="breadcrumb">{{ breadcrumb }}</h1>
+					</transition>
 					<ul class="breadcrumbs-custom">
 						<li><router-link data-nav :to="{name:'site.root'}">Home</router-link></li>
 						<li class="active">{{ breadcrumb }}</li>

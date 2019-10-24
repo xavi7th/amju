@@ -1,5 +1,9 @@
 <template>
-  <div></div>
+  <div class="temp-page">
+    <h2>
+      <span>Blank Page</span>
+    </h2>
+  </div>
 </template>
 
 <script>
