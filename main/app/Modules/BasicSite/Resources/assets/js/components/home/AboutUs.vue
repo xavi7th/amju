@@ -10,7 +10,20 @@
       </div>
       <div class="row row-20 justify-content-center justify-content-lg-between pb-5">
         <div class="col-md-10 col-lg-6">
-          <img class="img-bordered" src="img/index-1-2-570x352.jpg" alt width="570" height="352" />
+          <!-- <img class="img-bordered" src="img/index-1-2-570x352.jpg" alt width="570" height="352" /> -->
+          <video
+            width="570"
+            height="352"
+            controls
+            poster="/img/amju-intro-video-poster.png"
+            controlslist="nodownload"
+            preload="none"
+            playsinline
+          >
+            <source src="/img/amju-intro-video.mp4" type="video/mp4" />
+            <source src="/img/amju-intro-video.webm" type="video/webm" />
+            <a href="/img/amju-intro-video.mp4">download video</a>
+          </video>
         </div>
         <div class="col-md-10 col-lg-6 col-xl-5">
           <div class="text-block-2">
