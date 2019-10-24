@@ -17,8 +17,8 @@
 									<!-- RD Navbar Brand-->
 									<div class="rd-navbar-brand">
 										<router-link class="brand" :to="{name:'site.root'}" data-nav>
-											<img class="brand-logo-dark" src="img/logo-256.png" alt="" width="151" height="56" />
-											<img class="brand-logo-light" src="img/logo-round-small.png" alt="" width="151" height="56" />
+											<img class="brand-logo-dark" src="/img/logo-256.png" alt="" width="151" height="56" />
+											<img class="brand-logo-light" src="/img/logo-round-small.png" alt="" width="151" height="56" />
 										</router-link>
 									</div>
 								</div>

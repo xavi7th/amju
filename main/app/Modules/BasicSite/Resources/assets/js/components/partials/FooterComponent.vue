@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row row-40 wow fadeIn">
 				<div class="col-md-6 col-lg-3 text-center">
-					<img src="img/logo-round.png" alt="" width="100" height="58" />
+					<img src="/img/logo-round.png" alt="" width="100" height="58" />
 					<div class="group-md group-middle social-items">
 						<a data-nav class="icon icon-md novi-icon mdi mdi-facebook"  target="_blank" :href="CONSTANTS.facebook"></a>
 						<a data-nav class="icon icon-md novi-icon mdi mdi-twitter"  target="_blank" :href="CONSTANTS.twitter"></a>
