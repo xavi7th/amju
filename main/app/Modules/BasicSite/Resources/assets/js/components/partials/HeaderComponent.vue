@@ -27,7 +27,7 @@
 
 										<ul class="rd-navbar-nav">
 											<li class="rd-nav-item">
-												<a class="rd-nav-link" href="https://ibank.amjuuniquemfbng.com" target="_blank">Internet banking</a>
+												<a class="rd-nav-link" href="https://ibank.amjuuniquemfbng.com/rubikonibank/app.sn" target="_blank">Internet banking</a>
 											</li>
 											<router-link tag="li" :to="{name:'site.pb'}" class="rd-nav-item">
 												<a class="rd-nav-link" href="#" data-nav>Personal Banking</a>
