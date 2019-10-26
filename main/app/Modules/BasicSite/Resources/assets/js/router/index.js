@@ -291,7 +291,7 @@ export function createRouter() {
 				name: 'site.about.our-company',
 				meta: {
 					title: 'Our Company - ' + APP_NAME,
-					breadcrumb: 'Our Company'
+					breadcrumb: 'About Us'
 				},
 			},
 			{
