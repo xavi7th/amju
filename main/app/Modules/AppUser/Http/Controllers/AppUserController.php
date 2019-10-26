@@ -7,10 +7,10 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Modules\AppUser\Models\AppUser;
+use App\Modules\BasicSite\Models\AppUser;
 use App\Modules\AppUser\Transformers\AppuserTransformer;
 use App\Modules\AppUser\Http\Requests\EditUserProfileValidation;
-use App\Modules\AppUser\Models\WithdrawalRequest;
+
 
 class AppUserController extends Controller
 {

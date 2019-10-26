@@ -10,7 +10,10 @@
           </h3>
         </div>
         <div class="box-cta-inner">
-          <a class="button button-lg button-primary-dark" href="#">Get Started »</a>
+          <router-link
+            class="button button-lg button-primary-dark"
+            :to="{name:'site.account.create'}"
+          >Get Started »</router-link>
         </div>
       </div>
     </div>

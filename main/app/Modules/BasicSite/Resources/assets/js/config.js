@@ -52,6 +52,8 @@ export const siteAboutApply = rootUrl( 'about-us/career/submit-resume' )
 export const sitePrivacy = rootUrl( 'privacy-policy' )
 export const siteTerms = rootUrl( 'terms-and-conditions' )
 export const siteContactUs = rootUrl( 'contact-us' )
+export const siteCreateAccount = rootUrl( 'account/create' )
+export const siteCreateAccountSuccess = rootUrl( 'account/create/success' )
 
 
 /**
@@ -61,3 +63,4 @@ export const siteInternetBanking = 'https://ibank.amjuuniquemfbng.com/'
 export const siteTestimonials = apiRootUrl( 'testimonials' )
 export const siteFAQ = apiRootUrl( 'faq' )
 export const siteContact = apiRootUrl( 'contact' )
+export const siteCreateAccountApi = apiRootUrl( 'account/create' )

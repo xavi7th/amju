@@ -2,7 +2,9 @@
 
 use App\User;
 use Faker\Generator as Faker;
-use App\Modules\AppUser\Models\AppUser;
+use App\Modules\BasicSite\Models\AppUser;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,14 +19,15 @@ use App\Modules\AppUser\Models\AppUser;
 
 $factory->define(AppUser::class, function (Faker $faker) {
 	return [
-		'name' => $faker->name,
+		'full_name' => $faker->name,
 		'role_id' => User::getAppUserId(),
 		'email' => $faker->unique()->safeEmail,
-		'password' => 'pass',
-		'country' => $faker->country,
 		'phone' => $faker->phoneNumber,
-		'currency' => $faker->currencyCode,
-		'id_card' => '/storage/id_cards/' . $faker->file(public_path('img/team/'), public_path('storage/id_cards/'), false),
-		// 'unenc_password' => 'Pass@1',
+		'address' => $faker->address,
+		'dob' => $faker->date(),
+		'gender' => $faker->randomElement(['male', 'female']),
+		'bvn' => $faker->randomNumber(),
+		'acc_type' => $faker->randomElement(['amjuflex', 'current', 'corporate']),
+		'user_passport' => '/storage/user_passports/' . $faker->file(public_path('img/team/'), public_path('storage/user_passports/'), false),
 	];
 });

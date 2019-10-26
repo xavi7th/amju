@@ -370,8 +370,29 @@
 				name: 'PhoneNumber',
 				defaultMessage: 'Invalid phone number format',
 				validator: function () {
-					if ( this.value === '' ) return true;
+					if ( this.value === '' ) return false;
 					else return /^(\+\d)?[0-9\-\(\) ]{5,}$/i.test( this.value );
+				}
+			} );
+
+			regula.custom( {
+				name: 'Date',
+				defaultMessage: 'Accepted date formats are mm/dd/yyyy or mm-dd-yyyy or mm.dd.yyyy',
+				validator: function () {
+					if ( this.value === '' ) return false;
+					else return /^(?:(?:(?:0?[13578]|1[02])(\/|-|\.)31)\1|(?:(?:0?[1,3-9]|1[0-2])(\/|-|\.)(?:29|30)\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:0?2(\/|-|\.)29\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:(?:0?[1-9])|(?:1[0-2]))(\/|-|\.)(?:0?[1-9]|1\d|2[0-8])\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/i.test( this.value );
+				}
+			} );
+
+			regula.custom( {
+				name: 'Above18Years',
+				defaultMessage: 'To open an account you must be above 18 years',
+				validator: function () {
+					let ageInMilliSeconds = Date.now() - new Date( this.value );
+					let ageInYears = ageInMilliSeconds / ( 60000 * 60 * 24 * 365 );
+
+					if ( this.value === '' ) return false;
+					else return ageInYears > 18;
 				}
 			} );
 
@@ -404,7 +425,7 @@
 
 			var regularConstraintsMessages = [ {
 					type: regula.Constraint.Required,
-					newMessage: "The text field is required."
+					newMessage: "This field is required."
 				},
 				{
 					type: regula.Constraint.Email,
@@ -417,6 +438,14 @@
 				{
 					type: regula.Constraint.Selected,
 					newMessage: "Please choose an option."
+				},
+				{
+					type: regula.Constraint.NotEmpty,
+					newMessage: "This field is cannot be blank"
+				},
+				{
+					type: regula.Constraint.Alpha,
+					newMessage: "This field can only contain letters"
 				}
 			];
 

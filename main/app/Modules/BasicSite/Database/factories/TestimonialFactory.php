@@ -2,7 +2,8 @@
 
 use App\User;
 use Faker\Generator as Faker;
-use App\Modules\AppUser\Models\Testimonial;
+use App\Modules\BasicSite\Models\Testimonial;
+
 
 /*
 |--------------------------------------------------------------------------

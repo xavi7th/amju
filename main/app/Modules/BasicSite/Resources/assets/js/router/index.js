@@ -27,7 +27,9 @@ import {
 	siteAboutApply,
 	sitePrivacy,
 	siteTerms,
-	siteContactUs
+	siteContactUs,
+	siteCreateAccount,
+	siteCreateAccountSuccess
 } from '@assets/js/config'
 
 // import App from '@components/AppComponent'
@@ -75,6 +77,24 @@ export function createRouter() {
 				meta: {
 					title: 'Contacts - ' + APP_NAME,
 					breadcrumb: 'Contact Us'
+				},
+			},
+			{
+				path: siteCreateAccount,
+				component: view( 'CreateAccountPage' ),
+				name: 'site.account.create',
+				meta: {
+					title: 'Open New Account Instantly - ' + APP_NAME,
+					breadcrumb: 'Open New Account'
+				},
+			},
+			{
+				path: siteCreateAccountSuccess,
+				component: view( 'AccountCreationSuccessPage' ),
+				name: 'site.account.create.success',
+				meta: {
+					title: 'Account Created - ' + APP_NAME,
+					breadcrumb: 'New Account Created'
 				},
 			},
 			{

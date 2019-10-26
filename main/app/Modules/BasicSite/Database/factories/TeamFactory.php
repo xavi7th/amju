@@ -1,7 +1,9 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Modules\AppUser\Models\TeamMember;
+use App\Modules\BasicSite\Models\TeamMember;
+
+
 
 $factory->define(TeamMember::class, function (Faker $faker) {
 	return [

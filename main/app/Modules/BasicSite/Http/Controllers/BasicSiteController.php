@@ -2,16 +2,19 @@
 
 namespace App\Modules\BasicSite\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use App\Modules\Admin\Models\Admin;
 use Illuminate\Support\Facades\Route;
+use App\Modules\BasicSite\Models\AppUser;
 use App\Modules\BasicSite\Models\Message;
 use App\Modules\AppUser\Models\TeamMember;
 use App\Modules\AppUser\Models\Testimonial;
 use App\Modules\BasicSite\Transformers\TeamMemberTransformer;
 use App\Modules\BasicSite\Http\Requests\ContactFormValidation;
 use App\Modules\BasicSite\Transformers\TestimonialTransformer;
+use App\Modules\BasicSite\Http\Requests\AccountCreationFormValidation;
 
 class BasicSiteController extends Controller
 {
@@ -52,6 +55,34 @@ class BasicSiteController extends Controller
 
 			Route::post('/contact', function (ContactFormValidation $request) {
 				Message::create($request->all());
+				return response()->json(['status' => true], 201);
+			});
+
+			Route::post('/account/create', function (AccountCreationFormValidation $request) {
+				$url = request()->file('user_passport')->store('public/user_passports');
+				// Storage::setVisibility($url, 'public');
+
+				/** Replace the public part of the url with storage to make it accessible on the frontend */
+				$url = str_replace_first('public', '/storage', $url);
+
+				//Create an entry into the documents database
+
+				return AppUser::create([
+					'full_name' => $request->full_name,
+					'email' => $request->email,
+					'phone' => $request->phone,
+					'bvn' => $request->bvn,
+					'gender' => $request->gender,
+					'acc_type' => $request->acc_type,
+					'acc_num' => rand(001000000, 9999999999),
+					'address' => $request->address,
+					'dob' => Carbon::parse($request->dob),
+					'user_passport' => $url
+				]);
+
+				/**
+				 * Calculate account Number
+				 */
 				return response()->json(['status' => true], 201);
 			});
 		});

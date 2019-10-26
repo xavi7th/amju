@@ -35,7 +35,8 @@ class User extends Authenticatable
 	];
 
 	protected $casts = [
-		'role_id' => 'integer'
+		'role_id' => 'integer',
+		'bvn' => 'integer'
 	];
 
 	/**
