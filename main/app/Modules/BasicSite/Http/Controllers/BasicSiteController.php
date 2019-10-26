@@ -2,11 +2,14 @@
 
 namespace App\Modules\BasicSite\Http\Controllers;
 
+use Exception;
 use Carbon\Carbon;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use App\Modules\Admin\Models\Admin;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Modules\BasicSite\Models\AppUser;
 use App\Modules\BasicSite\Models\Message;
 use App\Modules\AppUser\Models\TeamMember;
@@ -25,6 +28,32 @@ class BasicSiteController extends Controller
 	public static function routes()
 	{
 		Route::group(['middleware' => 'web', 'namespace' => 'App\\Modules\BasicSite\Http\Controllers'], function () {
+
+			//Setup route example
+			Route::get('/amju/setup/{key?}',  function ($key = null) {
+
+				if ($key == config('app.migration_key')) {
+					// dd(config('app.migration_key'));
+
+					try {
+						echo '<br>init storage:link...';
+						$rsp = Artisan::call('storage:link');
+						echo 'done storage:link. Result: ' . $rsp;
+
+						echo '<br>init migrate:fresh...';
+						$rsp =  Artisan::call('migrate:fresh');
+						echo 'done migrate:fresh. Result: ' . $rsp;
+
+						echo '<br>init module:seed...';
+						$rsp =  Artisan::call('module:seed');
+						echo 'done module:seed. Result: ' . $rsp;
+					} catch (Exception $e) {
+						Response::make($e->getMessage(), 500);
+					}
+				} else {
+					App::abort(404);
+				}
+			});
 
 			Route::get('/{subcat?}', function () {
 				return view('basicsite::index');
