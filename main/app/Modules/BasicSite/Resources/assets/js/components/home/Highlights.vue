@@ -18,8 +18,8 @@
             </div>
             <div class="counter-boxed-body">
               <div class="exeption">
-                Our bank is an acknowledged leader in credit card distribution. We issue more
-                than 5000 cards every year.
+                Amju Unique Micro Finance Bank issues more than 5000 cards every year.
+                We offer you a cashless access to your cash at all times no matter where you go.
               </div>
             </div>
           </div>
@@ -41,8 +41,8 @@
             </div>
             <div class="counter-boxed-body">
               <div class="exeption">
-                We offer amazing amount of cashback for payments made with one of our credit
-                cards - Blue, Green, or Orange.
+                We offer amazing amount of cashback for payments made with one of our cards. These
+                cashbacks come in the form of reduced deductions per transcations compared to other financial institutions.
               </div>
             </div>
           </div>
@@ -64,8 +64,8 @@
             </div>
             <div class="counter-boxed-body">
               <div class="exeption">
-                Banque offers various deposits in all international currencies with interest
-                rate up to 25% for all regular clients.
+                Banque offers various account types and deposit options with interest
+                rates up to 25% for all regular clients. Who else would you rather bank with?
               </div>
             </div>
           </div>
