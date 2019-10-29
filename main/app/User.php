@@ -7,6 +7,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Modules\Admin\Models\ApiRoute;
 
 class User extends Authenticatable
 {
@@ -91,6 +92,11 @@ class User extends Authenticatable
 		} else if (Auth::user()->role_id === self::$admin_id) {
 			return 'admin.dashboard';
 		}
+	}
+
+	public function permitted_api_routes()
+	{
+		return $this->belongsToMany(ApiRoute::class, 'api_route_permissions');
 	}
 
 	public function setPasswordAttribute($value)

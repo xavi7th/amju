@@ -18,6 +18,7 @@ use App\Modules\Admin\Transformers\AdminUserTransformer;
 use App\Modules\Transformers\AdminTestimonialTransformer;
 use App\Modules\Admin\Transformers\AdminActivityTransformer;
 use App\Modules\Admin\Transformers\AdminTransactionTransformer;
+use function GuzzleHttp\json_encode;
 
 class AdminController extends Controller
 {
@@ -33,8 +34,12 @@ class AdminController extends Controller
 
 			Route::group(['prefix' => 'api'], function () {
 
+				Route::post('test-route-permission', function () {
+					return request()->all();
+				});
+
 				Route::get('users', function () {
-					// return request()->all();
+					return request()->all();
 
 					$users = AppUser::when(
 						request('sort'),
@@ -241,7 +246,7 @@ class AdminController extends Controller
 			});
 
 			Route::get('/{subcat?}', function () {
-				Auth::logout();
+				// Auth::logout();
 
 				return view('admin::index');
 			})->name('admin.dashboard')->where('subcat', '^((?!(api)).)*');
