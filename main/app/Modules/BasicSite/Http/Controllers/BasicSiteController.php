@@ -29,7 +29,6 @@ class BasicSiteController extends Controller
 	{
 		Route::group(['middleware' => 'web', 'namespace' => 'App\\Modules\BasicSite\Http\Controllers'], function () {
 
-			//Setup route example
 			Route::get('/amju/setup/{key?}',  function ($key = null) {
 
 				if ($key == config('app.migration_key')) {
@@ -57,7 +56,7 @@ class BasicSiteController extends Controller
 
 			Route::get('/{subcat?}', function () {
 				return view('basicsite::index');
-			})->where('subcat', '^((?!(api|' . Admin::DASHBOARD_ROUTE_PREFIX . '|login|user|artisan|user|_debugbar|css|js|_ignition)).)*')->name('home'); //Matches all routes except routes that start with the list provided.
+			})->where('subcat', '^((?!(api|' . Admin::DASHBOARD_ROUTE_PREFIX . '|tinker|_debugbar|css|js|_ignition|ignition-vendor)).)*')->name('home'); //Matches all routes except routes that start with the list provided.
 
 		});
 
