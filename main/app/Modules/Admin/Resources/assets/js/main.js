@@ -2,7 +2,10 @@ import '@assets/js/bootstrap'
 import Vue from 'vue'
 // import VeeValidate from 'vee-validate'
 import App from './AdminAppComponent'
-import router from './router'
+const {
+	routeGenerator
+} = require( './router' )
+
 // import Vue2Filters from 'vue2-filters'
 
 
@@ -11,49 +14,55 @@ import router from './router'
 // 	fieldsBagName: 'formFields'
 // } )
 // Vue.use( Vue2Filters )
-let mediaHandler = () => {
-	if ( window.matchMedia( '(max-width: 767px)' ).matches ) {
+
+
+
+routeGenerator().then( r => {
+
+	let mediaHandler = () => {
+		if ( window.matchMedia( '(max-width: 767px)' ).matches ) {
+			/**
+			 * Mobile
+			 */
+		} else {
+			/**
+			 * Desktop
+			 */
+		}
 		/**
-		 * Mobile
+		 * To set up a watcher
 		 */
-	} else {
-		/**
-		 * Desktop
-		 */
+		// window.matchMedia( '(min-width: 992px)' ).addEventListener( "change", () => {
+		// 	console.log( 'changed' )
+		// } )
 	}
-	/**
-	 * To set up a watcher
-	 */
-	// window.matchMedia( '(min-width: 992px)' ).addEventListener( "change", () => {
-	// 	console.log( 'changed' )
-	// } )
-}
 
-router.beforeEach( ( to, from, next ) => {
-	/**
-	 * Emit is loading event? Will App component catch it?
-	 */
-	// store.commit( 'setLoading', true )
-	next()
-} )
+	r.beforeEach( ( to, from, next ) => {
+		/**
+		 * Emit is loading event? Will App component catch it?
+		 */
+		// store.commit( 'setLoading', true )
+		next()
+	} )
 
-router.afterEach( ( to, from ) => {
-	/**
-	 * Emit finished loading event?
-	 */
-	// store.commit( 'setLoading', false )
-	/**
-	 * Handle resize based on the browser size
-	 */
-	mediaHandler()
-} )
+	r.afterEach( ( to, from ) => {
+		/**
+		 * Emit finished loading event?
+		 */
+		// store.commit( 'setLoading', false )
+		/**
+		 * Handle resize based on the browser size
+		 */
+		mediaHandler()
+	} )
 
-/* eslint-disable no-new */
-new Vue( {
-	el: '#app',
-	router,
-	template: '<App/>',
-	components: {
-		App
-	},
+	/* eslint-disable no-new */
+	new Vue( {
+		el: '#app',
+		router: r,
+		template: '<App/>',
+		components: {
+			App
+		},
+	} )
 } )

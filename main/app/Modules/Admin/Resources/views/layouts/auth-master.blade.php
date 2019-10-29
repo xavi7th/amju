@@ -13,14 +13,14 @@
 	</head>
 
 	<body>
-		<div id="app">
+		<div id="auth-app">
 			@yield('contents')
 		</div>
 
 		<script src="{{ mix('js/app-vendor.js') }}"></script>
 		<script src="{{ mix('js/manifest.js') }}"></script>
 		<script src="{{ mix('js/vendor.js') }}"></script>
-		<script src="{{ mix('js/admin-app.js') }}"></script>
+		<script src="{{ mix('js/admin-auth-app.js') }}"></script>
 
 		@yield('customJS')
 	</body>

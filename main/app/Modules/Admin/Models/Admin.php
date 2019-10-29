@@ -9,7 +9,7 @@ class Admin extends User
 {
 	protected $fillable = [];
 	protected $table = "users";
-	const DASHBOARD_ROUTE_PREFIX = 'moses-guy';
+	const DASHBOARD_ROUTE_PREFIX = 'tope-amju';
 
 	static function canAccess()
 	{

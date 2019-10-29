@@ -1,4 +1,4 @@
-@extends('admin::layouts.master')
+@extends('admin::layouts.auth-master')
 @section('contents')
 <transition name="slide-out-in" mode="out-in" :duration="{ enter: 1300, leave: 200 }">
 	<router-view></router-view>

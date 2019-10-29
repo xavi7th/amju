@@ -36,7 +36,9 @@ export default new Router( {
 			},
 		},
 		{
-			path: '/moses-guy/login',
+
+const authRoutes = [ {
+		path: '/tope-amju/login',
 			component: view( 'auth/Login' ),
 			name: 'admin.login',
 			meta: {
@@ -46,8 +48,22 @@ export default new Router( {
 		{
 			path: '*',
 			redirect: {
-				name: 'admin.root'
+			path: '/'
+		}
+	}
+]
+
+export const authRouter = new Router( {
+	mode: 'history',
+	scrollBehavior( to, from, savedPosition ) {
+		if ( savedPosition ) {
+			return savedPosition
+		} else {
+			return {
+				x: 0,
+				y: 0,
 			}
 		}
-	],
+	},
+	routes: authRoutes,
 } )

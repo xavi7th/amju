@@ -25,6 +25,7 @@ mix.webpackConfig( {
 } )
 
 mix.js( __dirname + '/Resources/assets/js/main.js', 'js/admin-app.js' )
+mix.js( __dirname + '/Resources/assets/js/auth.js', 'js/admin-auth-app.js' )
 
 if ( mix.inProduction() ) {
 	mix.version()

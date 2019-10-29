@@ -15,9 +15,12 @@ class Authenticate extends Middleware
 	 */
 	protected function redirectTo($request)
 	{
-		if (str_contains(session('url.intended'), Admin::DASHBOARD_ROUTE_PREFIX)) {
+		if (
+			str_contains(session('_previous.url'), Admin::DASHBOARD_ROUTE_PREFIX) ||
+			str_contains(session('url.intended'), Admin::DASHBOARD_ROUTE_PREFIX)
+		) {
 			return route('admin.login');
 		}
-		return route('login');
+		return route('home');
 	}
 }
