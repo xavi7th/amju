@@ -1,9 +1,5 @@
 @extends('admin::layouts.master')
 @section('contents')
-<transition name="slide-out-in" mode="out-in" :duration="{ enter: 1300, leave: 200 }">
-	<router-view></router-view>
-</transition>
-
 @stop
 @section('customCSS')
 <style>

@@ -75,7 +75,7 @@ class User extends Authenticatable
 
 	public function permitted_api_routes()
 	{
-		return $this->belongsToMany(ApiRoute::class, 'api_route_permissions');
+		return $this->belongsToMany(ApiRoute::class, 'api_route_permissions')->withTimestamps();
 	}
 
 	public function setPasswordAttribute($value)

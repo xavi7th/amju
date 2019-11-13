@@ -16,21 +16,13 @@ Vue.use( Router )
 const APP_NAME = 'Amju Unique Admin'
 
 const allRoutes = [ {
-		path: '/tope-amju',
-		component: view( 'dashboard/AdminDashboard' ),
-		name: 'admin.root',
-		meta: {
-			title: APP_NAME,
-		},
+	path: '/tope-amju',
+	component: view( 'dashboard/AdminDashboard' ),
+	name: 'admin.root',
+	meta: {
+		title: APP_NAME,
 	},
-	{
-		path: '*',
-		name: 'admin.catch-all',
-		redirect: {
-			name: 'admin.root'
-		}
-	}
-]
+} ]
 
 const authRoutes = [ {
 		path: '/tope-amju/login',
@@ -51,23 +43,25 @@ const authRoutes = [ {
 // const processRoutes = ( time, route ) => new Promise( resolve => setTimeout( resolve( route.path == "/tope-amju" ? route : false ), time ) );
 
 const processRoutes = async ( route ) => {
-	const sar = axios.post( '/tope-amju/api/test-route-permission ', {
+	const sar = axios.post( '/tope-amju/api/test-route-permission', {
 		route
 	} )
 
 	let pp = await sar;
-	return pp.data;
+	return pp.data.rsp;
 }
 
 const getRoutes = async () => {
-	let temp = [];
+	let temp = [ {
+		path: '*',
+		name: 'admin.catch-all',
+		redirect: {
+			name: 'admin.root'
+		}
+	} ];
 	for ( const route of allRoutes ) {
 		const result = await processRoutes( route.name );
-		console.log( result );
-
-		if ( result !== false ) {
-			temp.push( result )
-		}
+		if ( result === true ) temp.push( route )
 	}
 	return temp;
 }

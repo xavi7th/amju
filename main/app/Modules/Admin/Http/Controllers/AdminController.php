@@ -35,12 +35,10 @@ class AdminController extends Controller
 			Route::group(['prefix' => 'api'], function () {
 
 				Route::post('test-route-permission', function () {
-					$api_route = ApiRoute::where('name', request('route'))->first();
+					$api_route = ApiRoute::where('name', request('route'))->firstOrFail();
+					// Auth::user()->permitted_api_routes()->attach($api_route->id);
 					if ($api_route) {
-						dd($api_route->permitted_users()->where('user_id', auth()->id())->exists());
-						return auth()->user()->permitted_api_routes;
-					} else {
-						return response()->json(['msg' => 'route not found'], 404);
+						return ['rsp'  => $api_route->permitted_users()->where('user_id', auth()->id())->exists()];
 					}
 				});
 
