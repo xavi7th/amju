@@ -23,9 +23,9 @@ const allRoutes = [ {
 			title: APP_NAME,
 		},
 	},
-
 	{
 		path: '*',
+		name: 'admin.catch-all',
 		redirect: {
 			name: 'admin.root'
 		}

@@ -13,7 +13,6 @@ class User extends Authenticatable
 {
 	use Notifiable, SoftDeletes;
 
-	protected static $app_user_id = 1;
 	protected static $admin_id = 2;
 	protected static $super_admin_id = 3;
 
@@ -41,16 +40,6 @@ class User extends Authenticatable
 	];
 
 	/**
-	 * Returns the role id of the normal app user
-	 *
-	 * @return void
-	 */
-	static function getAppUserId()
-	{
-		return self::$app_user_id;
-	}
-
-	/**
 	 * Returns the role id of the admin user
 	 *
 	 * @return void
@@ -71,26 +60,16 @@ class User extends Authenticatable
 	}
 
 	/**
-	 * Check if the currently authenticated user is a normal user
-	 *
-	 * @return void
-	 */
-	protected static function isAppUser()
-	{
-		return Auth::user()->role_id === self::$app_user_id;
-	}
-
-	/**
 	 * Returns the dashboard route of the authenticated user
 	 *
 	 * @return void
 	 */
 	static function dashboardRoute()
 	{
-		if (Auth::user()->role_id === self::$app_user_id) {
-			return 'appuser.dashboard';
-		} else if (Auth::user()->role_id === self::$admin_id) {
+		if (Auth::user()->role_id === self::$admin_id) {
 			return 'admin.dashboard';
+		} else {
+			return 'home';
 		}
 	}
 

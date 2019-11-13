@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Modules\Admin\Models\ApiRoute;
 use App\Modules\AppUser\Models\AppUser;
 use App\Modules\BasicSite\Models\Message;
 use App\Modules\AppUser\Models\Testimonial;
@@ -18,7 +19,6 @@ use App\Modules\Admin\Transformers\AdminUserTransformer;
 use App\Modules\Transformers\AdminTestimonialTransformer;
 use App\Modules\Admin\Transformers\AdminActivityTransformer;
 use App\Modules\Admin\Transformers\AdminTransactionTransformer;
-use function GuzzleHttp\json_encode;
 
 class AdminController extends Controller
 {
@@ -35,7 +35,13 @@ class AdminController extends Controller
 			Route::group(['prefix' => 'api'], function () {
 
 				Route::post('test-route-permission', function () {
-					return request()->all();
+					$api_route = ApiRoute::where('name', request('route'))->first();
+					if ($api_route) {
+						dd($api_route->permitted_users()->where('user_id', auth()->id())->exists());
+						return auth()->user()->permitted_api_routes;
+					} else {
+						return response()->json(['msg' => 'route not found'], 404);
+					}
 				});
 
 				Route::get('users', function () {

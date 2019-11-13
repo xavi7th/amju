@@ -20,7 +20,6 @@ use App\Modules\BasicSite\Models\AppUser;
 $factory->define(AppUser::class, function (Faker $faker) {
 	return [
 		'full_name' => $faker->name,
-		'role_id' => User::getAppUserId(),
 		'email' => $faker->unique()->safeEmail,
 		'phone' => $faker->phoneNumber,
 		'address' => $faker->address,

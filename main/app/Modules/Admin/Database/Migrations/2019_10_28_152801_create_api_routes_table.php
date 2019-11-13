@@ -16,7 +16,6 @@ class CreateApiRoutesTable extends Migration
 		Schema::create('api_routes', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('path');
-			$table->string('component');
 			$table->string('name');
 			$table->string('meta');
 
