@@ -58,13 +58,6 @@ class LoginController extends Controller
 	 */
 	public function showLoginForm()
 	{
-		// try {
-		// dd(Admin::where('id', 1)->get());
-		// } catch (\Throwable $e) {
-		// 	dd($e);
-		// }
-		Auth::guard('admin')->loginUsingId(1);
-		dd(Auth::admin());
 		return view('admin::auth');
 	}
 
@@ -92,7 +85,13 @@ class LoginController extends Controller
 	protected function authenticated(Request $request, $user)
 	{
 		if (User::isAdmin()) {
-			return response()->json(['status' => true], 202);
+			if (Auth::admin()->is_verified) {
+				return response()->json(['status' => true], 202);
+			} else {
+				Auth::logout();
+				session()->invalidate();
+				return response()->json(['message' => 'Unverified user'], 416);
+			}
 		} else {
 			Auth::logout();
 			session()->invalidate();
@@ -109,6 +108,16 @@ class LoginController extends Controller
 	public function username()
 	{
 		return 'email';
+	}
+
+	/**
+	 * Get the guard to be used during authentication.
+	 *
+	 * @return \Illuminate\Contracts\Auth\StatefulGuard
+	 */
+	protected function guard()
+	{
+		return Auth::guard('admin');
 	}
 
 	/**

@@ -95,7 +95,7 @@
                 if (undefined !== rsp && rsp.status == 202) {
                   swal.close();
                   sessionStorage.clear();
-                  this.$router.push({ name: "dashboard.root" });
+                  // location.reload();
                 } else if (undefined !== rsp && rsp.status == 205) {
                   swal
                     .fire({
@@ -106,20 +106,15 @@
                     .then(() => {
                       location.reload();
                     });
-                  // this.$router.push({ name: "dashboard.login" });
                 }
               })
               .catch(err => {
                 if (err.response.status == 416) {
-                  swal
-                    .fire({
-                      title: "Unverified",
-                      text: `Your newly registered account has not been approved by our monitoring team. Kindly check back later.`,
-                      type: "info"
-                    })
-                    .then(() => {
-                      location.replace("/");
-                    });
+                  swal.fire({
+                    title: "Unverified",
+                    text: `Your newly registered account has not been approved by our validation team.`,
+                    type: "info"
+                  });
                 }
               });
           }

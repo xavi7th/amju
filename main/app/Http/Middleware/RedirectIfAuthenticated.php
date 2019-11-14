@@ -20,7 +20,7 @@ class RedirectIfAuthenticated
 	{
 		if (Auth::guard($guard)->check()) {
 			if ($request->ajax()) {
-				if (Auth::appuser() && Auth::appuser()->is_verified()) {
+				if (Auth::admin() && Auth::admin()->is_verified) {
 					return response()->json(['status' => true], 202);
 				} else {
 					return response()->json(['message' => 'Unverified user'], 416);
