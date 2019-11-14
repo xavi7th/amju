@@ -58,7 +58,7 @@ class LoginController extends Controller
 	 */
 	public function showLoginForm()
 	{
-		Auth::loginUsingId(1);
+		// Auth::loginUsingId(1);
 		return view('admin::auth');
 	}
 

@@ -2,15 +2,10 @@
   <div>
     <pre-loader v-if="isLoading"></pre-loader>
     <transition name="slide-out-in" mode="out-in" :duration="{ enter: 1300, leave: 200 }" v-else>
-      <div class="auth-layout" v-if="isAuth">
-        <site-header v-on:logout-user="logoutUser()" v-if="!is404" :isHome="isHome"></site-header>
-
+      <div class="wrapper" v-if="isAuth">
         <transition name="nav-transition" mode="out-in">
-          <pre-loader v-if="isRouteChanging"></pre-loader>
-          <router-view @page-loaded="pageLoaded" v-else />
+          <router-view @page-loaded="pageLoaded" />
         </transition>
-
-        <site-footer v-if="!is404"></site-footer>
       </div>
       <div class="wrapper" v-else>
         <admin-nav></admin-nav>
@@ -48,7 +43,7 @@
     },
     computed: {
       isAuth() {
-        return this.$route.path.match("auth");
+        return this.$route.path.match("login");
       },
       is404() {
         return this.$route.name
@@ -70,16 +65,18 @@
         logout();
       },
       pageLoaded() {
-        this.$loadScript("/js/dashboard-main.js").then(() => {
-          if (this.freshLoad) {
-            this.freshLoad = false;
-            $(".rd-dropdown-item").click(function() {
-              $(".rd-nav-item").addClass(
-                "rd-navbar--has-dropdown rd-navbar-submenu"
-              );
-            });
-          }
-        });
+        if (!this.isAuth) {
+          this.$loadScript("/js/dashboard-main.js").then(() => {
+            if (this.freshLoad) {
+              this.freshLoad = false;
+              $(".rd-dropdown-item").click(function() {
+                $(".rd-nav-item").addClass(
+                  "rd-navbar--has-dropdown rd-navbar-submenu"
+                );
+              });
+            }
+          });
+        }
       }
     }
   };

@@ -250,7 +250,7 @@ class AdminController extends Controller
 			});
 
 			Route::get('/{subcat?}', function () {
-				// Auth::logout();
+				Auth::logout();
 
 				return view('admin::index');
 			})->name('admin.dashboard')->where('subcat', '^((?!(api)).)*');
