@@ -16,18 +16,34 @@
           </div>
         </div>
         <div class="fs-18 fw-600 text-center mb-30 text-title">Log In</div>
-        <form action>
-          <div class="form-group mb-20">
+        <form @submit.prevent="loginAdmin">
+          <div class="form-group mb-20" :class="{'has-error': errors.has('email')}">
             <label for="form-mail">
               <strong>E-Mail</strong>
             </label>
-            <input type="text" class="form-control form-control-pill" id="form-mail" />
+            <input
+              type="text"
+              class="form-control form-control-pill"
+              id="form-mail"
+              v-model="details.email"
+              v-validate="'required|email'"
+              name="email"
+            />
+            <span>{{ errors.first('email') }}</span>
           </div>
-          <div class="form-group mb-20">
+          <div class="form-group mb-20" :class="{'has-error': errors.has('password')}">
             <label for="form-pass">
               <strong>Password</strong>
             </label>
-            <input type="password" class="form-control form-control-pill" id="form-pass" />
+            <input
+              type="password"
+              class="form-control form-control-pill"
+              id="form-pass"
+              v-model="details.password"
+              v-validate="'required'"
+              name="password"
+            />
+            <span>{{ errors.first('password') }}</span>
           </div>
 
           <div class="form-group flex j-c-center mt-30">
@@ -55,6 +71,60 @@
     name: "AdminAuth",
     mounted() {
       this.$emit("page-loaded");
+    },
+    data: () => ({
+      details: {}
+    }),
+    methods: {
+      loginAdmin() {
+        this.$validator.validateAll().then(result => {
+          if (!result) {
+            Toast.fire({
+              title: "Invalid data! Try again",
+              position: "center",
+              type: "error"
+            });
+          } else {
+            BlockToast.fire({
+              text: "Accessing your dashboard..."
+            });
+
+            axios
+              .post("/tope-amju/login", { ...this.details })
+              .then(rsp => {
+                if (undefined !== rsp && rsp.status == 202) {
+                  swal.close();
+                  sessionStorage.clear();
+                  this.$router.push({ name: "dashboard.root" });
+                } else if (undefined !== rsp && rsp.status == 205) {
+                  swal
+                    .fire({
+                      title: "Suspended Account",
+                      text: rsp.data.msg,
+                      type: "warning"
+                    })
+                    .then(() => {
+                      location.reload();
+                    });
+                  // this.$router.push({ name: "dashboard.login" });
+                }
+              })
+              .catch(err => {
+                if (err.response.status == 416) {
+                  swal
+                    .fire({
+                      title: "Unverified",
+                      text: `Your newly registered account has not been approved by our monitoring team. Kindly check back later.`,
+                      type: "info"
+                    })
+                    .then(() => {
+                      location.replace("/");
+                    });
+                }
+              });
+          }
+        });
+      }
     }
   };
 </script>
@@ -89,5 +159,30 @@
   .btn-primary {
     background-color: #1b97eb;
     border-color: #1b97eb;
+  }
+
+  .form-group {
+    position: relative;
+
+    span {
+      position: absolute;
+      bottom: 7px;
+      right: 20px;
+      color: #d33;
+      opacity: 0;
+      transition: ease-in 300ms opacity;
+      pointer-events: none;
+    }
+
+    &.has-error {
+      .form-control {
+        border-color: #f90a48;
+        box-shadow: 0 0 10px rgba(249, 10, 72, 0.2);
+      }
+
+      > span {
+        opacity: 1;
+      }
+    }
   }
 </style>

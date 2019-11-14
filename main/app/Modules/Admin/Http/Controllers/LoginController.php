@@ -41,7 +41,7 @@ class LoginController extends Controller
 	 */
 	public function __construct()
 	{
-		$this->middleware('guest')->except('logout');
+		$this->middleware('guest:admin')->except('logout');
 	}
 
 	static function routes()
@@ -58,7 +58,13 @@ class LoginController extends Controller
 	 */
 	public function showLoginForm()
 	{
-		// Auth::loginUsingId(1);
+		// try {
+		// dd(Admin::where('id', 1)->get());
+		// } catch (\Throwable $e) {
+		// 	dd($e);
+		// }
+		Auth::guard('admin')->loginUsingId(1);
+		dd(Auth::admin());
 		return view('admin::auth');
 	}
 

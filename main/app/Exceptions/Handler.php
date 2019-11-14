@@ -89,14 +89,12 @@ class Handler extends ExceptionHandler
 					}
 					return response()->json(['Error' => 'Query Exception'], 500);
 				}
-				return redirect()
-					->back()
-					->withInput($request->except('password'))
-					->withErrors([
-						'message' => 'The requested resource returned an unexpected reply. Try again later.',
-						'title' => 'Connection Error',
-						'type' => 'warning',
-					]);
+				if (getenv('APP_ENV') === 'local') {
+					# code...
+					dd($exception->getMessage());
+				} else {
+					abort(500, 'An error occured while trying to process this request');
+				}
 			}
 		} else if ($exception instanceof MethodNotAllowedHttpException) {
 			Log::channel('database')->info('Method Not Allowed Exception', ['$e_obj' => $request->getRequestUri()]);

@@ -30,7 +30,7 @@ class AdminController extends Controller
 	{
 		LoginController::routes();
 
-		Route::group(['middleware' => ['auth', 'admins']], function () {
+		Route::group(['middleware' => ['auth:admin', 'admins']], function () {
 
 			Route::group(['prefix' => 'api'], function () {
 
@@ -250,7 +250,7 @@ class AdminController extends Controller
 			});
 
 			Route::get('/{subcat?}', function () {
-				Auth::logout();
+				// Auth::logout();
 
 				return view('admin::index');
 			})->name('admin.dashboard')->where('subcat', '^((?!(api)).)*');

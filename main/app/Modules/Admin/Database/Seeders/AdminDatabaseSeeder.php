@@ -19,6 +19,21 @@ class AdminDatabaseSeeder extends Seeder
 		Model::unguard();
 
 		$this->call(ApiRoutesTableSeeder::class);
+		$this->call(AdminsTableSeeder::class);
+	}
+}
+
+
+class AdminsTableSeeder extends Seeder
+{
+	/**
+	 * Run the database seeds.
+	 *
+	 * @return void
+	 */
+	public function run()
+	{
+		factory(Admin::class, 1)->create();
 	}
 }
 

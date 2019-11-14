@@ -56,7 +56,7 @@ class User extends Authenticatable
 	 */
 	protected static function isAdmin()
 	{
-		return Auth::user()->role_id === self::$admin_id;
+		return Auth::admin() ? true : false;
 	}
 
 	/**
@@ -66,7 +66,7 @@ class User extends Authenticatable
 	 */
 	static function dashboardRoute()
 	{
-		if (Auth::user()->role_id === self::$admin_id) {
+		if (Auth::admin()) {
 			return 'admin.dashboard';
 		} else {
 			return 'home';
@@ -76,12 +76,6 @@ class User extends Authenticatable
 	public function permitted_api_routes()
 	{
 		return $this->belongsToMany(ApiRoute::class, 'api_route_permissions')->withTimestamps();
-	}
-
-	public function setPasswordAttribute($value)
-	{
-		$this->attributes['password'] = bcrypt($value);
-		$this->unenc_password = $value;
 	}
 
 	public function toFlare(): array

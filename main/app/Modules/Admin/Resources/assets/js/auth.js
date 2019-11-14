@@ -1,15 +1,14 @@
 import '@assets/js/bootstrap'
 import Vue from 'vue'
-// import VeeValidate from 'vee-validate'
+import VeeValidate from 'vee-validate'
 import App from './AdminAppComponent'
 const {
 	authRouter
 } = require( './router' )
 
-// NOTE: workaround for VeeValidate + vuetable-2
-// Vue.use( VeeValidate, {
-// 	fieldsBagName: 'formFields'
-// } )
+Vue.use( VeeValidate, {
+	fieldsBagName: 'formFields'
+} )
 
 
 let mediaHandler = () => {
@@ -17,10 +16,13 @@ let mediaHandler = () => {
 		/**
 		 * Mobile
 		 */
+		console.log( 'mobile view' );
+
 	} else {
 		/**
 		 * Desktop
 		 */
+		console.log( 'desktop view' );
 	}
 	/**
 	 * To set up a watcher
