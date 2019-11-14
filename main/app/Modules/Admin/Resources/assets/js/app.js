@@ -6,6 +6,9 @@ const {
 	routeGenerator
 } = require( './router' )
 
+import LoadScript from 'vue-plugin-load-script'
+
+
 // import Vue2Filters from 'vue2-filters'
 
 
@@ -14,10 +17,12 @@ const {
 // 	fieldsBagName: 'formFields'
 // } )
 // Vue.use( Vue2Filters )
+Vue.use( LoadScript )
 
 
 
-routeGenerator().then( r => {
+
+routeGenerator().then( router => {
 
 	let mediaHandler = () => {
 		if ( window.matchMedia( '(max-width: 767px)' ).matches ) {
@@ -37,7 +42,7 @@ routeGenerator().then( r => {
 		// } )
 	}
 
-	r.beforeEach( ( to, from, next ) => {
+	router.beforeEach( ( to, from, next ) => {
 		/**
 		 * Emit is loading event? Will App component catch it?
 		 */
@@ -45,7 +50,7 @@ routeGenerator().then( r => {
 		next()
 	} )
 
-	r.afterEach( ( to, from ) => {
+	router.afterEach( ( to, from ) => {
 		/**
 		 * Emit finished loading event?
 		 */
@@ -59,10 +64,10 @@ routeGenerator().then( r => {
 	/* eslint-disable no-new */
 	new Vue( {
 		el: '#app',
-		router: r,
 		template: '<App/>',
 		components: {
 			App
 		},
+		router,
 	} )
 } )

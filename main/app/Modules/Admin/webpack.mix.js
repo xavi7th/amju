@@ -24,7 +24,25 @@ mix.webpackConfig( {
 	},
 } )
 
-mix.js( __dirname + '/Resources/assets/js/main.js', 'js/admin-app.js' )
+mix.scripts( [
+	__dirname + '/Resources/assets/js/vendor/jquery-3.2.1.min.js',
+	__dirname + '/Resources/assets/js/vendor/popper.min.js',
+	__dirname + '/Resources/assets/js/vendor/bootstrap.min.js',
+	__dirname + '/Resources/assets/js/vendor/simplebar.min.js',
+	// __dirname + '/Resources/assets/js/vendor/morris.min.js',
+	// __dirname + '/Resources/assets/js/vendor/chartjs.min.js',
+	// __dirname + '/Resources/assets/js/vendor/raphael.min.js',
+	// __dirname + '/Resources/assets/js/vendor/owl.carousel.min.js'
+], 'public_html/js/dashboard-app-vendor.js' );
+
+mix.scripts( [
+	__dirname + '/Resources/assets/js/vendor/main.js'
+], 'public_html/js/dashboard-main.js' );
+
+mix.copyDirectory( __dirname + '/Resources/assets/img', 'public_html/img' );
+mix.copyDirectory( __dirname + '/Resources/assets/fonts', 'public_html/fonts' );
+
+mix.js( __dirname + '/Resources/assets/js/app.js', 'js/admin-app.js' )
 mix.js( __dirname + '/Resources/assets/js/auth.js', 'js/admin-auth-app.js' )
 
 if ( mix.inProduction() ) {

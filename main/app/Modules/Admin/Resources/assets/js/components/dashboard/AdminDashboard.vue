@@ -1,10 +1,22 @@
 <template>
-  <h1>Admin Dashboard</h1>
+  <main>
+    <div class="content">
+      <div class="card">
+        <div class="card-body"></div>
+      </div>
+    </div>
+  </main>
 </template>
 
 <script>
   export default {
-    name: "dashboard"
+    name: "AdminDashboard",
+    mounted() {
+      this.$emit("page-loaded");
+    },
+    beforeDestroy() {
+      this.$unloadScript("/js/main.js");
+    }
   };
 </script>
 
