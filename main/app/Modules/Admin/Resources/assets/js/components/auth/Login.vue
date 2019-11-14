@@ -5,7 +5,8 @@
         <div class="auth-logo">
           <div class="logo">
             <div class="logo-type logo-type-colored">
-              <a href="index.html">
+              <img src="/img/logo-round-small.png" alt="Amju Unique Logo" class="loader-img" />
+              <a href="/">
                 <span>
                   amju
                   <span>unique</span>
@@ -28,15 +29,7 @@
             </label>
             <input type="password" class="form-control form-control-pill" id="form-pass" />
           </div>
-          <div class="form-group">
-            <label class="control control-checkbox">
-              <div class="flex a-i-center j-c-between">
-                <span class="text-light fs-12">Remember</span>
-              </div>
-              <input type="checkbox" />
-              <span class="control-icon"></span>
-            </label>
-          </div>
+
           <div class="form-group flex j-c-center mt-30">
             <button class="btn btn-primary btn-shadow btn-round">Log In</button>
           </div>
@@ -62,9 +55,6 @@
     name: "AdminAuth",
     mounted() {
       this.$emit("page-loaded");
-    },
-    beforeDestroy() {
-      // this.$unloadScript("/js/main.js");
     }
   };
 </script>
@@ -90,5 +80,14 @@
 
   .auth-split .auth-left button {
     font-weight: bold;
+  }
+
+  .btn-primary.btn-shadow {
+    box-shadow: 0 3px 10px rgba(27, 151, 235, 0.5);
+  }
+
+  .btn-primary {
+    background-color: #1b97eb;
+    border-color: #1b97eb;
   }
 </style>

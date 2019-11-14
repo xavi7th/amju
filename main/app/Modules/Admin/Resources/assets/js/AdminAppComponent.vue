@@ -1,7 +1,6 @@
 <template>
   <div>
-    <pre-loader v-if="isLoading"></pre-loader>
-    <transition name="slide-out-in" mode="out-in" :duration="{ enter: 1300, leave: 200 }" v-else>
+    <transition name="slide-out-in" mode="out-in" :duration="{ enter: 1300, leave: 200 }">
       <div class="wrapper" v-if="isAuth">
         <transition name="nav-transition" mode="out-in">
           <router-view @page-loaded="pageLoaded" />
@@ -23,6 +22,7 @@
 </template>
 
 <script>
+  import PreLoader from "@admin-components/misc/PageLoader";
   import AdminNav from "@admin-components/partials/NavComponent";
   import AdminHeader from "@admin-components/partials/HeaderComponent";
   import AdminFooter from "@admin-components/partials/FooterComponent";
@@ -31,7 +31,7 @@
   export default {
     name: "AdminApp",
     data: () => ({
-      isLoading: false,
+      isLoading: true,
       isRouteChanging: false,
       freshLoad: true,
       isPageChanging: false
@@ -39,7 +39,8 @@
     components: {
       AdminHeader,
       AdminFooter,
-      AdminNav
+      AdminNav,
+      PreLoader
     },
     computed: {
       isAuth() {
@@ -75,7 +76,10 @@
                 );
               });
             }
+            $(".preloader").fadeOut(300);
           });
+        } else {
+          $(".preloader").fadeOut(300);
         }
       }
     }
