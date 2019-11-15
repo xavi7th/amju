@@ -85,7 +85,7 @@ class LoginController extends Controller
 	protected function authenticated(Request $request, $user)
 	{
 		if (User::isAdmin()) {
-			if (Auth::admin()->is_verified) {
+			if (Auth::admin()->is_verified()) {
 				return response()->json(['status' => true], 202);
 			} else {
 				Auth::logout();

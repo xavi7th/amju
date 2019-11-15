@@ -9,11 +9,17 @@ class Admin extends User
 {
 	protected $fillable = [];
 	protected $table = "admins";
+	protected $dates = ['dob'];
 	const DASHBOARD_ROUTE_PREFIX = 'tope-amju';
 
 	static function canAccess()
 	{
 		return parent::isAdmin();
+	}
+
+	public function is_verified()
+	{
+		return $this->verified_at !== null;
 	}
 
 	// /**

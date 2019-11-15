@@ -95,7 +95,7 @@
                 if (undefined !== rsp && rsp.status == 202) {
                   swal.close();
                   sessionStorage.clear();
-                  // location.reload();
+                  location.reload();
                 } else if (undefined !== rsp && rsp.status == 205) {
                   swal
                     .fire({
