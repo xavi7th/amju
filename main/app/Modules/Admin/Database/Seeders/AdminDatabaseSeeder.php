@@ -36,23 +36,3 @@ class AdminsTableSeeder extends Seeder
 		factory(Admin::class, 1)->create();
 	}
 }
-
-
-class ApiRoutesTableSeeder extends Seeder
-{
-	/**
-	 * Run the database seeds.
-	 *
-	 * @return void
-	 */
-	public function run()
-	{
-		Model::unguard();
-
-		ApiRoute::create([
-			'path' => Admin::DASHBOARD_ROUTE_PREFIX,
-			'name' => 'admin.root',
-			'meta' => '{title: APP_NAME,}'
-		]);
-	}
-}
