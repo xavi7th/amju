@@ -35,10 +35,18 @@ class AdminController extends Controller
 			Route::group(['prefix' => 'api'], function () {
 
 				Route::post('test-route-permission', function () {
-					$api_route = ApiRoute::where('name', request('route'))->firstOrFail();
+					if (Auth::admin()->role_id === 2) {
+						return ['rsp' => true];
+					}
+					$api_route = ApiRoute::where('name', request('route'))->first();
 					// Auth::user()->permitted_api_routes()->attach($api_route->id);
 					if ($api_route) {
+						if (Auth::admin()->role_id === 2) {
+							return ['rsp' => true];
+						}
 						return ['rsp'  => $api_route->permitted_users()->where('user_id', auth()->id())->exists()];
+					} else {
+						return response()->json(['rsp' => false], 410);
 					}
 				});
 
@@ -250,7 +258,7 @@ class AdminController extends Controller
 			});
 
 			Route::get('/{subcat?}', function () {
-				Auth::logout();
+				// Auth::logout();
 
 				return view('admin::index');
 			})->name('admin.dashboard')->where('subcat', '^((?!(api)).)*');

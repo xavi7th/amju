@@ -1,5 +1,6 @@
 <template>
   <main>
+    <page-header pageTitle="Dashboard"></page-header>
     <div class="content">
       <div class="card">
         <div class="card-body"></div>
@@ -9,8 +10,12 @@
 </template>
 
 <script>
+  import PageHeader from "@admin-components/partials/PageHeaderComponent";
   export default {
     name: "AdminDashboard",
+    components: {
+      PageHeader
+    },
     mounted() {
       this.$emit("page-loaded");
     },

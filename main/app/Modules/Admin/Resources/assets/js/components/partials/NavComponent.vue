@@ -4,30 +4,35 @@
       <div class="header">
         <div class="logo">
           <div class="logo-type">
-            <a href="index.html">
-              <span>
-                c
-                <span>o</span>dash
+            <router-link :to="{name:'admin.root'}">
+              <img src="/img/logo-round-small.png" alt="Amju Unique Logo" class="loader-img" />
+              <span id="logo-caption">
+                amju
+                <span>unique</span>
               </span>
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
       <ul class="menu">
-        <li class="menu-category">MAIN</li>
-        <li class="nav-sub">
-          <a href>
-            <i class="fas fa-desktop nav-icon"></i>Dashboard
+        <li class="menu-category">ADMIN</li>
+
+        <li
+          v-for="(item, index) in routes.filter(x => x.path !== '*')"
+          :key="index"
+          :class="{'nav-sub':!item.name}"
+        >
+          <router-link :to="item.path" v-if="item.name">
+            <i class="fa fa-home nav-icon" :class="item.meta.iconClass"></i>
+            {{item.meta.menuName}}
+          </router-link>
+          <a href="#" v-else>
+            <i class="fa fa-desktop nav-icon" v-bind:class="item.meta.iconClass"></i>
+            {{item.meta.menuName}}
           </a>
-          <ul class="sub-menu">
-            <li>
-              <a href="index.html">Dashboard 1</a>
-            </li>
-            <li>
-              <a href="dashboard-crypto.html">Crypto Currency</a>
-            </li>
-            <li>
-              <a href="dashboard-support.html">Support Center</a>
+          <ul class="sub-menu" v-if="item.children">
+            <li v-for="childItem in item.children" :key="childItem.name">
+              <router-link :to="childItem.path">{{childItem.meta.menuName}}</router-link>
             </li>
           </ul>
         </li>
@@ -37,5 +42,22 @@
 </template>
 
 <script>
-  export default {};
+  export default {
+    name: "AdminNav",
+    computed: {
+      routes() {
+        return this.$router.options.routes;
+      }
+    }
+  };
 </script>
+
+<style lang="scss" scoped>
+  .logo-caption {
+    color: #24adef;
+  }
+  .loader-img {
+    margin: 55px auto 15px;
+    height: 60px;
+  }
+</style>

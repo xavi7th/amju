@@ -11,7 +11,7 @@
         <admin-header v-on:logout-user="logoutUser()" v-if="!is404" :isHome="isHome"></admin-header>
 
         <transition name="nav-transition" mode="out-in">
-          <pre-loader v-if="isPageChanging"></pre-loader>
+          <pre-loader v-if="isLoading"></pre-loader>
           <router-view @page-loaded="pageLoaded" v-else />
         </transition>
 
@@ -31,10 +31,8 @@
   export default {
     name: "AdminApp",
     data: () => ({
-      isLoading: true,
-      isRouteChanging: false,
       freshLoad: true,
-      isPageChanging: false
+      isLoading: false
     }),
     components: {
       AdminHeader,
