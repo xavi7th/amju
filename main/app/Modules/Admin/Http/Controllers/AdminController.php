@@ -35,9 +35,6 @@ class AdminController extends Controller
 			Route::group(['prefix' => 'api'], function () {
 
 				Route::post('test-route-permission', function () {
-					if (Auth::admin()->role_id === 2) {
-						return ['rsp' => true];
-					}
 					$api_route = ApiRoute::where('name', request('route'))->first();
 					// Auth::user()->permitted_api_routes()->attach($api_route->id);
 					if ($api_route) {
