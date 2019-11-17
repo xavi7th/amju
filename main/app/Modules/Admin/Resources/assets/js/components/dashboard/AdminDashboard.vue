@@ -10,24 +10,10 @@
 </template>
 
 <script>
-  import PageHeader from "@admin-components/partials/PageHeaderComponent";
   export default {
     name: "AdminDashboard",
-    components: {
-      PageHeader
-    },
     mounted() {
       this.$emit("page-loaded");
-    },
-    beforeDestroy() {
-      try {
-        // this.$unloadScript("/js/dashboard-main.js");
-      } catch (error) {
-        console.log(error);
-      }
-    },
-    beforeRouteLeave(to, from, next) {
-      this.$emit("is-loading");
     }
   };
 </script>

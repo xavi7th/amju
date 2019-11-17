@@ -10,9 +10,11 @@
     <admin-nav></admin-nav>
     <admin-header v-on:logout-user="logoutUser()" v-if="!is404" :isHome="isHome"></admin-header>
 
-    <transition name="nav-transition" mode="out-in">
+    <transition name="fade" :duration="{ enter: 1300, leave: 200 }">
       <pre-loader v-if="isLoading"></pre-loader>
-      <router-view @page-loaded="pageLoaded" @is-loading="toggleLoading" v-else />
+    </transition>
+    <transition name="nav-transition" mode="out-in" :duration="{ leave: 600, enter: 600 }">
+      <router-view @page-loaded="pageLoaded" @is-loading="toggleLoadState" />
     </transition>
 
     <admin-footer v-if="!is404"></admin-footer>
@@ -31,7 +33,7 @@
     name: "AdminApp",
     data: () => ({
       freshLoad: true,
-      isLoading: false
+      isLoading: true
     }),
     components: {
       AdminHeader,
@@ -67,8 +69,8 @@
           location.reload();
         });
       },
-      toggleLoading() {
-        this.isLoading = !this.isLoading;
+      toggleLoadState() {
+        this.isLoading = true;
       },
       pageLoaded() {
         // if (!this.isAuth) {
@@ -85,6 +87,7 @@
         //   });
         // } else {
         $(".preloader").fadeOut(300);
+        this.isLoading = false;
         // }
       }
     }

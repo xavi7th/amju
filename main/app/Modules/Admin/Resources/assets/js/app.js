@@ -2,6 +2,7 @@ import '@assets/js/bootstrap'
 import Vue from 'vue'
 // import VeeValidate from 'vee-validate'
 import App from './AdminAppComponent'
+import PageHeader from "@admin-components/partials/PageHeaderComponent";
 const {
 	routeGenerator
 } = require( './router' )
@@ -62,6 +63,24 @@ routeGenerator().then( router => {
 		 * Handle resize based on the browser size
 		 */
 		mediaHandler()
+	} )
+
+	Vue.component( 'page-header', PageHeader )
+
+	Vue.mixin( {
+		/**
+		 *
+		 * @param {RouteObject} to The route we are coming from
+		 * @param {RouteObject} from The route we are going to
+		 * @param {RouteResolver} next The function that resolves the route change process next(false) cancels the route change
+		 *
+		 * Register a global mixin to triger this event. The event is caught in AdminAppComponent
+		 * It triggers the route change pre loader
+		 */
+		beforeRouteLeave( to, from, next ) {
+			this.$emit( "is-loading" );
+			next();
+		}
 	} )
 
 	/* eslint-disable no-new */

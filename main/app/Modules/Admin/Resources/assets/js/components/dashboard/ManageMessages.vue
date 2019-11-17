@@ -12,14 +12,8 @@
   import PageHeader from "@admin-components/partials/PageHeaderComponent";
   export default {
     name: "ManageMessages",
-    components: {
-      PageHeader
-    },
     mounted() {
       this.$emit("page-loaded");
-    },
-    beforeDestroy() {
-      // this.$unloadScript("/js/dashboard-main.js");
     }
   };
 </script>
