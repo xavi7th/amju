@@ -30,12 +30,12 @@ routeGenerator().then( router => {
 			/**
 			 * Mobile
 			 */
-			console.log( 'mobile view' );
+			// console.log( 'mobile view' );
 		} else {
 			/**
 			 * Desktop
 			 */
-			console.log( 'desktop view' );
+			// console.log( 'desktop view' );
 		}
 		/**
 		 * To set up a watcher

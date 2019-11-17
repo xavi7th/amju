@@ -6,7 +6,7 @@
   export default {};
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   footer {
     position: fixed;
     bottom: 5px;
@@ -14,5 +14,9 @@
     right: 0;
     left: 260px;
     color: #777;
+
+    @media (max-width: 767px) {
+      left: 0;
+    }
   }
 </style>

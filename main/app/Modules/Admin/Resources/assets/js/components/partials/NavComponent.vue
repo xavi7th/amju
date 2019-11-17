@@ -22,7 +22,7 @@
           :key="index"
           :class="{'nav-sub':!item.name}"
         >
-          <router-link :to="item.path" v-if="item.name && !item.meta.skip">
+          <router-link :to="item.path" v-if="item.name && !item.meta.skip" class="nav-link">
             <i class="fa fa-home nav-icon" :class="item.meta.iconClass"></i>
             {{item.meta.menuName}}
           </router-link>
@@ -36,7 +36,7 @@
               :key="childItem.name"
               v-show="!childItem.meta.skip"
             >
-              <router-link :to="childItem.path">{{childItem.meta.menuName}}</router-link>
+              <router-link :to="childItem.path" class="nav-link">{{childItem.meta.menuName}}</router-link>
             </li>
           </ul>
         </li>
@@ -50,6 +50,16 @@
     name: "AdminNav",
     mounted() {
       this.$loadScript("/js/dashboard-main.js");
+      setTimeout(() => {
+        $(".menu .nav-link").click(e => {
+          console.log(e);
+          $(".header-btn.closed").removeClass("closed");
+          $(".main-navigation.open-nav").removeClass("open-nav");
+          $(".header-small").removeClass("header-small");
+          $("a.active").removeClass("active");
+          $(".sub-menu").hide(100);
+        });
+      }, 1000);
     },
     computed: {
       routes() {
