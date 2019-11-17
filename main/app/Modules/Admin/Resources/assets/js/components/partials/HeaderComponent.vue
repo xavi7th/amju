@@ -160,7 +160,7 @@
           <a href="user-profile.html" class="dropdown-item">
             <i class="fa fa-cog mr-10"></i> Settings
           </a>
-          <a href="page-login-2.html" class="dropdown-item">
+          <a href="#" @click.prevent="$emit('logout-user')" class="dropdown-item">
             <i class="fas fa-sign-out-alt mr-10"></i> Log Out
           </a>
         </div>

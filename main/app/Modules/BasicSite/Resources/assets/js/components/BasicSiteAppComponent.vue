@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <site-header v-on:logout-user="logoutUser()" v-if="!is404" :isHome="isHome"></site-header>
+    <site-header v-if="!is404" :isHome="isHome"></site-header>
 
     <transition name="nav-transition" mode="out-in">
       <router-view @page-loaded="pageLoaded" />
@@ -13,7 +13,6 @@
 <script>
   import SiteHeader from "@components/partials/HeaderComponent";
   import SiteFooter from "@components/partials/FooterComponent";
-  import { logout } from "@assets/js/config";
 
   export default {
     name: "BasicSiteApp",
@@ -28,9 +27,6 @@
       SiteFooter
     },
     methods: {
-      logoutUser() {
-        logout();
-      },
       pageLoaded() {
         this.$loadScript("/js/main.js").then(() => {
           if (this.freshLoad) {

@@ -86,7 +86,7 @@
 			<div class="preloader-body">
 				<p>
 					<img src="/img/logo-round-small.png" alt="Amju Unique Logo" class="loader-img" />
-					<span>Please wait. Loading ...</span>
+					<span>Please wait. Preparing your dashboard ...</span>
 				</p>
 				<p></p>
 				<div class="cssload-container">

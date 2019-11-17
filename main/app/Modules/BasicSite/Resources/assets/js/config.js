@@ -6,15 +6,6 @@ let apiDomain = '/api/'
 let rootUrl = url => '/' + ( url || '' )
 let apiRootUrl = url => apiDomain + ( url || '' )
 
-export const logout = ( msg = 'Logging you out....' ) => {
-	BlockToast.fire( {
-		text: msg
-	} )
-	axios.post( rootUrl( 'logout' ) ).then( rsp => {
-		location.reload()
-	} )
-}
-
 export const CONSTANTS = {
 	facebook: 'amju-facebook',
 	twitter: 'amju-twitter',

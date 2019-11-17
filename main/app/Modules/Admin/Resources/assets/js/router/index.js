@@ -138,17 +138,6 @@ const allRoutes = [ {
 		},
 	},
 	{
-		path: '/admins/:id/route-permissions',
-		component: view( 'dashboard/ManageAdmins' ),
-		name: 'admin.admins.permissions',
-		meta: {
-			title: APP_NAME + ' | View Admin Permissions',
-			iconClass: 'home',
-			menuName: 'View Admin Permission',
-			skip: true
-		},
-	},
-	{
 		path: 'admin.logs',
 		meta: {
 			iconClass: 'home',
@@ -173,7 +162,7 @@ const allRoutes = [ {
 		},
 		children: [ {
 				path: '/admins',
-				component: view( 'dashboard/ManageAdmins' ),
+				component: view( 'admins/ManageAdmins' ),
 				name: 'admin.admins.view',
 				meta: {
 					title: APP_NAME + ' | View Admins',

@@ -26,7 +26,6 @@
   import AdminNav from "@admin-components/partials/NavComponent";
   import AdminHeader from "@admin-components/partials/HeaderComponent";
   import AdminFooter from "@admin-components/partials/FooterComponent";
-  import { logout } from "@assets/js/config";
 
   export default {
     name: "AdminApp",
@@ -60,8 +59,13 @@
       }
     },
     methods: {
-      logoutUser() {
-        logout();
+      logoutUser(msg = "Logging you out....") {
+        BlockToast.fire({
+          text: msg
+        });
+        axios.post("/tope-amju/logout").then(rsp => {
+          location.reload();
+        });
       },
       pageLoaded() {
         if (!this.isAuth) {
