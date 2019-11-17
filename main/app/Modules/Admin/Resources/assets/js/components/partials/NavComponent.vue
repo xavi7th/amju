@@ -48,6 +48,9 @@
 <script>
   export default {
     name: "AdminNav",
+    mounted() {
+      this.$loadScript("/js/dashboard-main.js");
+    },
     computed: {
       routes() {
         return this.$router.options.routes;

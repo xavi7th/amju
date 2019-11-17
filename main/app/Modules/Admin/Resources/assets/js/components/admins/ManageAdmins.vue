@@ -3,7 +3,7 @@
     <page-header pageTitle="Dashboard"></page-header>
     <div class="content">
       <div class="card">
-        <div class="card-body">Manage yfjhg</div>
+        <div class="card-body">Manage Admins</div>
       </div>
     </div>
   </main>
@@ -12,7 +12,7 @@
 <script>
   import PageHeader from "@admin-components/partials/PageHeaderComponent";
   export default {
-    name: "AdminDashboard",
+    name: "ManageAdmins",
     components: {
       PageHeader
     },
@@ -20,14 +20,7 @@
       this.$emit("page-loaded");
     },
     beforeDestroy() {
-      try {
-        // this.$unloadScript("/js/dashboard-main.js");
-      } catch (error) {
-        console.log(error);
-      }
-    },
-    beforeRouteLeave(to, from, next) {
-      this.$emit("is-loading");
+      // this.$unloadScript("/js/dashboard-main.js");
     }
   };
 </script>

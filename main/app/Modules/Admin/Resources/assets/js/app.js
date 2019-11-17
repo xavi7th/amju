@@ -8,7 +8,6 @@ const {
 
 import LoadScript from 'vue-plugin-load-script'
 
-
 // import Vue2Filters from 'vue2-filters'
 
 
@@ -23,6 +22,7 @@ Vue.use( LoadScript )
 
 
 routeGenerator().then( router => {
+
 
 	let mediaHandler = () => {
 		if ( window.matchMedia( '(max-width: 767px)' ).matches ) {
@@ -45,6 +45,7 @@ routeGenerator().then( router => {
 	}
 
 	router.beforeEach( ( to, from, next ) => {
+		document.title = to.meta.title
 		/**
 		 * Emit is loading event? Will App component catch it?
 		 */

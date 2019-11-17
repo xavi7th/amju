@@ -27,6 +27,7 @@ const allRoutes = [ {
 	},
 	{
 		path: 'admin.ui',
+		component: view( 'EmptyComponent' ),
 		meta: {
 			iconClass: 'home',
 			menuName: 'Manage UI'
@@ -76,6 +77,7 @@ const allRoutes = [ {
 	},
 	{
 		path: 'admin.media',
+		component: view( 'EmptyComponent' ),
 		meta: {
 			iconClass: 'home',
 			menuName: 'Manage Media'
@@ -111,6 +113,7 @@ const allRoutes = [ {
 	},
 	{
 		path: 'admin.account',
+		component: view( 'EmptyComponent' ),
 		meta: {
 			iconClass: 'home',
 			menuName: 'Manage Accounts'
@@ -139,6 +142,9 @@ const allRoutes = [ {
 	},
 	{
 		path: 'admin.logs',
+		component: {
+			render: h => h( 'router-view' )
+		},
 		meta: {
 			iconClass: 'home',
 			menuName: 'View Activity Logs'
@@ -156,6 +162,7 @@ const allRoutes = [ {
 	},
 	{
 		path: 'admin.admins',
+		component: view( 'EmptyComponent' ),
 		meta: {
 			iconClass: 'home',
 			menuName: 'Manage Admins'
@@ -174,6 +181,7 @@ const allRoutes = [ {
 				path: '/admins/:id/route-permissions',
 				component: view( 'dashboard/ManageAdmins' ),
 				name: 'admin.admins.permissions',
+				props: true,
 				meta: {
 					title: APP_NAME + ' | View Admin Permissions',
 					iconClass: 'home',
