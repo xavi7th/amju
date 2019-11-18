@@ -1,6 +1,4 @@
 <template>
-  <!-- <div> -->
-  <!-- <transition name="slide-out-in" mode="out-in" :duration="{ enter: 1300, leave: 200 }"> -->
   <div class="wrapper" v-if="isAuth">
     <transition name="nav-transition" mode="out-in">
       <router-view @page-loaded="pageLoaded" />
@@ -19,8 +17,6 @@
 
     <admin-footer v-if="!is404"></admin-footer>
   </div>
-  <!-- </transition> -->
-  <!-- </div> -->
 </template>
 
 <script>

@@ -52,7 +52,6 @@
       this.$loadScript("/js/dashboard-main.js");
       setTimeout(() => {
         $(".menu .nav-link").click(e => {
-          console.log(e);
           $(".header-btn.closed").removeClass("closed");
           $(".main-navigation.open-nav").removeClass("open-nav");
           $(".header-small").removeClass("header-small");

@@ -32,12 +32,12 @@ class AppUser extends User
 	 *
 	 * @return void
 	 */
-	protected static function boot()
-	{
-		parent::boot();
+	// protected static function boot()
+	// {
+	// 	parent::boot();
 
-		static::addGlobalScope('appUsersOnly', function (Builder $builder) {
-			$builder->where('role_id', parent::$app_user_id);
-		});
-	}
+	// 	static::addGlobalScope('appUsersOnly', function (Builder $builder) {
+	// 		$builder->where('role_id', parent::$app_user_id);
+	// 	});
+	// }
 }

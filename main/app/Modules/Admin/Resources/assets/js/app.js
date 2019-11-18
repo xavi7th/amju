@@ -1,26 +1,22 @@
 import '@assets/js/bootstrap'
 import Vue from 'vue'
-// import VeeValidate from 'vee-validate'
+import VeeValidate from 'vee-validate'
 import App from './AdminAppComponent'
 import PageHeader from "@admin-components/partials/PageHeaderComponent";
+// import Vue2Filters from 'vue2-filters'
 const {
 	routeGenerator
 } = require( './router' )
 
 import LoadScript from 'vue-plugin-load-script'
 
-// import Vue2Filters from 'vue2-filters'
 
 
-// NOTE: workaround for VeeValidate + vuetable-2
-// Vue.use( VeeValidate, {
-// 	fieldsBagName: 'formFields'
-// } )
 // Vue.use( Vue2Filters )
+Vue.use( VeeValidate, {
+	fieldsBagName: 'formFields'
+} )
 Vue.use( LoadScript )
-
-
-
 
 routeGenerator().then( router => {
 

@@ -29,6 +29,8 @@ mix.scripts( [
 	__dirname + '/Resources/assets/js/vendor/popper.min.js',
 	__dirname + '/Resources/assets/js/vendor/bootstrap.min.js',
 	__dirname + '/Resources/assets/js/vendor/simplebar.min.js',
+	__dirname + '/Resources/assets/js/vendor/jquery.dataTables.min.js',
+	__dirname + '/Resources/assets/js/vendor/dataTables.responsive.min.js',
 	// __dirname + '/Resources/assets/js/vendor/morris.min.js',
 	// __dirname + '/Resources/assets/js/vendor/chartjs.min.js',
 	// __dirname + '/Resources/assets/js/vendor/raphael.min.js',

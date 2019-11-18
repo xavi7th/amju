@@ -4,17 +4,17 @@ namespace App\Modules\Admin\Http\Controllers;
 
 use App\ErrLog;
 use Carbon\Carbon;
+use Illuminate\Support\Arr;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
+use App\Modules\Admin\Models\Admin;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Modules\Admin\Models\ApiRoute;
-use App\Modules\AppUser\Models\AppUser;
+use App\Modules\BasicSite\Models\AppUser;
 use App\Modules\BasicSite\Models\Message;
-use App\Modules\AppUser\Models\Testimonial;
-use App\Modules\AppUser\Models\Transaction;
-use App\Modules\AppUser\Models\WithdrawalRequest;
 use App\Modules\Admin\Transformers\AdminUserTransformer;
 use App\Modules\Transformers\AdminTestimonialTransformer;
 use App\Modules\Admin\Transformers\AdminActivityTransformer;
@@ -36,7 +36,6 @@ class AdminController extends Controller
 
 				Route::post('test-route-permission', function () {
 					$api_route = ApiRoute::where('name', request('route'))->first();
-					// Auth::user()->permitted_api_routes()->attach($api_route->id);
 					if ($api_route) {
 						if (Auth::admin()->role_id === 2) {
 							return ['rsp' => true];
@@ -47,28 +46,53 @@ class AdminController extends Controller
 					}
 				});
 
-				Route::get('users', function () {
-					return request()->all();
+				Route::get('admins', function () {
+					return (new AdminUserTransformer)->collectionTransformer(Admin::all(), 'transformForAdminViewAdmins');
+				});
 
-					$users = AppUser::when(
-						request('sort'),
-						function ($query) {
-							$sort_params = explode('|', request('sort'));
-							$sort_param = $sort_params[0] == 'is_verified' ? 'verified_at' : $sort_params[0];
-							$sort_type = $sort_params[1];
-
-							return $query->orderBy($sort_param, $sort_type);
-						},
-						function ($query) {
-							return $query->latest();
+				Route::post('admin/create', function () {
+					// return request()->all();
+					try {
+						DB::beginTransaction();
+						$admin = Admin::create(Arr::collapse([
+							request()->all(),
+							[
+								'password' => bcrypt('amju@admin'),
+								'role_id' => Admin::getAdminId()
+							]
+						]));
+						//Give him access to dashboard
+						$admin->permitted_api_routes()->attach(1);
+						DB::commit();
+						return response()->json(['rsp' => $admin], 201);
+					} catch (\Throwable $e) {
+						if (app()->environment() == 'local') {
+							return response()->json(['error' => $e->getMessage()], 500);
 						}
-					)
-						->when(request('filter'), function ($query) {
-							$filter = request('filter');
-							return $query->where('name', 'LIKE',  "%$filter%")->orWhere('email', 'LIKE', "%$filter%");
-						})->paginate(request('per_page'));
+						return response()->json(['rsp' => 'error occurred'], 500);
+					}
+				});
 
-					return (new AdminUserTransformer)->collectionTransformer($users, 'transformForAdminViewUsers');
+				Route::get('admin/{admin}/permissions', function (Admin $admin) {
+					$permitted_routes = $admin->permitted_api_routes()->get(['api_routes.id'])->map(function ($item, $key) {
+						return $item->id;
+					});
+
+					$all_routes = ApiRoute::get(['id', 'description'])->map(function ($item, $key) {
+						return ['id' => $item->id, 'description' => $item->description];
+					});
+
+					return ['permitted_routes' => $permitted_routes, 'all_routes' => $all_routes];
+					return (new AdminUserTransformer)->collectionTransformer(Admin::all(), 'transformForAdminViewAdmins');
+				});
+
+				Route::put('admin/{admin}/permissions', function (Admin $admin) {
+					$admin->permitted_api_routes()->sync(request('permitted_routes'));
+					return response()->json(['rsp' => true], 204);
+				});
+
+				Route::get('users', function () {
+					return (new AdminUserTransformer)->collectionTransformer(AppUser::all(), 'transformForAdminViewUsers');
 				});
 
 				Route::put('user/verify', function () {

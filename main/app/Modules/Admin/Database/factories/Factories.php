@@ -8,7 +8,7 @@ use App\Modules\Admin\Models\ApiRoute;
 $factory->define(Admin::class, function (Faker $faker) {
 
 	return [
-		'role_id' => 1,
+		'role_id' => 2,
 		'full_name' => 'Grant Aghedo',
 		'email' => 'grant@amju.com',
 		'password' => bcrypt('pass'),

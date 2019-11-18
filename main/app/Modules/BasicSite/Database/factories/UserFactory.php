@@ -25,7 +25,7 @@ $factory->define(AppUser::class, function (Faker $faker) {
 		'address' => $faker->address,
 		'dob' => $faker->date(),
 		'gender' => $faker->randomElement(['male', 'female']),
-		'bvn' => $faker->randomNumber(),
+		'bvn' => $faker->randomNumber(9),
 		'acc_type' => $faker->randomElement(['amjuflex', 'current', 'corporate']),
 		'user_passport' => '/storage/user_passports/' . $faker->file(public_path('img/team/'), public_path('storage/user_passports/'), false),
 	];

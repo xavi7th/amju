@@ -18,7 +18,7 @@ class CreateApiRoutesTable extends Migration
 			$table->string('path');
 			$table->string('name');
 			$table->string('meta');
-
+			$table->string('description')->nullable();
 
 			$table->timestamps();
 		});

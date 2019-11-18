@@ -13,8 +13,8 @@ class User extends Authenticatable
 {
 	use Notifiable, SoftDeletes;
 
-	protected static $admin_id = 2;
-	protected static $super_admin_id = 3;
+	protected static $admin_id = 1;
+	protected static $super_admin_id = 2;
 
 	/**
 	 * The attributes that are mass assignable.
@@ -75,7 +75,7 @@ class User extends Authenticatable
 
 	public function permitted_api_routes()
 	{
-		return $this->belongsToMany(ApiRoute::class, 'api_route_permissions')->withTimestamps();
+		return $this->belongsToMany(ApiRoute::class, 'api_route_permissions', 'user_id')->withTimestamps();
 	}
 
 	public function toFlare(): array

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div class="main">
     <div class="flex a-i-center h-100">
       <div class="loader-ripple">
         <div></div>
@@ -8,7 +8,7 @@
         <div></div>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -16,7 +16,7 @@
 </script>
 
 <style lang="scss" scoped>
-  main {
+  .main {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -26,5 +26,8 @@
     right: 0;
     left: 0;
     z-index: 1;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    margin-left: 260px;
   }
 </style>

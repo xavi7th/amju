@@ -2,10 +2,13 @@ export const CONSTANTS = {
 	APP_NAME: 'Amju Unique MFB',
 }
 
-const apiBaseUrl = '/moses-guy/api/'
-const baseUrl = '/moses-guy/'
+const apiBaseUrl = '/tope-amju/api/'
+const baseUrl = '/tope-amju/'
 
 export const adminLoginEndpoint = baseUrl + 'login'
+export const adminViewAdmins = apiBaseUrl + 'admins'
+export const adminCreateAdmin = apiBaseUrl + 'admin/create'
+export const adminAdminPermissions = id => apiBaseUrl + 'admin/' + id + '/permissions'
 export const adminViewUsers = apiBaseUrl + 'users'
 export const adminDeleteUser = id => apiBaseUrl + 'user/' + id + '/delete'
 export const adminViewUserTransactions = id => apiBaseUrl + 'user/' + id + '/transactions'
