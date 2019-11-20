@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: "PBWaysToBankPage",
+    name: "AmjuEdusaveSavingsPage",
     mounted() {
       this.$emit("page-loaded");
     },

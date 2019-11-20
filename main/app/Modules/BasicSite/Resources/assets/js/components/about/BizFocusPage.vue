@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: "CorporateLoanInvestmentPage",
+    name: "AboutBizFocusPage",
     mounted() {
       this.$emit("page-loaded");
     },

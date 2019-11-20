@@ -88,14 +88,14 @@ export function createRouter() {
 			{
 				path: sitePersonalBanking,
 				name: 'site.pb',
-				component: view( 'PersonalBankingPage' ),
+				component: view( 'pb/PersonalBankingPage' ),
 				meta: {
 					title: 'Personal Banking - ' + APP_NAME,
 					breadcrumb: 'Personal Banking'
 				},
 				children: [ {
 						path: siteAmjuFlexiSavings,
-						component: view( 'AmjuFlexiSavingsPage' ),
+						component: view( 'pb/AmjuFlexiSavingsPage' ),
 						name: 'site.pb.flexi',
 						meta: {
 							title: 'Amju Flexi Savings - ' + APP_NAME,
@@ -104,7 +104,7 @@ export function createRouter() {
 					},
 					{
 						path: siteAmjuEdusaveSavings,
-						component: view( 'AmjuEdusaveSavingsPage' ),
+						component: view( 'pb/AmjuEdusaveSavingsPage' ),
 						name: 'site.pb.edusave',
 						meta: {
 							title: 'Amju Edusave Savings - ' + APP_NAME,
@@ -113,7 +113,7 @@ export function createRouter() {
 					},
 					{
 						path: siteThriftSavings,
-						component: view( 'ThriftSavingsPage' ),
+						component: view( 'pb/ThriftSavingsPage' ),
 						name: 'site.pb.cards',
 						meta: {
 							title: 'Thrift Savivgs - ' + APP_NAME,
@@ -122,7 +122,7 @@ export function createRouter() {
 					},
 					{
 						path: siteMarriageSavings,
-						component: view( 'MarriageSavingsPage' ),
+						component: view( 'pb/MarriageSavingsPage' ),
 						name: 'site.pb.marriage',
 						meta: {
 							title: 'Marriage Savings - ' + APP_NAME,
@@ -131,7 +131,7 @@ export function createRouter() {
 					},
 					{
 						path: siteChristmsaSavings,
-						component: view( 'ChristmsaSavingsPage' ),
+						component: view( 'pb/ChristmsaSavingsPage' ),
 						name: 'site.pb.christmas',
 						meta: {
 							title: 'Christmas Savings - ' + APP_NAME,
@@ -140,7 +140,7 @@ export function createRouter() {
 					},
 					{
 						path: siteEsusuSavings,
-						component: view( 'EsusuSavingsPage' ),
+						component: view( 'pb/EsusuSavingsPage' ),
 						name: 'site.pb.esusu',
 						meta: {
 							title: 'Esusu Savings - ' + APP_NAME,
@@ -149,7 +149,7 @@ export function createRouter() {
 					},
 					{
 						path: siteEnterpreneurSavings,
-						component: view( 'EnterpreneurSavingsPage' ),
+						component: view( 'pb/EnterpreneurSavingsPage' ),
 						name: 'site.pb.entrepreneur',
 						meta: {
 							title: 'Enterpreneur Savings - ' + APP_NAME,
@@ -162,14 +162,14 @@ export function createRouter() {
 			{
 				path: siteSMEBanking,
 				name: 'site.sme',
-				component: view( 'SMEBankingPage' ),
+				component: view( 'sme/SMEBankingPage' ),
 				meta: {
 					title: 'SME Banking - ' + APP_NAME,
 					breadcrumb: 'SME Banking'
 				},
 				children: [ {
 						path: sitePlatinumCurrent,
-						component: view( 'PlatinumCurrentPage' ),
+						component: view( 'sme/PlatinumCurrentPage' ),
 						name: 'site.sme.platinum',
 						meta: {
 							title: 'AMJU Platinum Account - ' + APP_NAME,
@@ -179,7 +179,7 @@ export function createRouter() {
 					},
 					{
 						path: siteCorporateCurrent,
-						component: view( 'CorporateCurrentPage' ),
+						component: view( 'sme/CorporateCurrentPage' ),
 						name: 'site.sme.corporate',
 						meta: {
 							title: 'AMJU Current/Corporate Account - ' + APP_NAME,
@@ -188,7 +188,7 @@ export function createRouter() {
 					},
 					{
 						path: siteOverdraftCurrent,
-						component: view( 'OverdraftCurrentPage' ),
+						component: view( 'sme/OverdraftCurrentPage' ),
 						name: 'site.sme.overdraft',
 						meta: {
 							title: 'AMJU Overdraft Account (Telecom) - ' + APP_NAME,
@@ -197,7 +197,7 @@ export function createRouter() {
 					},
 					{
 						path: siteDivineCurrent,
-						component: view( 'DivineCurrentPage' ),
+						component: view( 'sme/DivineCurrentPage' ),
 						name: 'site.sme.divine',
 						meta: {
 							title: 'AMJU Divine Account (Churches) - ' + APP_NAME,
@@ -206,7 +206,7 @@ export function createRouter() {
 					},
 					{
 						path: siteCooperativeCurrent,
-						component: view( 'CooperativeCurrentPage' ),
+						component: view( 'sme/CooperativeCurrentPage' ),
 						name: 'site.sme.cooperative',
 						meta: {
 							title: 'AMJU Cooperative Account - ' + APP_NAME,
@@ -215,7 +215,7 @@ export function createRouter() {
 					},
 					{
 						path: siteGroupLeadingCurrent,
-						component: view( 'GroupLeadingCurrentPage' ),
+						component: view( 'sme/GroupLeadingCurrentPage' ),
 						name: 'site.sme.groupleading',
 						meta: {
 							title: 'AMJU Group Leading Account - ' + APP_NAME,
@@ -227,7 +227,7 @@ export function createRouter() {
 			{
 				path: siteEbankingServices,
 				name: 'site.services',
-				component: view( 'EBankingServicesPage' ),
+				component: view( 'ebanking/EBankingServicesPage' ),
 				meta: {
 					title: 'eBanking Services - ' + APP_NAME,
 					breadcrumb: 'eBanking Services'
@@ -308,7 +308,7 @@ export function createRouter() {
 			},
 			{
 				path: siteMedia,
-				component: view( 'MediaPage' ),
+				component: view( 'media/MediaPage' ),
 				name: 'site.media',
 				meta: {
 					title: 'Media - ' + APP_NAME,
@@ -316,7 +316,7 @@ export function createRouter() {
 				},
 				children: [ {
 						path: siteMediaNews,
-						component: view( 'MediaNewsPage' ),
+						component: view( 'media/MediaNewsPage' ),
 						name: 'site.media.news',
 						meta: {
 							title: 'News - ' + APP_NAME,
@@ -325,7 +325,7 @@ export function createRouter() {
 					},
 					{
 						path: siteMediaVideos,
-						component: view( 'MediaVideosPage' ),
+						component: view( 'media/MediaVideosPage' ),
 						name: 'site.media.videos',
 						meta: {
 							title: 'Videos - ' + APP_NAME,
@@ -334,7 +334,7 @@ export function createRouter() {
 					},
 					{
 						path: siteMediaGallery,
-						component: view( 'MediaGalleryPage' ),
+						component: view( 'media/MediaGalleryPage' ),
 						name: 'site.media.gallery',
 						meta: {
 							title: 'Amju Gallery - ' + APP_NAME,
@@ -346,14 +346,14 @@ export function createRouter() {
 			{
 				path: siteInvestorRelations,
 				name: 'site.ir',
-				component: view( 'InvestorRelationsPage' ),
+				component: view( 'investors/InvestorRelationsPage' ),
 				meta: {
 					title: 'Investor Relations - ' + APP_NAME,
 					breadcrumb: 'Investor Relations'
 				},
 				children: [ {
 						path: siteIRFinInfo,
-						component: view( 'IRFinInfoPage' ),
+						component: view( 'investors/IRFinInfoPage' ),
 						name: 'site.ir.fin-info',
 						meta: {
 							title: 'Financial Information - ' + APP_NAME,
@@ -362,7 +362,7 @@ export function createRouter() {
 					},
 					{
 						path: siteIRInvestorNews,
-						component: view( 'IRInvestorNewsPage' ),
+						component: view( 'investors/IRInvestorNewsPage' ),
 						name: 'site.ir.investor-news',
 						meta: {
 							title: 'Investor News - ' + APP_NAME,
@@ -371,7 +371,7 @@ export function createRouter() {
 					},
 					{
 						path: siteIROutlookInsights,
-						component: view( 'IROutlookInsightsPage' ),
+						component: view( 'investors/IROutlookInsightsPage' ),
 						name: 'site.ir.outlook-insights',
 						meta: {
 							title: 'Outlook and Insight - ' + APP_NAME,
@@ -380,7 +380,7 @@ export function createRouter() {
 					},
 					{
 						path: siteIREvents,
-						component: view( 'IREventsPage' ),
+						component: view( 'investors/IREventsPage' ),
 						name: 'site.ir.events',
 						meta: {
 							title: 'Investor Relation Events - ' + APP_NAME,
@@ -389,7 +389,7 @@ export function createRouter() {
 					},
 					{
 						path: siteIRShareholders,
-						component: view( 'IRShareholdersInfoPage' ),
+						component: view( 'investors/IRShareholdersInfoPage' ),
 						name: 'site.ir.shareholders-info',
 						meta: {
 							title: 'Shareholder Information - ' + APP_NAME,
@@ -410,7 +410,7 @@ export function createRouter() {
 				},
 				children: [ {
 						path: siteAboutOurCompany,
-						component: view( 'OurCompanyPage' ),
+						component: view( 'about/OurCompanyPage' ),
 						name: 'site.about.our-company',
 						meta: {
 							title: 'Our Company - ' + APP_NAME,
@@ -419,7 +419,7 @@ export function createRouter() {
 					},
 					{
 						path: siteAboutCorpGov,
-						component: view( 'CorpGovPage' ),
+						component: view( 'about/CorpGovPage' ),
 						name: 'site.about.corp-gov',
 						meta: {
 							title: 'Corporate Governance - ' + APP_NAME,
@@ -428,7 +428,7 @@ export function createRouter() {
 					},
 					{
 						path: siteAboutBizFocus,
-						component: view( 'BizFocusPage' ),
+						component: view( 'about/BizFocusPage' ),
 						name: 'site.about.bizfocus',
 						meta: {
 							title: 'Business Focus - ' + APP_NAME,
@@ -437,7 +437,7 @@ export function createRouter() {
 					},
 					{
 						path: siteAboutAwards,
-						component: view( 'AwardsPage' ),
+						component: view( 'about/AwardsPage' ),
 						name: 'site.about.awards',
 						meta: {
 							title: 'Awards - ' + APP_NAME,
@@ -446,7 +446,7 @@ export function createRouter() {
 					},
 					{
 						path: siteAboutCareer,
-						component: view( 'CareerPage' ),
+						component: view( 'about/CareerPage' ),
 						name: 'site.about.career',
 						meta: {
 							title: 'Career - ' + APP_NAME,
@@ -455,7 +455,7 @@ export function createRouter() {
 					},
 					{
 						path: siteAboutApply,
-						component: view( 'ApplicationPage' ),
+						component: view( 'about/ApplicationPage' ),
 						name: 'site.about.career.apply',
 						meta: {
 							title: 'Send Us Your Resume - ' + APP_NAME,

@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: "CorporateBankAccountPage",
+    name: "OverdraftCurrentPage",
     mounted() {
       this.$emit("page-loaded");
     },

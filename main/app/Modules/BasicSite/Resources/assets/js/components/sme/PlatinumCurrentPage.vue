@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: "PBLoansPage",
+    name: "PlatinumCurrentPage",
     mounted() {
       this.$emit("page-loaded");
     },
