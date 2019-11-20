@@ -2,34 +2,44 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import {
 	siteRootUrl,
-	sitePBAmjuAccount,
-	sitePBServices,
-	sitePBCards,
-	sitePBLoans,
-	sitePBWaysToBank,
+	sitePersonalBanking,
+	siteAmjuFlexiSavings,
+	siteAmjuEdusaveSavings,
+	siteThriftSavings,
+	siteMarriageSavings,
+	siteChristmsaSavings,
+	siteEsusuSavings,
+	siteEnterpreneurSavings,
 	siteSMEBanking,
-	siteCBBankAccount,
-	siteCBLoansInvestment,
-	siteCBElectronicBanking,
+	sitePlatinumCurrent,
+	siteCorporateCurrent,
+	siteOverdraftCurrent,
+	siteDivineCurrent,
+	siteCooperativeCurrent,
+	siteGroupLeadingCurrent,
+	siteMedia,
 	siteMediaNews,
 	siteMediaVideos,
 	siteMediaGallery,
+	siteEbankingServices,
+	siteInvestorRelations,
 	siteIRFinInfo,
 	siteIRInvestorNews,
 	siteIROutlookInsights,
 	siteIREvents,
 	siteIRShareholders,
+	siteAboutUs,
 	siteAboutOurCompany,
 	siteAboutCorpGov,
 	siteAboutBizFocus,
 	siteAboutAwards,
 	siteAboutCareer,
 	siteAboutApply,
-	sitePrivacy,
-	siteTerms,
 	siteContactUs,
 	siteCreateAccount,
-	siteCreateAccountSuccess
+	siteCreateAccountSuccess,
+	sitePrivacy,
+	siteTerms,
 } from '@assets/js/config'
 
 // import App from '@components/AppComponent'
@@ -53,14 +63,17 @@ export function createRouter() {
 		mode: 'history',
 		linkActiveClass: 'active',
 		scrollBehavior( to, from, savedPosition ) {
-			if ( savedPosition ) {
+			if ( savedPosition )
 				return savedPosition
-			} else {
+			if ( to.hash )
 				return {
-					x: 0,
-					y: 0,
+					selector: to.hash
 				}
+			return {
+				x: 0,
+				y: 0,
 			}
+
 		},
 		routes: [ {
 				path: siteRootUrl,
@@ -68,7 +81,388 @@ export function createRouter() {
 				name: 'site.root',
 				meta: {
 					title: APP_NAME,
+					navSkip: true
 				},
+			},
+
+			{
+				path: sitePersonalBanking,
+				name: 'site.pb',
+				component: view( 'PersonalBankingPage' ),
+				meta: {
+					title: 'Personal Banking - ' + APP_NAME,
+					breadcrumb: 'Personal Banking'
+				},
+				children: [ {
+						path: siteAmjuFlexiSavings,
+						component: view( 'AmjuFlexiSavingsPage' ),
+						name: 'site.pb.flexi',
+						meta: {
+							title: 'Amju Flexi Savings - ' + APP_NAME,
+							breadcrumb: 'Amju Flexi Savings'
+						},
+					},
+					{
+						path: siteAmjuEdusaveSavings,
+						component: view( 'AmjuEdusaveSavingsPage' ),
+						name: 'site.pb.edusave',
+						meta: {
+							title: 'Amju Edusave Savings - ' + APP_NAME,
+							breadcrumb: 'Amju Edusave Savings'
+						},
+					},
+					{
+						path: siteThriftSavings,
+						component: view( 'ThriftSavingsPage' ),
+						name: 'site.pb.cards',
+						meta: {
+							title: 'Thrift Savivgs - ' + APP_NAME,
+							breadcrumb: 'Thrift Savivgs'
+						},
+					},
+					{
+						path: siteMarriageSavings,
+						component: view( 'MarriageSavingsPage' ),
+						name: 'site.pb.marriage',
+						meta: {
+							title: 'Marriage Savings - ' + APP_NAME,
+							breadcrumb: 'Marriage Savings'
+						},
+					},
+					{
+						path: siteChristmsaSavings,
+						component: view( 'ChristmsaSavingsPage' ),
+						name: 'site.pb.christmas',
+						meta: {
+							title: 'Christmas Savings - ' + APP_NAME,
+							breadcrumb: 'Christmas Savings'
+						},
+					},
+					{
+						path: siteEsusuSavings,
+						component: view( 'EsusuSavingsPage' ),
+						name: 'site.pb.esusu',
+						meta: {
+							title: 'Esusu Savings - ' + APP_NAME,
+							breadcrumb: 'Esusu Savings'
+						},
+					},
+					{
+						path: siteEnterpreneurSavings,
+						component: view( 'EnterpreneurSavingsPage' ),
+						name: 'site.pb.entrepreneur',
+						meta: {
+							title: 'Enterpreneur Savings - ' + APP_NAME,
+							breadcrumb: 'Enterpreneur Savings'
+						},
+					},
+				]
+			},
+
+			{
+				path: siteSMEBanking,
+				name: 'site.sme',
+				component: view( 'SMEBankingPage' ),
+				meta: {
+					title: 'SME Banking - ' + APP_NAME,
+					breadcrumb: 'SME Banking'
+				},
+				children: [ {
+						path: sitePlatinumCurrent,
+						component: view( 'PlatinumCurrentPage' ),
+						name: 'site.sme.platinum',
+						meta: {
+							title: 'AMJU Platinum Account - ' + APP_NAME,
+							breadcrumb: 'AMJU Platinum Account',
+							navName: ""
+						},
+					},
+					{
+						path: siteCorporateCurrent,
+						component: view( 'CorporateCurrentPage' ),
+						name: 'site.sme.corporate',
+						meta: {
+							title: 'AMJU Current/Corporate Account - ' + APP_NAME,
+							breadcrumb: 'AMJU Current/Corporate Account'
+						},
+					},
+					{
+						path: siteOverdraftCurrent,
+						component: view( 'OverdraftCurrentPage' ),
+						name: 'site.sme.overdraft',
+						meta: {
+							title: 'AMJU Overdraft Account (Telecom) - ' + APP_NAME,
+							breadcrumb: 'AMJU Overdraft Account (Telecom)'
+						},
+					},
+					{
+						path: siteDivineCurrent,
+						component: view( 'DivineCurrentPage' ),
+						name: 'site.sme.divine',
+						meta: {
+							title: 'AMJU Divine Account (Churches) - ' + APP_NAME,
+							breadcrumb: 'AMJU Divine Account (Churches)'
+						},
+					},
+					{
+						path: siteCooperativeCurrent,
+						component: view( 'CooperativeCurrentPage' ),
+						name: 'site.sme.cooperative',
+						meta: {
+							title: 'AMJU Cooperative Account - ' + APP_NAME,
+							breadcrumb: 'AMJU Cooperative Account'
+						},
+					},
+					{
+						path: siteGroupLeadingCurrent,
+						component: view( 'GroupLeadingCurrentPage' ),
+						name: 'site.sme.groupleading',
+						meta: {
+							title: 'AMJU Group Leading Account - ' + APP_NAME,
+							breadcrumb: 'AMJU Group Leading Account'
+						},
+					},
+				]
+			},
+			{
+				path: siteEbankingServices,
+				name: 'site.services',
+				component: view( 'EBankingServicesPage' ),
+				meta: {
+					title: 'eBanking Services - ' + APP_NAME,
+					breadcrumb: 'eBanking Services'
+				},
+				children: [ {
+						path: siteEbankingServices,
+						name: 'site.services.atm',
+						meta: {
+							title: 'ATM Services - ' + APP_NAME,
+							breadcrumb: 'ATM Services',
+							hash: '#atm-services'
+						},
+					},
+					{
+						path: siteEbankingServices,
+						name: 'site.services.mobile-banking',
+						meta: {
+							title: 'Mobile Services - ' + APP_NAME,
+							breadcrumb: 'Mobile Services',
+							hash: '#mobile-banking'
+						},
+					},
+					{
+						path: siteEbankingServices,
+						name: 'site.services.internet-banking',
+						meta: {
+							title: 'Internet Banking - ' + APP_NAME,
+							breadcrumb: 'Internet Banking',
+							hash: '#internet-banking'
+						},
+					},
+					{
+						path: siteEbankingServices,
+						name: 'site.services.pos',
+						meta: {
+							title: 'POS For Merchants - ' + APP_NAME,
+							breadcrumb: 'POS For Merchants',
+							hash: '#pos'
+						},
+					},
+					{
+						path: siteEbankingServices,
+						name: 'site.services.nip',
+						meta: {
+							title: 'NIBSS Instant Payment (NIP) - ' + APP_NAME,
+							breadcrumb: 'NIBSS Instant Payment (NIP)',
+							hash: '#nip'
+						},
+					},
+					{
+						path: siteEbankingServices,
+						name: 'site.services.pay-direct',
+						meta: {
+							title: 'Pay Direct - ' + APP_NAME,
+							breadcrumb: 'Pay Direct',
+							hash: '#pay-direct'
+						},
+					},
+					{
+						path: siteEbankingServices,
+						name: 'site.services.auto-pay-transfer',
+						meta: {
+							title: 'Auto Pay Transfer - ' + APP_NAME,
+							breadcrumb: 'Auto Pay Transfer',
+							hash: '#auto-pay-transfer'
+						},
+					},
+					{
+						path: siteEbankingServices,
+						name: 'site.services.ussd-codes',
+						meta: {
+							title: 'USSD Codes - ' + APP_NAME,
+							breadcrumb: 'USSD Codes',
+							hash: '#ussd-codes'
+						},
+					},
+				]
+			},
+			{
+				path: siteMedia,
+				component: view( 'MediaPage' ),
+				name: 'site.media',
+				meta: {
+					title: 'Media - ' + APP_NAME,
+					breadcrumb: 'Media'
+				},
+				children: [ {
+						path: siteMediaNews,
+						component: view( 'MediaNewsPage' ),
+						name: 'site.media.news',
+						meta: {
+							title: 'News - ' + APP_NAME,
+							breadcrumb: 'News'
+						},
+					},
+					{
+						path: siteMediaVideos,
+						component: view( 'MediaVideosPage' ),
+						name: 'site.media.videos',
+						meta: {
+							title: 'Videos - ' + APP_NAME,
+							breadcrumb: 'Videos'
+						},
+					},
+					{
+						path: siteMediaGallery,
+						component: view( 'MediaGalleryPage' ),
+						name: 'site.media.gallery',
+						meta: {
+							title: 'Amju Gallery - ' + APP_NAME,
+							breadcrumb: 'Amju Gallery'
+						},
+					},
+				]
+			},
+			{
+				path: siteInvestorRelations,
+				name: 'site.ir',
+				component: view( 'InvestorRelationsPage' ),
+				meta: {
+					title: 'Investor Relations - ' + APP_NAME,
+					breadcrumb: 'Investor Relations'
+				},
+				children: [ {
+						path: siteIRFinInfo,
+						component: view( 'IRFinInfoPage' ),
+						name: 'site.ir.fin-info',
+						meta: {
+							title: 'Financial Information - ' + APP_NAME,
+							breadcrumb: 'Financial Information'
+						},
+					},
+					{
+						path: siteIRInvestorNews,
+						component: view( 'IRInvestorNewsPage' ),
+						name: 'site.ir.investor-news',
+						meta: {
+							title: 'Investor News - ' + APP_NAME,
+							breadcrumb: 'Investor News'
+						},
+					},
+					{
+						path: siteIROutlookInsights,
+						component: view( 'IROutlookInsightsPage' ),
+						name: 'site.ir.outlook-insights',
+						meta: {
+							title: 'Outlook and Insight - ' + APP_NAME,
+							breadcrumb: 'Outlook and Insight'
+						},
+					},
+					{
+						path: siteIREvents,
+						component: view( 'IREventsPage' ),
+						name: 'site.ir.events',
+						meta: {
+							title: 'Investor Relation Events - ' + APP_NAME,
+							breadcrumb: 'Investor Relation Events'
+						},
+					},
+					{
+						path: siteIRShareholders,
+						component: view( 'IRShareholdersInfoPage' ),
+						name: 'site.ir.shareholders-info',
+						meta: {
+							title: 'Shareholder Information - ' + APP_NAME,
+							breadcrumb: 'Shareholder Information'
+						},
+					},
+				]
+			},
+
+			{
+				path: siteAboutUs,
+				name: 'site.about',
+				meta: {
+					breadcrumb: 'About Us'
+				},
+				redirect: {
+					name: 'site.about.our-company',
+				},
+				children: [ {
+						path: siteAboutOurCompany,
+						component: view( 'OurCompanyPage' ),
+						name: 'site.about.our-company',
+						meta: {
+							title: 'Our Company - ' + APP_NAME,
+							breadcrumb: 'About Our Bank'
+						},
+					},
+					{
+						path: siteAboutCorpGov,
+						component: view( 'CorpGovPage' ),
+						name: 'site.about.corp-gov',
+						meta: {
+							title: 'Corporate Governance - ' + APP_NAME,
+							breadcrumb: 'Corporate Governance'
+						},
+					},
+					{
+						path: siteAboutBizFocus,
+						component: view( 'BizFocusPage' ),
+						name: 'site.about.bizfocus',
+						meta: {
+							title: 'Business Focus - ' + APP_NAME,
+							breadcrumb: 'Business Focus'
+						},
+					},
+					{
+						path: siteAboutAwards,
+						component: view( 'AwardsPage' ),
+						name: 'site.about.awards',
+						meta: {
+							title: 'Awards - ' + APP_NAME,
+							breadcrumb: 'Awards'
+						},
+					},
+					{
+						path: siteAboutCareer,
+						component: view( 'CareerPage' ),
+						name: 'site.about.career',
+						meta: {
+							title: 'Career - ' + APP_NAME,
+							breadcrumb: 'Career'
+						},
+					},
+					{
+						path: siteAboutApply,
+						component: view( 'ApplicationPage' ),
+						name: 'site.about.career.apply',
+						meta: {
+							title: 'Send Us Your Resume - ' + APP_NAME,
+							breadcrumb: 'Submit Resume'
+						},
+					},
+				]
 			},
 			{
 				path: siteContactUs,
@@ -76,7 +470,8 @@ export function createRouter() {
 				name: 'site.contact',
 				meta: {
 					title: 'Contacts - ' + APP_NAME,
-					breadcrumb: 'Contact Us'
+					breadcrumb: 'Contact Us',
+					navSkip: true
 				},
 			},
 			{
@@ -85,7 +480,8 @@ export function createRouter() {
 				name: 'site.account.create',
 				meta: {
 					title: 'Open New Account Instantly - ' + APP_NAME,
-					breadcrumb: 'Open New Account'
+					breadcrumb: 'Open New Account',
+					navSkip: true
 				},
 			},
 			{
@@ -94,249 +490,8 @@ export function createRouter() {
 				name: 'site.account.create.success',
 				meta: {
 					title: 'Account Created - ' + APP_NAME,
-					breadcrumb: 'New Account Created'
-				},
-			},
-			{
-				path: '/personal-banking',
-				name: 'site.pb',
-				redirect: {
-					name: 'site.pb.amju-account',
-				},
-			},
-			{
-				path: sitePBAmjuAccount,
-				component: view( 'PBAmjuAccountPage' ),
-				name: 'site.pb.amju-account',
-				meta: {
-					title: 'Personal Amju Accounts - ' + APP_NAME,
-					breadcrumb: 'Personal Amju Accounts'
-				},
-			},
-			{
-				path: sitePBServices,
-				component: view( 'PBServicesPage' ),
-				name: 'site.pb.services',
-				meta: {
-					title: 'Amju Services - ' + APP_NAME,
-					breadcrumb: 'Services'
-				},
-			},
-			{
-				path: sitePBCards,
-				component: view( 'PBCardsPage' ),
-				name: 'site.pb.cards',
-				meta: {
-					title: 'Bank Cards - ' + APP_NAME,
-					breadcrumb: 'Bank Cards'
-				},
-			},
-			{
-				path: sitePBLoans,
-				component: view( 'PBLoansPage' ),
-				name: 'site.pb.loans',
-				meta: {
-					title: 'Personal Loans - ' + APP_NAME,
-					breadcrumb: 'Personal Loans'
-				},
-			},
-			{
-				path: sitePBWaysToBank,
-				component: view( 'PBWaysToBankPage' ),
-				name: 'site.pb.ways-to-bank',
-				meta: {
-					title: 'Personal Ways To Bank - ' + APP_NAME,
-					breadcrumb: 'Personal Ways To Bank'
-				},
-			},
-			{
-				path: siteSMEBanking,
-				component: view( 'SMEBankingPage' ),
-				name: 'site.sme-banking',
-				meta: {
-					title: 'SME Banking - ' + APP_NAME,
-					breadcrumb: 'SME Banking'
-				},
-			},
-			{
-				path: '/corporate-banking',
-				name: 'site.cb',
-				redirect: {
-					name: 'site.cb.bank-account',
-				},
-			},
-			{
-				path: siteCBBankAccount,
-				component: view( 'CBBankAccountPage' ),
-				name: 'site.cb.bank-account',
-				meta: {
-					title: 'Corporate Bank Account - ' + APP_NAME,
-					breadcrumb: 'Corporate Bank Account'
-				},
-			},
-			{
-				path: siteCBLoansInvestment,
-				component: view( 'CBLoansInvestmentPage' ),
-				name: 'site.cb.loans-investment',
-				meta: {
-					title: 'Corporate Bank Loans and Investment - ' + APP_NAME,
-					breadcrumb: 'Corporate Bank Loans and Investment'
-				},
-			},
-			{
-				path: siteCBElectronicBanking,
-				component: view( 'CBElectronicBankingPage' ),
-				name: 'site.cb.electronic-banking',
-				meta: {
-					title: 'Corporate Electronic Banking - ' + APP_NAME,
-					breadcrumb: 'Corporate Electronic Banking'
-				},
-			},
-			{
-				path: '/media',
-				redirect: {
-					name: 'site.media.news',
-				},
-				name: 'site.media',
-			},
-			{
-				path: siteMediaNews,
-				component: view( 'MediaNewsPage' ),
-				name: 'site.media.news',
-				meta: {
-					title: 'News - ' + APP_NAME,
-					breadcrumb: 'News'
-				},
-			},
-			{
-				path: siteMediaVideos,
-				component: view( 'MediaVideosPage' ),
-				name: 'site.media.videos',
-				meta: {
-					title: 'Videos - ' + APP_NAME,
-					breadcrumb: 'Videos'
-				},
-			},
-			{
-				path: siteMediaGallery,
-				component: view( 'MediaGalleryPage' ),
-				name: 'site.media.gallery',
-				meta: {
-					title: 'Amju Gallery - ' + APP_NAME,
-					breadcrumb: 'Amju Gallery'
-				},
-			},
-			{
-				path: '/investor-relations',
-				name: 'site.ir',
-				redirect: {
-					name: 'site.ir.fin-info',
-				},
-			},
-			{
-				path: siteIRFinInfo,
-				component: view( 'IRFinInfoPage' ),
-				name: 'site.ir.fin-info',
-				meta: {
-					title: 'Financial Info - ' + APP_NAME,
-					breadcrumb: 'Financial Info'
-				},
-			},
-			{
-				path: siteIRInvestorNews,
-				component: view( 'IRInvestorNewsPage' ),
-				name: 'site.ir.investor-news',
-				meta: {
-					title: 'Investor News - ' + APP_NAME,
-					breadcrumb: 'Investor News'
-				},
-			},
-			{
-				path: siteIROutlookInsights,
-				component: view( 'IROutlookInsightsPage' ),
-				name: 'site.ir.outlook-insights',
-				meta: {
-					title: 'Outlook and Insights - ' + APP_NAME,
-					breadcrumb: 'Outlook and Insights'
-				},
-			},
-			{
-				path: siteIREvents,
-				component: view( 'IREventsPage' ),
-				name: 'site.ir.events',
-				meta: {
-					title: 'Investor Relation Events - ' + APP_NAME,
-					breadcrumb: 'Investor Relation Events'
-				},
-			},
-			{
-				path: siteIRShareholders,
-				component: view( 'IRShareholdersInfoPage' ),
-				name: 'site.ir.shareholders-info',
-				meta: {
-					title: 'Shareholders Information - ' + APP_NAME,
-					breadcrumb: 'Shareholders Information'
-				},
-			},
-			{
-				path: '/about-us',
-				name: 'site.about',
-				redirect: {
-					name: 'site.about.our-company',
-				},
-			},
-			{
-				path: siteAboutOurCompany,
-				component: view( 'OurCompanyPage' ),
-				name: 'site.about.our-company',
-				meta: {
-					title: 'Our Company - ' + APP_NAME,
-					breadcrumb: 'About Us'
-				},
-			},
-			{
-				path: siteAboutCorpGov,
-				component: view( 'CorpGovPage' ),
-				name: 'site.about.corp-gov',
-				meta: {
-					title: 'Corporate Governance - ' + APP_NAME,
-					breadcrumb: 'Corporate Governance'
-				},
-			},
-			{
-				path: siteAboutBizFocus,
-				component: view( 'BizFocusPage' ),
-				name: 'site.about.bizfocus',
-				meta: {
-					title: 'Business Focus - ' + APP_NAME,
-					breadcrumb: 'Business Focus'
-				},
-			},
-			{
-				path: siteAboutAwards,
-				component: view( 'AwardsPage' ),
-				name: 'site.about.awards',
-				meta: {
-					title: 'Awards - ' + APP_NAME,
-					breadcrumb: 'Awards'
-				},
-			},
-			{
-				path: siteAboutCareer,
-				component: view( 'CareerPage' ),
-				name: 'site.about.career',
-				meta: {
-					title: 'Career - ' + APP_NAME,
-					breadcrumb: 'Career'
-				},
-			},
-			{
-				path: siteAboutApply,
-				component: view( 'ApplicationPage' ),
-				name: 'site.about.career.apply',
-				meta: {
-					title: 'Send Us Your Resume - ' + APP_NAME,
-					breadcrumb: 'Submit Resume'
+					breadcrumb: 'New Account Created',
+					navSkip: true
 				},
 			},
 			{
@@ -345,7 +500,8 @@ export function createRouter() {
 				name: 'site.privacy',
 				meta: {
 					title: 'Privacy - ' + APP_NAME,
-					breadcrumb: 'Privacy'
+					breadcrumb: 'Privacy',
+					navSkip: true
 				},
 			},
 			{
@@ -354,19 +510,25 @@ export function createRouter() {
 				name: 'site.terms',
 				meta: {
 					title: 'Terms - ' + APP_NAME,
-					breadcrumb: 'Terms'
+					breadcrumb: 'Terms',
+					navSkip: true
 				},
 			},
+
 			{
 				path: 'page-not-found',
 				component: view( '404Page' ),
 				name: 'site.error',
 				meta: {
 					title: `404 - ${APP_NAME}`,
+					navSkip: true
 				},
 			},
 			{
 				path: '*',
+				meta: {
+					navSkip: true
+				},
 				redirect: {
 					name: 'site.error',
 				},

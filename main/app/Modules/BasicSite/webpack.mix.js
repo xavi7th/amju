@@ -13,7 +13,14 @@ mix.webpackConfig( {
 	},
 } )
 
-mix.copy( __dirname + '/Resources/assets/js/vendor/core.min.js', 'public_html/js/app-vendor.js' );
+mix.scripts( [
+	__dirname + '/Resources/assets/js/vendor/core.min.js',
+	// __dirname + '/Resources/assets/js/vendor/mordernizr.js',
+	// __dirname + '/Resources/assets/js/vendor/jquery.aim.js',
+	// __dirname + '/Resources/assets/js/vendor/mega-menu.js',
+], 'public_html/js/app-vendor.js' );
+
+// mix.copy( __dirname + '/Resources/assets/js/vendor/core.min.js', 'public_html/js/app-vendor.js' );
 mix.copy( __dirname + '/Resources/assets/js/vendor/script.js', 'public_html/js/main.js' );
 
 mix.copyDirectory( __dirname + '/Resources/assets/img', 'public_html/img' );

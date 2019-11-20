@@ -62,6 +62,7 @@ class AdminController extends Controller
 							]
 						]));
 						//Give him access to dashboard
+						// TODO set thin when admin fills his details and resets his password
 						$admin->permitted_api_routes()->attach(1);
 						DB::commit();
 						return response()->json(['rsp' => $admin], 201);

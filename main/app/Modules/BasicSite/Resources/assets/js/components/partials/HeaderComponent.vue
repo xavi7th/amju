@@ -29,120 +29,39 @@
 											<li class="rd-nav-item">
 												<a class="rd-nav-link" href="https://ibank.amjuuniquemfbng.com/rubikonibank/app.sn" target="_blank">Internet banking</a>
 											</li>
-											<router-link tag="li" :to="{name:'site.pb'}" class="rd-nav-item">
-												<a class="rd-nav-link" href="#" data-nav>Personal Banking</a>
-												<ul class="rd-menu rd-navbar-dropdown">
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.pb.amju-account'}">
-														<a class="rd-dropdown-link" data-nav>Amju Account</a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.pb.services'}">
-														<a class="rd-dropdown-link" data-nav>Services</a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.pb.cards'}">
-														<a class="rd-dropdown-link" data-nav>Cards</a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.pb.loans'}">
-														<a class="rd-dropdown-link" data-nav>Loans</a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.pb.ways-to-bank'}">
-														<a class="rd-dropdown-link" data-nav>Ways to bank</a>
-													</router-link>
+											<li
+												v-for="(item, index) in routes"
+												:key="index"
+												class="rd-nav-item"
+											>
+												<router-link :to="{name: item.name, hash:item.meta.hash}" v-if="item.meta.hash" class="rd-nav-link" data-nav>
+													{{item.meta.breadcrumb}}
+												</router-link>
+												<router-link :to="item.path" v-else class="rd-nav-link" data-nav>
+													{{item.meta.breadcrumb}}
+												</router-link>
+												<ul class="rd-menu rd-navbar-dropdown" v-if="item.children">
+													<li
+														v-for="childItem in item.children.filter(x => !x.meta.navSkip)"
+														:key="childItem.name"
+														class="rd-dropdown-item"
+													>
+														<router-link :to="{name: childItem.name, hash:childItem.meta.hash}" v-if="childItem.meta.hash" class="nav-link" data-nav>
+															{{childItem.meta.breadcrumb}}
+														</router-link>
+														<router-link :to="childItem.path" class="nav-link" v-else  data-nav>{{childItem.meta.breadcrumb}}</router-link>
+													</li>
 												</ul>
-											</router-link>
-											<router-link tag="li" class="rd-nav-item" :to="{name:'site.sme-banking'}">
-												<a class="rd-nav-link" data-nav>SME Banking</a>
-											</router-link>
-											<router-link tag="li" :to="{name:'site.cb'}" class="rd-nav-item">
-												<a class="rd-nav-link" href="#" data-nav>Corporate Banking</a>
-												<ul class="rd-menu rd-navbar-dropdown">
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.cb.bank-account'}">
-														<a class="rd-dropdown-link" data-nav>Bank Account</a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.cb.loans-investment'}">
-														<a class="rd-dropdown-link" data-nav>Loan &amp; Investment </a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.cb.electronic-banking'}">
-														<a class="rd-dropdown-link" data-nav>Electronic Banking </a>
-													</router-link>
-												</ul>
-											</router-link>
-											<router-link tag="li" :to="{name:'site.media'}" class="rd-nav-item">
-												<a class="rd-nav-link" href="#" data-nav>Media</a>
-												<ul class="rd-menu rd-navbar-dropdown">
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.media.news'}">
-														<a class="rd-dropdown-link" data-nav>News</a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.media.videos'}">
-														<a class="rd-dropdown-link" data-nav>Videos </a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.media.gallery'}">
-														<a class="rd-dropdown-link" data-nav>Gallery </a>
-													</router-link>
-												</ul>
-											</router-link>
-
-											<router-link tag="li" :to="{name:'site.ir'}" class="rd-nav-item">
-												<a class="rd-nav-link" href="#" data-nav>Investor Relations</a>
-												<ul class="rd-menu rd-navbar-dropdown">
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.ir.fin-info'}">
-														<a class="rd-dropdown-link" data-nav>Financial Information</a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.ir.investor-news'}">
-														<a class="rd-dropdown-link" data-nav>Investor News </a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.ir.outlook-insights'}">
-														<a class="rd-dropdown-link" data-nav>Outlook and Insight </a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.ir.events'}">
-														<a class="rd-dropdown-link" data-nav>Events </a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.ir.shareholders-info'}">
-														<a class="rd-dropdown-link" data-nav>Shareholder Information </a>
-													</router-link>
-												</ul>
-											</router-link>
-											<router-link tag="li" :to="{name:'site.about'}" class="rd-nav-item">
-												<a class="rd-nav-link" href="#" data-nav>About Us</a>
-												<ul class="rd-menu rd-navbar-dropdown">
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.about.our-company'}">
-														<a class="rd-dropdown-link" data-nav>Our Company</a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.about.corp-gov'}">
-														<a class="rd-dropdown-link" data-nav>Corporate Governance </a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.about.bizfocus'}">
-														<a class="rd-dropdown-link" data-nav>Business Focus </a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.about.awards'}">
-														<a class="rd-dropdown-link" data-nav>Awards and Achievements </a>
-													</router-link>
-													<router-link tag="li" class="rd-dropdown-item" :to="{name:'site.about.career'}">
-														<a class="rd-dropdown-link" data-nav>Career </a>
-													</router-link>
-												</ul>
-											</router-link>
+											</li>
 										</ul>
 									</div>
-									<!-- <div class="rd-navbar-search">
-										<button class="rd-navbar-search-toggle rd-navbar-fixed-element-1"
-											data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-										<form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live"
-											method="GET">
-											<div class="form-wrap">
-												<label class="form-label" for="rd-navbar-search-form-input">Search</label>
-												<input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input"
-													type="text" name="s" autocomplete="off">
-												<div class="rd-search-results-live" id="rd-search-results-live"></div>
-											</div>
-											<button class="rd-search-form-submit mdi mdi-magnify" type="submit"></button>
-										</form>
-									</div> -->
+									<!-- <menu-search-bar></menu-search-bar> -->
 								</div>
 							</div>
 						</div>
 					</nav>
 				</div>
-				<!-- Breadcrumbs -->
+
 			<section class="section section-bredcrumbs" v-if="!isHome">
 				<div class="container context-dark breadcrumb-wrapper">
 
@@ -175,6 +94,9 @@
     computed: {
       breadcrumb() {
         return this.$route.meta.breadcrumb;
+      },
+      routes() {
+        return this.$router.options.routes.filter(x => !x.meta.navSkip);
       }
     }
   };
@@ -189,6 +111,11 @@
   .rd-navbar-static {
     .rd-navbar-dropdown {
       top: 30px;
+      width: auto;
+
+      a {
+        white-space: nowrap !important;
+      }
     }
     .rd-nav-link {
       font-size: 16px;
