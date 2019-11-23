@@ -1087,7 +1087,8 @@
 				if ( url = $this.attr( "data-slide-bg" ) ) {
 					$this.css( {
 						"background-image": "url(" + url + ")",
-						"background-size": "cover"
+						"background-size": "cover",
+						"background-position": "bottom center",
 					} )
 				}
 			}
@@ -2034,5 +2035,24 @@
 			}
 		}
 	}
+
+
+	//Make img background image
+	$( 'img[data-enlarge]' ).each( function () {
+		var theImg = $( this ).attr( 'src' );
+		var $this = $( this );
+		$this.parent().css( {
+			'background-image': 'url(' + theImg + ')',
+			'background-size': 'cover',
+			'background-position': 'center',
+			'background-repeat': 'no-repeat',
+			'background-color': 'whitesmoke',
+			'max-width': '100%',
+			'height': $this.data( 'enlarge' ),
+			'display': 'block'
+		} );
+		$this.remove();
+	} );
+
 
 }() );

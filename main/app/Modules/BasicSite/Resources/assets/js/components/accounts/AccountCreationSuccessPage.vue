@@ -36,7 +36,7 @@
         <div class="button-wrap-lg text-center col-12">
           <a
             class="button button-lg button-primary"
-            href="/storage/amju-passbook-forms.zip"
+            href="/download-bank-forms"
             target="_blank"
             data-nav
           >Download Files</a>

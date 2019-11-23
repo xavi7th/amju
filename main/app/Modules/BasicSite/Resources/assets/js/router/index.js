@@ -63,16 +63,19 @@ export function createRouter() {
 		mode: 'history',
 		linkActiveClass: 'active',
 		scrollBehavior( to, from, savedPosition ) {
-			if ( savedPosition )
-				return savedPosition
 			if ( to.hash )
 				return {
 					selector: to.hash
 				}
-			return {
-				x: 0,
-				y: 0,
+			else if ( savedPosition ) {
+				return savedPosition
+			} else {
+				return {
+					x: 0,
+					y: 0,
+				}
 			}
+
 
 		},
 		routes: [ {
@@ -84,7 +87,6 @@ export function createRouter() {
 					navSkip: true
 				},
 			},
-
 			{
 				path: sitePersonalBanking,
 				name: 'site.pb',
@@ -114,7 +116,7 @@ export function createRouter() {
 					{
 						path: siteThriftSavings,
 						component: view( 'pb/ThriftSavingsPage' ),
-						name: 'site.pb.cards',
+						name: 'site.pb.thrift',
 						meta: {
 							title: 'Thrift Savivgs - ' + APP_NAME,
 							breadcrumb: 'Thrift Savivgs'
@@ -158,7 +160,6 @@ export function createRouter() {
 					},
 				]
 			},
-
 			{
 				path: siteSMEBanking,
 				name: 'site.sme',
@@ -270,33 +271,6 @@ export function createRouter() {
 					},
 					{
 						path: siteEbankingServices,
-						name: 'site.services.nip',
-						meta: {
-							title: 'NIBSS Instant Payment (NIP) - ' + APP_NAME,
-							breadcrumb: 'NIBSS Instant Payment (NIP)',
-							hash: '#nip'
-						},
-					},
-					{
-						path: siteEbankingServices,
-						name: 'site.services.pay-direct',
-						meta: {
-							title: 'Pay Direct - ' + APP_NAME,
-							breadcrumb: 'Pay Direct',
-							hash: '#pay-direct'
-						},
-					},
-					{
-						path: siteEbankingServices,
-						name: 'site.services.auto-pay-transfer',
-						meta: {
-							title: 'Auto Pay Transfer - ' + APP_NAME,
-							breadcrumb: 'Auto Pay Transfer',
-							hash: '#auto-pay-transfer'
-						},
-					},
-					{
-						path: siteEbankingServices,
 						name: 'site.services.ussd-codes',
 						meta: {
 							title: 'USSD Codes - ' + APP_NAME,
@@ -304,6 +278,16 @@ export function createRouter() {
 							hash: '#ussd-codes'
 						},
 					},
+					{
+						path: siteEbankingServices,
+						name: 'site.services.nip',
+						meta: {
+							title: 'NIBSS Instant Payment (NIP) - ' + APP_NAME,
+							breadcrumb: 'NIP & Others',
+							hash: '#others'
+						},
+					}
+
 				]
 			},
 			{
@@ -349,7 +333,8 @@ export function createRouter() {
 				component: view( 'investors/InvestorRelationsPage' ),
 				meta: {
 					title: 'Investor Relations - ' + APP_NAME,
-					breadcrumb: 'Investor Relations'
+					breadcrumb: 'Investor Relations',
+					navSkip: true,
 				},
 				children: [ {
 						path: siteIRFinInfo,
@@ -402,6 +387,7 @@ export function createRouter() {
 			{
 				path: siteAboutUs,
 				name: 'site.about',
+				component: view( 'misc/EmptyComponent' ),
 				meta: {
 					breadcrumb: 'About Us'
 				},
@@ -459,7 +445,8 @@ export function createRouter() {
 						name: 'site.about.career.apply',
 						meta: {
 							title: 'Send Us Your Resume - ' + APP_NAME,
-							breadcrumb: 'Submit Resume'
+							breadcrumb: 'Submit Resume',
+							navSkip: true
 						},
 					},
 				]
@@ -476,7 +463,7 @@ export function createRouter() {
 			},
 			{
 				path: siteCreateAccount,
-				component: view( 'CreateAccountPage' ),
+				component: view( 'accounts/CreateAccountPage' ),
 				name: 'site.account.create',
 				meta: {
 					title: 'Open New Account Instantly - ' + APP_NAME,
@@ -486,7 +473,7 @@ export function createRouter() {
 			},
 			{
 				path: siteCreateAccountSuccess,
-				component: view( 'AccountCreationSuccessPage' ),
+				component: view( 'accounts/AccountCreationSuccessPage' ),
 				name: 'site.account.create.success',
 				meta: {
 					title: 'Account Created - ' + APP_NAME,

@@ -54,6 +54,11 @@ class BasicSiteController extends Controller
 				}
 			});
 
+			Route::get('/download-bank-forms', function () {
+				// return response()->file('storage/amju-account-opening-forms.zip');
+				return download_file('amju-account-opening-forms.zip', 'amju-account-opening-forms.zip');
+			});
+
 			Route::get('/{subcat?}', function () {
 				return view('basicsite::index');
 			})->where('subcat', '^((?!(api|' . Admin::DASHBOARD_ROUTE_PREFIX . '|tinker|_debugbar|css|js|_ignition|ignition-vendor)).)*')->name('home'); //Matches all routes except routes that start with the list provided.

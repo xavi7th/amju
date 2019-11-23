@@ -34,7 +34,7 @@
 												:key="index"
 												class="rd-nav-item"
 											>
-												<router-link :to="{name: item.name, hash:item.meta.hash}" v-if="item.meta.hash" class="rd-nav-link" data-nav>
+												<router-link :to="`#${item.meta.hash}`" v-if="item.meta.hash" class="rd-nav-link" data-nav>
 													{{item.meta.breadcrumb}}
 												</router-link>
 												<router-link :to="item.path" v-else class="rd-nav-link" data-nav>
@@ -46,7 +46,7 @@
 														:key="childItem.name"
 														class="rd-dropdown-item"
 													>
-														<router-link :to="{name: childItem.name, hash:childItem.meta.hash}" v-if="childItem.meta.hash" class="nav-link" data-nav>
+														<router-link :to="`${childItem.meta.hash}`" v-if="childItem.meta.hash" class="nav-link" data-nav>
 															{{childItem.meta.breadcrumb}}
 														</router-link>
 														<router-link :to="childItem.path" class="nav-link" v-else  data-nav>{{childItem.meta.breadcrumb}}</router-link>

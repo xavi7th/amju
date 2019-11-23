@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="isBasePage">
     <section class="section section-lg">
       <div class="container text-center">
         <div class="row justify-content-center">
@@ -93,6 +93,7 @@
       </div>
     </section>
   </div>
+  <router-view v-else @page-loaded="$emit('page-loaded')"></router-view>
 </template>
 <script>
   export default {
@@ -102,6 +103,11 @@
     },
     beforeDestroy() {
       this.$unloadScript("/js/main.js");
+    },
+    computed: {
+      isBasePage() {
+        return this.$route.name === "site.ir";
+      }
     }
   };
 </script>

@@ -222,7 +222,8 @@
       this.$emit("page-loaded");
     },
     beforeDestroy() {
-      this.$unloadScript("/js/main.js");
+      // this.$unloadScript("/js/main.js");
+      this.$emit("unload-main");
     }
   };
 </script>

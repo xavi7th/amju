@@ -8,14 +8,14 @@
           </div>
           <div class="col-12">
             <div class="heading-6">
-              Lorem ipsum dolor sit amet, scripta legimus quaerendum ex vis, audire nonumes his
-              an. Decore tamquam insolens usu.
+              Amju Unique Micro Finance Bank was founded in ???? to introduce the new level of financial services in Nigeria.
+              We are still dedicated to the success of our clients.
             </div>
             <p>
-              Lorem ipsum dolor sit amet, scripta legimus quaerendum ex vis, audire nonumes his an. Decore tamquam
-              insolens usu, an duo omnium debitis adipiscing, ne postulant. Lorem ipsum dolor sit amet, scripta
-              legimus quaerendum ex vis, audire nonumes his an. Decore tamquam insolens usu, an duo omnium debitis
-              adipiscing, ne postulant.
+              At Amju Unique Micro Finance Bank, we are guided by a common purpose to help make financial lives better by connecting
+              clients and communities to the resource they need to be successful. We are driving growth – helping to create jobs,
+              develop communities, foster economic mobility and address our society’s biggest challenges – while managing risk and
+              providing a return to our clients and our shareholders.
             </p>
           </div>
         </div>
@@ -145,7 +145,8 @@
       this.$emit("page-loaded");
     },
     beforeDestroy() {
-      this.$unloadScript("/js/main.js");
+      // this.$unloadScript("/js/main.js");
+      this.$emit("unload-main");
     }
   };
 </script>

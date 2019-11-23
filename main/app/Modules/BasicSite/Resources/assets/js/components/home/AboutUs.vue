@@ -68,12 +68,12 @@
           <article class="post-modern">
             <div class="media-wrapper">
               <router-link data-nav :to="{name: 'site.root'}">
-                <img src="img/slider-2-1920x879.jpg" alt width="370" height="240" />
+                <img src="/img/amju-ceo.jpg" alt width="370" height="240" />
               </router-link>
               <ul class="list-tags">
-                <li>
+                <!-- <li>
                   <router-link data-nav class="tag" :to="{name: 'site.root'}">Read More</router-link>
-                </li>
+                </li>-->
               </ul>
             </div>
           </article>
@@ -82,12 +82,12 @@
           <article class="post-modern">
             <div class="media-wrapper">
               <router-link data-nav :to="{name: 'site.root'}">
-                <img src="img/modern-blog-2-370x240.jpg" alt width="370" height="240" />
+                <img src="/img/customer-care.jpg" alt width="370" height="240" />
               </router-link>
               <ul class="list-tags">
-                <li>
+                <!-- <li>
                   <router-link data-nav class="tag" :to="{name: 'site.root'}">Read More</router-link>
-                </li>
+                </li>-->
               </ul>
             </div>
           </article>
@@ -96,12 +96,12 @@
           <article class="post-modern">
             <div class="media-wrapper">
               <router-link data-nav :to="{name: 'site.root'}">
-                <img src="img/modern-blog-3-370x240.jpg" alt width="370" height="240" />
+                <img src="/img/slider-2-1920x879.jpg" alt width="370" height="240" />
               </router-link>
               <ul class="list-tags">
-                <li>
+                <!-- <li>
                   <router-link data-nav class="tag" :to="{name: 'site.root'}">Read More</router-link>
-                </li>
+                </li>-->
               </ul>
             </div>
           </article>

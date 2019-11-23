@@ -64,8 +64,8 @@
             </div>
             <div class="counter-boxed-body">
               <div class="exeption">
-                Banque offers various account types and deposit options with interest
-                rates up to 25% for all regular clients. Who else would you rather bank with?
+                BanAmju Unique Micro Finance Bankque offers various account types and deposit options with interest
+                rates up to 25% for all clients. Won't you rather bank with us?
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@
           </div>
           <div class="col-sm-6 col-lg-4 d-none d-lg-block">
             <div class="text-center wow fadeIn">
-              <img src="img/index-1-1-309x582.png" alt width="309" height="582" />
+              <img src="img/amju-mobile-banking.png" alt width="309" height="582" />
             </div>
           </div>
           <div class="col-sm-6 col-lg-4">
@@ -172,5 +172,8 @@
 <style lang="scss" scoped>
   .section-negative {
     background: #012a53;
+  }
+  .counter-boxed {
+    box-shadow: -4px -1px 2px 1px rgba(102, 102, 102, 0.15);
   }
 </style>

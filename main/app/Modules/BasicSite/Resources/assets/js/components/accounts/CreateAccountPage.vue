@@ -1,7 +1,7 @@
 <template>
   <section class="section one-screen-page bg-gray-100">
     <div class="one-screen-page-inner">
-      <div class="page-content text-center">
+      <div class="page-content text-center py-5 my-5">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-4">
