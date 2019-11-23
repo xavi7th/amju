@@ -110,11 +110,57 @@
               })
               .catch(err => {
                 if (err.response.status == 416) {
-                  swal.fire({
-                    title: "Unverified",
-                    text: `Your newly registered account has not been approved by our validation team.`,
-                    type: "info"
-                  });
+                  swal
+                    .fire({
+                      title: "Unverified",
+                      text: `This seems to be your first login. You need to supply a password`,
+                      type: "info"
+                    })
+                    .then(() => {
+                      swal
+                        .fire({
+                          title: "Enter a password",
+                          input: "text",
+                          inputAttributes: {
+                            autocapitalize: "off"
+                          },
+                          showCancelButton: true,
+                          confirmButtonText: "Set Password",
+                          showLoaderOnConfirm: true,
+                          preConfirm: pw => {
+                            return axios
+                              .post("first-time", {
+                                pw,
+                                email: this.details.email
+                              })
+                              .then(response => {
+                                if (response.status !== 204) {
+                                  throw new Error(response.statusText);
+                                }
+                                return { rsp: true };
+                              })
+                              .catch(error => {
+                                swal.showValidationMessage(
+                                  `Request failed: ${error}`
+                                );
+                              });
+                          },
+                          allowOutsideClick: () => !swal.isLoading()
+                        })
+                        .then(result => {
+                          if (result.value) {
+                            swal
+                              .fire({
+                                title: `Success`,
+                                text: "Password set successfully!",
+                                type: "success"
+                              })
+                              .then(() => {
+                                location.reload();
+                              });
+                          }
+                        });
+                    });
                 }
               });
           }

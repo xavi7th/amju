@@ -207,6 +207,7 @@ const allRoutes = [ {
 const authRoutes = [ {
 		path: '/login',
 		component: view( 'auth/Login' ),
+		meta: {}
 	},
 	{
 		path: '*',

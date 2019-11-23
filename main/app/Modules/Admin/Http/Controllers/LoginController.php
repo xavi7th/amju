@@ -4,6 +4,7 @@ namespace App\Modules\Admin\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Modules\Admin\Models\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -47,7 +48,8 @@ class LoginController extends Controller
 	static function routes()
 	{
 		Route::get('login', 'LoginController@showLoginForm')->name('admin.login');
-		Route::post('login', 'LoginController@login')->middleware('throttle:5,1');
+		Route::post('login', 'LoginController@login')->middleware('throttle:5,1')->middleware('verified');
+		Route::post('first-time', 'LoginController@resetPassword')->middleware('throttle:5,1');
 		Route::post('logout', 'LoginController@logout')->name('admin.logout');
 	}
 
@@ -59,6 +61,31 @@ class LoginController extends Controller
 	public function showLoginForm()
 	{
 		return view('admin::auth');
+	}
+
+	/**
+	 * Show the application's login form.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function resetPassword()
+	{
+		$admin = Admin::where('email', request('email'))->firstOrFail();
+		if ($admin && !$admin->is_verified()) {
+			Db::beginTransaction();
+
+			$admin->password = bcrypt(request('pw'));
+			$admin->verified_at = now();
+			$admin->permitted_api_routes()->attach(1);
+			$admin->save();
+
+			DB::commit();
+
+			$this->guard()->login($admin);
+
+			return response()->json(['status' => true], 204);
+		}
+		return response()->json(['status'], 403);
 	}
 
 	/**

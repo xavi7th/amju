@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
 use App\Modules\Admin\Http\Middleware\OnlyAdmins;
+use App\Modules\Admin\Http\Middleware\VerifiedAdmins;
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -33,6 +34,7 @@ class AdminServiceProvider extends ServiceProvider
 
 		/**** Register the modules middlewares *****/
 		app()->make('router')->aliasMiddleware('admins', OnlyAdmins::class);
+		app()->make('router')->aliasMiddleware('verified', VerifiedAdmins::class);
 	}
 
 	/**
