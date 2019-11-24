@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 use App\Modules\Admin\Models\ApiRoute;
 use App\Modules\BasicSite\Models\AppUser;
 use App\Modules\BasicSite\Models\Message;
+use App\Modules\BasicSite\Models\Testimonial;
 use App\Modules\Admin\Transformers\AdminUserTransformer;
 use App\Modules\Transformers\AdminTestimonialTransformer;
 use App\Modules\Admin\Transformers\AdminActivityTransformer;
@@ -191,25 +192,7 @@ class AdminController extends Controller
 
 
 				Route::get('testimonials', function () {
-					$testimonials = Testimonial::when(
-						request('sort'),
-						function ($query) {
-							$sort_params = explode('|', request('sort'));
-							$sort_param = $sort_params[0] == 'is_verified' ? 'verified_at' : $sort_params[0];
-							$sort_type = $sort_params[1];
-
-							return $query->orderBy($sort_param, $sort_type);
-						},
-						function ($query) {
-							return $query->latest();
-						}
-					)
-						->when(request('filter'), function ($query) {
-							$filter = request('filter');
-							return $query->where('name', 'LIKE',  "%$filter%")->orWhere('email', 'LIKE', "%$filter%");
-						})->paginate(request('per_page'));
-
-					return (new AdminTestimonialTransformer)->collectionTransformer($testimonials, 'transformForAdminViewTestimonials');
+					return (new AdminTestimonialTransformer)->collectionTransformer(Testimonial::all(), 'transformForAdminViewTestimonials');
 				});
 
 
@@ -218,16 +201,15 @@ class AdminController extends Controller
 					$url = request()->file('user_img')->store('public/testimonial_images');
 					$url = str_replace_first('public', '/storage', $url);
 
-
 					try {
-						Testimonial::create([
+						$testimonial = Testimonial::create([
 							'name' => request('name'),
 							'city' => request('city'),
 							'country' => request('country'),
 							'testimonial' => request('testimonial'),
 							'img' => $url
 						]);
-						return response()->json(['rsp' => true], 201);
+						return response()->json(['rsp' => $testimonial], 201);
 					} catch (\Throwable $e) {
 						Log::error($e);
 						return response()->json(['rsp' => false], 500);

@@ -34,7 +34,7 @@ const allRoutes = [ {
 		},
 		children: [ {
 				path: '/manage-ui/testimonials',
-				component: view( 'dashboard/ManageTestimonials' ),
+				component: view( 'ui/ManageTestimonials' ),
 				name: 'admin.ui.testimonials',
 				meta: {
 					title: APP_NAME + ' | Manage Testimonials',

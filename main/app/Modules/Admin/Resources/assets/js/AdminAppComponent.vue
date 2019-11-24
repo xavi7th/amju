@@ -39,7 +39,7 @@
     },
     computed: {
       isAuth() {
-        return this.$route.path.match("login");
+        return this.$route.name === null || this.$route.path.match("login");
       },
       is404() {
         return this.$route.name
