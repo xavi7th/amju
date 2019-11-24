@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Artisan;
 use App\Modules\BasicSite\Models\AppUser;
 use App\Modules\BasicSite\Models\Message;
 use App\Modules\AppUser\Models\TeamMember;
-use App\Modules\AppUser\Models\Testimonial;
+use App\Modules\BasicSite\Models\Testimonial;
 use App\Modules\BasicSite\Transformers\TeamMemberTransformer;
 use App\Modules\BasicSite\Http\Requests\ContactFormValidation;
 use App\Modules\BasicSite\Transformers\TestimonialTransformer;

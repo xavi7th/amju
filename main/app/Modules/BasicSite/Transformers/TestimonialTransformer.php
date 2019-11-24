@@ -2,7 +2,7 @@
 
 namespace App\Modules\BasicSite\Transformers;
 
-use App\Modules\AppUser\Models\Testimonial;
+use App\Modules\BasicSite\Models\Testimonial;
 
 class TestimonialTransformer
 {
