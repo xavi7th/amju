@@ -22,6 +22,13 @@ import {
 	siteMediaVideos,
 	siteMediaGallery,
 	siteEbankingServices,
+	siteEBAtmServices,
+	siteEBMobileBankingServices,
+	siteEBInternetBankingServices,
+	siteEBPosServices,
+	siteEBUssdCodesServices,
+	siteEBNipServices,
+	siteEBProductsAndServices,
 	siteInvestorRelations,
 	siteIRFinInfo,
 	siteIRInvestorNews,
@@ -29,6 +36,7 @@ import {
 	siteIREvents,
 	siteIRShareholders,
 	siteAboutUs,
+	siteAboutBranches,
 	siteAboutOurCompany,
 	siteAboutCorpGov,
 	siteAboutBizFocus,
@@ -234,57 +242,67 @@ export function createRouter() {
 					breadcrumb: 'eBanking Services'
 				},
 				children: [ {
-						path: siteEbankingServices,
+						path: siteEBAtmServices,
 						name: 'site.services.atm',
+						component: view( 'ebanking/ATMServicesPage' ),
 						meta: {
 							title: 'ATM Services - ' + APP_NAME,
 							breadcrumb: 'ATM Services',
-							hash: '#atm-services'
 						},
 					},
 					{
-						path: siteEbankingServices,
+						path: siteEBMobileBankingServices,
 						name: 'site.services.mobile-banking',
+						component: view( 'ebanking/MobileBankingServicesPage' ),
 						meta: {
 							title: 'Mobile Services - ' + APP_NAME,
-							breadcrumb: 'Mobile Services',
-							hash: '#mobile-banking'
+							breadcrumb: 'Mobile Banking Services',
 						},
 					},
 					{
-						path: siteEbankingServices,
+						path: siteEBInternetBankingServices,
 						name: 'site.services.internet-banking',
+						component: view( 'ebanking/InternetBankingServicesPage' ),
 						meta: {
 							title: 'Internet Banking - ' + APP_NAME,
 							breadcrumb: 'Internet Banking',
-							hash: '#internet-banking'
 						},
 					},
 					{
-						path: siteEbankingServices,
+						path: siteEBPosServices,
 						name: 'site.services.pos',
+						component: view( 'ebanking/POSServicesPage' ),
 						meta: {
 							title: 'POS For Merchants - ' + APP_NAME,
 							breadcrumb: 'POS For Merchants',
-							hash: '#pos'
 						},
 					},
 					{
-						path: siteEbankingServices,
+						path: siteEBUssdCodesServices,
 						name: 'site.services.ussd-codes',
+						component: view( 'ebanking/USSDServicesPage' ),
 						meta: {
-							title: 'USSD Codes - ' + APP_NAME,
-							breadcrumb: 'USSD Codes',
-							hash: '#ussd-codes'
+							title: 'AMJU Eazybanking - ' + APP_NAME,
+							breadcrumb: 'AMJU Eazybanking',
 						},
 					},
 					{
-						path: siteEbankingServices,
+						path: siteEBNipServices,
 						name: 'site.services.nip',
+						component: view( 'ebanking/OtherServicesPage' ),
 						meta: {
 							title: 'NIBSS Instant Payment (NIP) - ' + APP_NAME,
 							breadcrumb: 'NIP & Others',
-							hash: '#others'
+						},
+					},
+					{
+						path: siteEBProductsAndServices,
+						name: 'site.services.products',
+						component: view( 'ebanking/ProductsAndServices' ),
+						meta: {
+							title: 'Products and Services - ' + APP_NAME,
+							breadcrumb: 'Products and Services',
+							navSkip: true
 						},
 					}
 
@@ -428,6 +446,16 @@ export function createRouter() {
 						meta: {
 							title: 'Awards - ' + APP_NAME,
 							breadcrumb: 'Awards'
+						},
+					},
+					{
+						path: siteAboutBranches,
+						component: view( 'about/OurBranchesPage' ),
+						name: 'site.about.branches',
+						meta: {
+							title: 'Our Branches - ' + APP_NAME,
+							breadcrumb: 'Our Branches',
+							navSkip: true
 						},
 					},
 					{

@@ -9,16 +9,7 @@
               <form class="rd-form form-lg rd-mailform" @submit.prevent="createAccount">
                 <div class="form-wrap radio-group">
                   <label for="account-type" class="radio-group-label">Choose Account Type</label>
-                  <div>
-                    <input
-                      type="radio"
-                      name="account-type"
-                      :data-constraints="accountTypeConstraint"
-                      v-model="details.acc_type"
-                      value="corporate"
-                    />
-                    <label for="account-type">Corporate</label>
-                  </div>
+
                   <div>
                     <input
                       type="radio"
@@ -33,9 +24,9 @@
                       type="radio"
                       name="account-type"
                       v-model="details.acc_type"
-                      value="amjuflex"
+                      value="savings"
                     />
-                    <label for="account-type">AmjuFlex</label>
+                    <label for="account-type">Savings</label>
                   </div>
                   <div>
                     <input
@@ -47,13 +38,30 @@
                     <label for="account-type">Others</label>
                   </div>
                 </div>
+                <div class="form-wrap" v-if="otherAccTypes">
+                  <select class="form-input" name="gender" v-model="details.acc_type">
+                    <option value="others">Select Account Type</option>
+                    <option value="flexi">Amju Flexi Savings</option>
+                    <option value="edusave">Amju Edusave Savings</option>
+                    <option value="thrift">Amju Thrift Savings</option>
+                    <option value="marriage">Amju Marriage Savings</option>
+                    <option value="christmas">Amju Christmas Savings</option>
+                    <option value="esusu">Amju Esusu Savings</option>
+                    <option value="entrepreneur">Amju Entrepreneur Savings</option>
+                    <option value="platinum">Amju Platinum Account</option>
+                    <option value="overdraft">Amju Overdraft Account</option>
+                    <option value="divine">Amju Divine Account</option>
+                    <option value="cooperative">Amju Cooperative Account</option>
+                    <option value="groupleading">Amju Group Leading Account</option>
+                  </select>
+                </div>
                 <div class="form-wrap">
                   <input
                     class="form-input"
                     id="user-name"
                     type="text"
                     name="user-name"
-                    data-constraints="@Alpha @Required"
+                    :data-constraints="fullnameConstraint"
                     v-model="details.full_name"
                   />
                   <label class="form-label" for="user-name">Full Name</label>
@@ -146,7 +154,7 @@
                 <button
                   class="button button-lg button-round button-block button-primary"
                   type="submit"
-                  :disabled="!details.full_name || !details.gender || !details.user_passport"
+                  :disabled="!details.full_name || !details.gender || !details.user_passport || !details.acc_type || details.acc_type == 'others'"
                 >Register</button>
               </form>
             </div>
@@ -184,7 +192,17 @@
         return '@Required(message = "Select your gender")';
       },
       bvnConstraint() {
-        return '@Length(min=20, max=20, message = "Your BVN must be exactly 20 digits", ignoreEmpty=true) @Numeric(ignoreEmpty=true)';
+        return '@Length(min=11, max=12, message = "Your BVN must be between 11 & 12 digits", ignoreEmpty=true) @Numeric(ignoreEmpty=true)';
+      },
+      fullnameConstraint() {
+        return '@Pattern(regex=/^[A-Za-z-\\s\\.]+$/, message="A valid name is required") @Required';
+      },
+      otherAccTypes() {
+        return (
+          this.details.acc_type &&
+          this.details.acc_type != "current" &&
+          this.details.acc_type != "savings"
+        );
       }
     },
     methods: {
@@ -200,6 +218,9 @@
             title: "Oops! "
           });
         } else {
+          BlockToast.fire({
+            text: "Setting up your new account ..."
+          });
           this.details.dob = new Date(this.details.dob).toDateString();
           let formData = new FormData();
 

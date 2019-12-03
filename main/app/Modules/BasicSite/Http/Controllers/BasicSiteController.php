@@ -59,6 +59,10 @@ class BasicSiteController extends Controller
 				return download_file('amju-account-opening-forms.zip', 'amju-account-opening-forms.zip');
 			});
 
+			Route::get('/download-pos-form', function () {
+				return download_file('pos.pdf', 'POS-Merchant-Application-Form.pdf');
+			});
+
 			Route::get('/{subcat?}', function () {
 				return view('basicsite::index');
 			})->where('subcat', '^((?!(api|' . Admin::DASHBOARD_ROUTE_PREFIX . '|tinker|_debugbar|css|js|_ignition|ignition-vendor)).)*')->name('home'); //Matches all routes except routes that start with the list provided.

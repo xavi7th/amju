@@ -6,22 +6,26 @@
           <ul class="list-xxl pl-5">
             <li>
               <h5>Overview</h5>
-              <p>Secure your child’s future with flexible quality accademics with Amju EDU SAVE</p>
+              <p>
+                Amju Bank has deployed a large network of ATMs in all our branches,
+                to offer our customers painless, quick and convenient access to their funds 24/7 every day.
+              </p>
             </li>
             <li>
               <h5>Main Features</h5>
               <ul class="list-marked">
-                <li>Open with ₦1,000 Minimum</li>
-                <li>Available to all categories of students</li>
-                <li>Save up to a minimum of ₦100,000 in six months</li>
-                <li>Easy access to loan for school fees</li>
+                <li>Open with ₦2,000 Minimum</li>
+                <li>₦5,000 Minimum credit balance</li>
+                <li>Operate with a cheque book</li>
+                <li>Attract interest rate of 2% income per annum</li>
               </ul>
             </li>
             <li>
               <h5>Benefits</h5>
               <ul class="list-marked">
-                <li>3% Interest per anum payable on average minimum balance of N100,000 for 6 months</li>
-                <li>Easy access to loan for school fess</li>
+                <li>Attract interest rate of 2% income per annum</li>
+                <li>It attracts interest to customers</li>
+                <li>It allows lodgement of cheques from any bank</li>
                 <li>*322*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
                 <li>AMJU Mobile Banking App</li>
@@ -50,23 +54,7 @@
           <div class="box-wrap-gray">
             <div class="thumbnail-1">
               <div class="media-wrap">
-                <img src="/img/avatar7.jpg" alt width="270" height="270" />
-              </div>
-              <div class="title">
-                <a href="#">Daniel Gbenga</a>
-              </div>
-              <div class="position">Uniben Student</div>
-              <p class="exeption">
-                Ever since I started saving with Amju Unique Micro Finance Bank I have been able to meet my target for
-                my school needs
-              </p>
-              <div class="group group-middle social-items d-flex justify-content-around">
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-facebook" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-twitter" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-instagram" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-facebook-messenger" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-linkedin" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-snapchat" href="#"></a>
+                <img src="/img/atm.jpeg" alt width="270" height="270" />
               </div>
             </div>
           </div>
@@ -78,7 +66,7 @@
 
 <script>
   export default {
-    name: "AmjuEdusaveSavingsPage",
+    name: "InternetBankingServices",
     mounted() {
       this.$emit("page-loaded");
     },

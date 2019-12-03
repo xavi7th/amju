@@ -19,7 +19,7 @@ class AccountCreationFormValidation extends FormRequest
 			'full_name' => 'required|max:255|string|unique:users,full_name',
 			'gender' => 'required|string',
 			'acc_type' => 'required|string|max:15',
-			'bvn' => 'nullable|numeric|digits:20|unique:users,bvn',
+			'bvn' => 'nullable|numeric|digits_between:11,12|unique:users,bvn',
 			'dob' => 'required|date',
 			'user_passport' => 'required| mimes:jpeg,bmp,png',
 			'address' => 'required|string',

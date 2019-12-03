@@ -28,7 +28,7 @@
         <div class="col-md-10 col-lg-6 col-xl-5">
           <div class="text-block-2">
             <h6>
-              Amju Unique Micro Finance Bank was founded in ???? to introduce the new level of financial services in Nigeria. We are still
+              Amju Unique Micro Finance Bank was founded on 6th May, 2009 to introduce the new level of financial services in Nigeria. We are still
               dedicated to the success of our clients.
             </h6>
             <p>
@@ -64,24 +64,11 @@
         </div>
 
         <!-- pick from DB -->
-        <div class="col-sm-6 col-lg-3 wow fadeInRight">
-          <article class="post-modern">
-            <div class="media-wrapper">
-              <router-link data-nav :to="{name: 'site.root'}">
-                <img src="/img/amju-ceo.jpg" alt width="370" height="240" />
-              </router-link>
-              <ul class="list-tags">
-                <!-- <li>
-                  <router-link data-nav class="tag" :to="{name: 'site.root'}">Read More</router-link>
-                </li>-->
-              </ul>
-            </div>
-          </article>
-        </div>
+
         <div class="col-sm-6 col-lg-3 wow fadeInRight" data-wow-delay="0.1s">
           <article class="post-modern">
             <div class="media-wrapper">
-              <router-link data-nav :to="{name: 'site.root'}">
+              <router-link data-nav to="#faq">
                 <img src="/img/customer-care.jpg" alt width="370" height="240" />
               </router-link>
               <ul class="list-tags">
@@ -95,8 +82,22 @@
         <div class="col-sm-6 col-lg-3 wow fadeInRight" data-wow-delay="0.1s">
           <article class="post-modern">
             <div class="media-wrapper">
-              <router-link data-nav :to="{name: 'site.root'}">
+              <router-link data-nav :to="{name: 'site.pb.edusave'}">
                 <img src="/img/slider-2-1920x879.jpg" alt width="370" height="240" />
+              </router-link>
+              <ul class="list-tags">
+                <!-- <li>
+                  <router-link data-nav class="tag" :to="{name: 'site.root'}">Read More</router-link>
+                </li>-->
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-lg-3 wow fadeInRight">
+          <article class="post-modern">
+            <div class="media-wrapper">
+              <router-link data-nav :to="{name: 'site.about.career'}">
+                <img src="/img/entrepreneur.jpg" alt width="370" height="240" />
               </router-link>
               <ul class="list-tags">
                 <!-- <li>

@@ -1,6 +1,22 @@
 <template>
   <section class="section section-md">
     <div class="container text-center">
+      <div class="row row-fix justify-content-center text-center">
+        <div class="col-md-10 col-xl-7">
+          <h2>
+            <span>AMJU Verve Card</span>
+          </h2>
+          <p>
+            The AMJU BANK VERVE Card is a Naira denominated debit card, it is sued in partners with secure id.
+            It is denominated in Naira, but can be used for ATM cash withdrawals and also to settle purchases/payments
+            via POS terminals and Online anywhere in Nigeria.
+          </p>
+          <p>
+            The AMJU BANK VERVE card is linked online, real-time to your Current or Savings account. The AMJU
+            BANK VERVE card is valid for 3 years.
+          </p>
+        </div>
+      </div>
       <h2 class="custom-title">
         <span>How to Order a New Card</span>
       </h2>
@@ -30,8 +46,8 @@
             </div>
             <h5 class="title">Filling Out a Form</h5>
             <p class="exeption">
-              After the basic registration, you will need to fill out a form to help us determine
-              your financial goals.
+              After the basic registration, you will need to print out a form and fill it out completely
+              to enable us know you better
             </p>
           </div>
         </div>
@@ -42,10 +58,10 @@
                 <span class="index-counter"></span>
               </div>
             </div>
-            <h5 class="title">Signing an Agreement</h5>
+            <h5 class="title">Append Signatures</h5>
             <p class="exeption">
-              This stage concludes the procedure of opening an account at Banque to start using
-              your card.
+              All proposed account signatories are required to append their signature to the form and also
+              include their passports
             </p>
           </div>
         </div>
@@ -56,11 +72,10 @@
                 <span class="index-counter"></span>
               </div>
             </div>
-            <h5 class="title">Using Your Card</h5>
-            <p class="exeption">
-              You can use your card to purchase the products you need or to open a secure deposit
-              with lots of benefits.
-            </p>
+            <h5 class="title">Pick Up Your Card</h5>
+            <p
+              class="exeption"
+            >Walk into any AMJU branch with your duly completed forms to collect your card, activate it by changing your PIN and you can start using it immediately.</p>
           </div>
         </div>
       </div>

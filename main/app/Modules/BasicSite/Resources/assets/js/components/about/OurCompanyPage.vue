@@ -8,15 +8,62 @@
           </div>
           <div class="col-12">
             <div class="heading-6">
-              Amju Unique Micro Finance Bank was founded in ???? to introduce the new level of financial services in Nigeria.
-              We are still dedicated to the success of our clients.
+              AMJU Unique Microfinance Bank Limited, which has its corporate Head OFFICE AT No 71, Airport Road, Warri,
+              Delta State, was incorporated with the Corporate Affairs Commisiion (CAC) of Nigeria on the 6th of May, 2009
+              consequent upon the grant of approval-in-principle by the Central Bank of Nigeria (CBN)
+              VIDE ITS LETTER referenced OFD/GDM/MAU/01/303 dated 6th April, 2010.
             </div>
             <p>
-              At Amju Unique Micro Finance Bank, we are guided by a common purpose to help make financial lives better by connecting
-              clients and communities to the resource they need to be successful. We are driving growth – helping to create jobs,
-              develop communities, foster economic mobility and address our society’s biggest challenges – while managing risk and
-              providing a return to our clients and our shareholders.
+              We commenced banking operation as unit microfinance bank on 3rd May, 2010 with an authorized and paid-up capital of
+              N150 million respectively. In february 2013 we are granted approval by the Central Bank of Nigeria to operate as
+              a state microfiance bank having increased our capital base to N500 million fully paid. As at 31 December, 2017 our
+              management account shows shareholders fund unimpaired by losses stood at N1.188 billion with only six branches -
+              situated in Effurun, Warri, Asaba, Ughelli, Eku and Kurutie Delta State. Our total clientele base as at 30th of June, 2018
+              stood at 19,514 with balance sheet of over N10.2 BILLION.
             </p>
+            <p>
+              Our bank can be said to be a hybrid microfinance bank as we Our management team is made up of highly qualified professionals
+              with many years of experience in the banking industry. All of them are certified microfinance bankers as required by the CBN.
+            </p>
+            <p>
+              We are one of the very few microfinance banks in Nigeria today that have “Acquirer” ATM, Internet Banking, POS, and other
+              E-channel in all her branches, including Airport Road Effurun, Main Market Warri, Asaba, Ughelli and Eku.
+            </p>
+            <p>
+              Secondly, with our Ebanking platform our customers and the public can transfer and receive money electronically to and from any
+              bank in Nigeria through the Auto Pay and pay Direct platforms provided by interswitch.
+            </p>
+            <p>
+              Our Motto ”Easy Banking beyond the First” encapsulates our philosophy, services and products that meet the needs of all
+              classes of individuals and group that are engaged in micro, small and medium scale enterprises.
+            </p>
+          </div>
+
+          <div class="col-md-6">
+            <ul class="list-xxl">
+              <li>
+                <h4>VISION STATEMENT</h4>
+                <ul class="list-marked">
+                  <li>To become the world leading financial institution that support customers needs through product and services</li>
+                  <li>To create superior returns to shareholders, Investors, government, depositors, employees and community</li>
+                  <li>To bring good life to the employees good welfare</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-xxl">
+              <li>
+                <h4>MISSION STATEMENT</h4>
+                <ul class="list-marked">
+                  <li>To be the best MFB in Nigeria with flexible quality services to our esteemed customers</li>
+                  <li>To empower the powerless</li>
+                  <li>To enhance self actualization in those economic vision</li>
+                  <li>To reduce poverty in our environment of operation</li>
+                  <li>To generate and provide investment advice</li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
         <img
@@ -28,13 +75,13 @@
         />
       </div>
     </section>
-    <!-- Your Career Starts Here-->
-    <section class="section section-lg bg-gray-100">
+
+    <!-- <section class="section section-lg bg-gray-100">
       <div class="container text-center">
         <h2 class="custom-title">
           <span>History</span>
         </h2>
-        <!-- Owl Carousel-->
+
         <div
           class="owl-carousel text-left"
           data-items="1"
@@ -134,7 +181,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
   </div>
 </template>
 

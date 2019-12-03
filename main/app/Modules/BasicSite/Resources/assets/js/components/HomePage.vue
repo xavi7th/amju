@@ -3,7 +3,7 @@
     <hero-section></hero-section>
     <amju-highlights></amju-highlights>
     <about-section></about-section>
-    <testimonial-section></testimonial-section>
+    <!-- <testimonial-section></testimonial-section> -->
     <!-- <platform-statistics></platform-statistics> -->
     <create-account-cta></create-account-cta>
     <order-card-section></order-card-section>

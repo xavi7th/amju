@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="isBasePage">
     <section class="section section-lg">
       <div class="container text-center">
         <div class="row justify-content-center">
@@ -20,23 +20,26 @@
           <div class="row row-20 service-item" id="atm-services">
             <div class="col-md-6">
               <div class="bkg-img">
-                <img src="/img/atm.jpeg" data-enlarge="350" />
+                <img src="/img/atm.jpeg" data-enlarge="250" />
               </div>
             </div>
             <div class="col-md-6">
               <h3 class="title">ATM Services</h3>
-              <p class="exeption">ATM machine is available in all our branches</p>
+              <p class="exeption">
+                You and your money should never be far apart. Our ATM machines are available in all our branches and are available 24/7.
+                Also you can use any ATM machine closest to you.
+              </p>
               <router-link
                 data-nav
                 class="button button-lg button-primary"
-                :to="{name: 'site.contact'}"
-              >Contact Us</router-link>
+                :to="{name: 'site.services.atm'}"
+              >Learn More</router-link>
             </div>
           </div>
           <div class="row row-20 service-item" id="mobile-banking">
             <div class="col-md-6">
               <div class="bkg-img">
-                <img src="/img/mobile-banking.jpg" data-enlarge="350" />
+                <img src="/img/mobile-banking.jpg" data-enlarge="250" />
               </div>
             </div>
             <div class="col-md-6">
@@ -47,14 +50,14 @@
               <router-link
                 data-nav
                 class="button button-lg button-primary"
-                :to="{name: 'site.contact'}"
-              >Contact Us</router-link>
+                :to="{name: 'site.services.mobile-banking'}"
+              >Learn More</router-link>
             </div>
           </div>
           <div class="row row-20 service-item" id="internet-banking">
             <div class="col-md-6">
               <div class="bkg-img">
-                <img src="/img/amju-internet-banking.png" data-enlarge="350" />
+                <img src="/img/amju-internet-banking.png" data-enlarge="250" />
               </div>
             </div>
             <div class="col-md-6">
@@ -63,14 +66,14 @@
               <router-link
                 data-nav
                 class="button button-lg button-primary"
-                :to="{name: 'site.contact'}"
-              >Contact Us</router-link>
+                :to="{name: 'site.services.internet-banking'}"
+              >Learn More</router-link>
             </div>
           </div>
           <div class="row row-20 service-item" id="pos">
             <div class="col-md-6">
               <div class="bkg-img">
-                <img src="/img/pos.jpg" data-enlarge="350" />
+                <img src="/img/pos.jpg" data-enlarge="250" />
               </div>
             </div>
             <div class="col-md-6">
@@ -81,14 +84,14 @@
               <router-link
                 data-nav
                 class="button button-lg button-primary"
-                :to="{name: 'site.contact'}"
-              >Contact Us</router-link>
+                :to="{name: 'site.services.pos'}"
+              >Learn More</router-link>
             </div>
           </div>
           <div class="row row-20 service-item" id="ussd-codes">
             <div class="col-md-6">
               <div class="bkg-img">
-                <img src="/img/ussd-ict4d.png" data-enlarge="350" />
+                <img src="/img/ussd-ict4d.png" data-enlarge="250" />
               </div>
             </div>
             <div class="col-md-6">
@@ -105,14 +108,14 @@
               <router-link
                 data-nav
                 class="button button-lg button-primary"
-                :to="{name: 'site.contact'}"
-              >Contact Us</router-link>
+                :to="{name: 'site.services.ussd-codes'}"
+              >Learn More</router-link>
             </div>
           </div>
           <div class="row row-20 service-item" id="others">
             <div class="col-md-6">
               <div class="bkg-img">
-                <img src="/img/cash-count.jpeg" data-enlarge="350" />
+                <img src="/img/cash-count.jpeg" data-enlarge="250" />
               </div>
             </div>
             <div class="col-md-6">
@@ -125,14 +128,15 @@
               <router-link
                 data-nav
                 class="button button-lg button-primary"
-                :to="{name: 'site.contact'}"
-              >Contact Us</router-link>
+                :to="{name: 'site.services.nip'}"
+              >Learn More</router-link>
             </div>
           </div>
         </div>
       </div>
     </section>
   </div>
+  <router-view v-else @page-loaded="$emit('page-loaded')"></router-view>
 </template>
 
 <script>
@@ -143,6 +147,11 @@
     },
     beforeDestroy() {
       this.$unloadScript("/js/main.js");
+    },
+    computed: {
+      isBasePage() {
+        return this.$route.name === "site.services";
+      }
     }
   };
 </script>
