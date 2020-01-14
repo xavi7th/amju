@@ -28,7 +28,7 @@
           <div class="media-wrap">
             <img src="/img/pricing-6-163x127.png" alt width="163" height="127" />
           </div>
-          <div class="title">Flexi</div>
+          <div class="title">Flexy</div>
           <div class="heading-3 price">₦5,000.00</div>
           <ul class="list-sm">
             <li>Free Card</li>

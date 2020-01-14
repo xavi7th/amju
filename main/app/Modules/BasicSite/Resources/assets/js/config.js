@@ -17,7 +17,7 @@ export const CONSTANTS = {
 
 export const siteRootUrl = rootUrl()
 export const sitePersonalBanking = rootUrl( 'personal-banking-account-types' )
-export const siteAmjuFlexiSavings = rootUrl( 'personal-banking/amju-flexi-savings-account' )
+export const siteAmjuFlexySavings = rootUrl( 'personal-banking/amju-flexy-savings-account' )
 export const siteAmjuEdusaveSavings = rootUrl( 'personal-banking/amju-edusave-savings-account' )
 export const siteThriftSavings = rootUrl( 'personal-banking/amju-thrift-savings-account' )
 export const siteMarriageSavings = rootUrl( 'personal-banking/amju-marriage-savings-account' )

@@ -23,14 +23,14 @@
               </div>
             </div>
             <div class="col-md-6">
-              <h3 class="title">AMJU FLEXI SAVINGS ACCOUNT</h3>
+              <h3 class="title">AMJU FLEXY SAVINGS ACCOUNT</h3>
               <p
                 class="exeption"
-              >Amju Unique Micro Finance Bank flexi savings account is good for students</p>
+              >Amju Unique Micro Finance Bank flexy savings account is good for students</p>
               <router-link
                 data-nav
                 class="button button-lg button-primary"
-                :to="{name: 'site.pb.flexi'}"
+                :to="{name: 'site.pb.flexy'}"
               >Read More</router-link>
             </div>
           </div>
@@ -39,7 +39,7 @@
               <h3 class="title">AMJU EDUSAVE SAVINGS ACCOUNT</h3>
               <p
                 class="exeption"
-              >Amju Unique Micro Finance Bank flexi savings account is good for parents who are saving for their children's education</p>
+              >Amju Unique Micro Finance Bank flexy savings account is good for parents who are saving for their children's education</p>
               <router-link
                 data-nav
                 class="button button-lg button-primary"
@@ -62,7 +62,7 @@
               <h3 class="title">AMJU THRIFT SAVINGS ACCOUNT</h3>
               <p
                 class="exeption"
-              >Amju Unique Micro Finance Bank flexi savings account is good for market women who want to save.</p>
+              >Amju Unique Micro Finance Bank flexy savings account is good for market women who want to save.</p>
               <router-link
                 data-nav
                 class="button button-lg button-primary"
@@ -75,7 +75,7 @@
               <h3 class="title">AMJU MARRAIGE SAVINGS ACCOUNT</h3>
               <p
                 class="exeption"
-              >Amju Unique Micro Finance Bank flexi savings account is good for those who want to save for marriage.</p>
+              >Amju Unique Micro Finance Bank flexy savings account is good for those who want to save for marriage.</p>
               <router-link
                 data-nav
                 class="button button-lg button-primary"
@@ -98,7 +98,7 @@
               <h3 class="title">AMJU CHRISTMAS SAVINGS ACCOUNT</h3>
               <p
                 class="exeption"
-              >Amju Unique Micro Finance Bank flexi savings account is good for those who want to save for christmas.</p>
+              >Amju Unique Micro Finance Bank flexy savings account is good for those who want to save for christmas.</p>
               <router-link
                 data-nav
                 class="button button-lg button-primary"
@@ -134,7 +134,7 @@
               <h3 class="title">AMJU ENTERPRENUER SAVINGS ACCOUNT</h3>
               <p
                 class="exeption"
-              >Amju Unique Micro Finance Bank flexi savings account is good for those who want to save for enterpreneurs.</p>
+              >Amju Unique Micro Finance Bank flexy savings account is good for those who want to save for enterpreneurs.</p>
               <router-link
                 data-nav
                 class="button button-lg button-primary"

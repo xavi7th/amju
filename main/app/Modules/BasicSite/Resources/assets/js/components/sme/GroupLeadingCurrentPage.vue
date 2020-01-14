@@ -41,31 +41,6 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-9 col-md-6 col-lg-5 col-xl-4">
-          <div class="box-wrap-gray">
-            <div class="thumbnail-1">
-              <div class="media-wrap">
-                <img src="/img/avatar4.jpg" alt width="270" height="270" />
-              </div>
-              <div class="title">
-                <a href="#">Evi HarCourt</a>
-              </div>
-              <div class="position">Amju Staff</div>
-              <p class="exeption">
-                The Esusu account is a God-send. I normally eat my profit and find it difficult to grow my business capital. Ever
-                since I started the Esusu savings with Amju Unique Micro Finance Bank, my business capital has grown time 5, in just 2 years.
-              </p>
-              <div class="group group-middle social-items d-flex justify-content-around">
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-facebook" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-twitter" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-instagram" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-facebook-messenger" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-linkedin" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-snapchat" href="#"></a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>

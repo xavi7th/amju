@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import {
 	siteRootUrl,
 	sitePersonalBanking,
-	siteAmjuFlexiSavings,
+	siteAmjuFlexySavings,
 	siteAmjuEdusaveSavings,
 	siteThriftSavings,
 	siteMarriageSavings,
@@ -101,15 +101,17 @@ export function createRouter() {
 				component: view( 'pb/PersonalBankingPage' ),
 				meta: {
 					title: 'Personal Banking - ' + APP_NAME,
-					breadcrumb: 'Personal Banking'
+					breadcrumb: 'Personal Banking',
+					bgImg: '/img/banners/amju-personal-banking.jpg',
 				},
 				children: [ {
-						path: siteAmjuFlexiSavings,
-						component: view( 'pb/AmjuFlexiSavingsPage' ),
-						name: 'site.pb.flexi',
+						path: siteAmjuFlexySavings,
+						component: view( 'pb/AmjuFlexySavingsPage' ),
+						name: 'site.pb.flexy',
 						meta: {
-							title: 'Amju Flexi Savings - ' + APP_NAME,
-							breadcrumb: 'Amju Flexi Savings'
+							title: 'Amju Flexy Savings - ' + APP_NAME,
+							breadcrumb: 'Amju Flexy Savings',
+							bgImg: '/img/banners/amju-flexy-savings.jpg',
 						},
 					},
 					{
@@ -118,7 +120,8 @@ export function createRouter() {
 						name: 'site.pb.edusave',
 						meta: {
 							title: 'Amju Edusave Savings - ' + APP_NAME,
-							breadcrumb: 'Amju Edusave Savings'
+							breadcrumb: 'Amju Edusave Savings',
+							bgImg: '/img/banners/amju-edu-save.jpg',
 						},
 					},
 					{
@@ -127,7 +130,8 @@ export function createRouter() {
 						name: 'site.pb.thrift',
 						meta: {
 							title: 'Thrift Savivgs - ' + APP_NAME,
-							breadcrumb: 'Thrift Savivgs'
+							breadcrumb: 'Thrift Savivgs',
+							bgImg: '/img/banners/amju-thrift-savings.jpg',
 						},
 					},
 					{
@@ -136,7 +140,8 @@ export function createRouter() {
 						name: 'site.pb.marriage',
 						meta: {
 							title: 'Marriage Savings - ' + APP_NAME,
-							breadcrumb: 'Marriage Savings'
+							breadcrumb: 'Marriage Savings',
+							bgImg: '/img/banners/amju-marriage-savings.jpg',
 						},
 					},
 					{
@@ -145,7 +150,8 @@ export function createRouter() {
 						name: 'site.pb.christmas',
 						meta: {
 							title: 'Christmas Savings - ' + APP_NAME,
-							breadcrumb: 'Christmas Savings'
+							breadcrumb: 'Christmas Savings',
+							bgImg: '/img/banners/amju-christmas-savings.jpg',
 						},
 					},
 					{
@@ -154,7 +160,8 @@ export function createRouter() {
 						name: 'site.pb.esusu',
 						meta: {
 							title: 'Esusu Savings - ' + APP_NAME,
-							breadcrumb: 'Esusu Savings'
+							breadcrumb: 'Esusu Savings',
+							bgImg: '/img/banners/amju-esusu-savings.jpg',
 						},
 					},
 					{
@@ -163,7 +170,8 @@ export function createRouter() {
 						name: 'site.pb.entrepreneur',
 						meta: {
 							title: 'Enterpreneur Savings - ' + APP_NAME,
-							breadcrumb: 'Enterpreneur Savings'
+							breadcrumb: 'Enterpreneur Savings',
+							bgImg: '/img/banners/amju-entrepreneur-savings.jpg',
 						},
 					},
 				]
@@ -174,7 +182,8 @@ export function createRouter() {
 				component: view( 'sme/SMEBankingPage' ),
 				meta: {
 					title: 'SME Banking - ' + APP_NAME,
-					breadcrumb: 'SME Banking'
+					breadcrumb: 'SME Banking',
+					bgImg: '/img/banners/amju-new-account.jpg',
 				},
 				children: [ {
 						path: sitePlatinumCurrent,
@@ -183,7 +192,7 @@ export function createRouter() {
 						meta: {
 							title: 'AMJU Platinum Account - ' + APP_NAME,
 							breadcrumb: 'AMJU Platinum Account',
-							navName: ""
+							bgImg: '/img/banners/amju-platinum-account.jpg'
 						},
 					},
 					{
@@ -192,7 +201,8 @@ export function createRouter() {
 						name: 'site.sme.corporate',
 						meta: {
 							title: 'AMJU Current/Corporate Account - ' + APP_NAME,
-							breadcrumb: 'AMJU Current/Corporate Account'
+							breadcrumb: 'AMJU Current/Corporate Account',
+							bgImg: '/img/banners/amju-corporate-account.jpg',
 						},
 					},
 					{
@@ -201,7 +211,8 @@ export function createRouter() {
 						name: 'site.sme.overdraft',
 						meta: {
 							title: 'AMJU Overdraft Account (Telecom) - ' + APP_NAME,
-							breadcrumb: 'AMJU Overdraft Account (Telecom)'
+							breadcrumb: 'AMJU Overdraft Account (Telecom)',
+							bgImg: '/img/banners/amju-current-account.jpg',
 						},
 					},
 					{
@@ -210,7 +221,8 @@ export function createRouter() {
 						name: 'site.sme.divine',
 						meta: {
 							title: 'AMJU Divine Account (Churches) - ' + APP_NAME,
-							breadcrumb: 'AMJU Divine Account (Churches)'
+							breadcrumb: 'AMJU Divine Account (Churches)',
+							bgImg: '/img/banners/amju-flexy.jpg',
 						},
 					},
 					{
@@ -219,7 +231,8 @@ export function createRouter() {
 						name: 'site.sme.cooperative',
 						meta: {
 							title: 'AMJU Cooperative Account - ' + APP_NAME,
-							breadcrumb: 'AMJU Cooperative Account'
+							breadcrumb: 'AMJU Cooperative Account',
+							bgImg: '/img/banners/amju-cooperative-account.jpg',
 						},
 					},
 					{
@@ -228,7 +241,8 @@ export function createRouter() {
 						name: 'site.sme.groupleading',
 						meta: {
 							title: 'AMJU Group Leading Account - ' + APP_NAME,
-							breadcrumb: 'AMJU Group Leading Account'
+							breadcrumb: 'AMJU Group Leading Account',
+							bgImg: '/img/banners/amju-group-leading.jpg',
 						},
 					},
 				]
@@ -239,7 +253,8 @@ export function createRouter() {
 				component: view( 'ebanking/EBankingServicesPage' ),
 				meta: {
 					title: 'eBanking Services - ' + APP_NAME,
-					breadcrumb: 'eBanking Services'
+					breadcrumb: 'eBanking Services',
+					bgImg: '/img/banners/amju-e-banking.jpg',
 				},
 				children: [ {
 						path: siteEBAtmServices,
@@ -248,6 +263,7 @@ export function createRouter() {
 						meta: {
 							title: 'ATM Services - ' + APP_NAME,
 							breadcrumb: 'ATM Services',
+							bgImg: '/img/banners/amju-atm-services.jpg',
 						},
 					},
 					{
@@ -257,6 +273,7 @@ export function createRouter() {
 						meta: {
 							title: 'Mobile Services - ' + APP_NAME,
 							breadcrumb: 'Mobile Banking Services',
+							bgImg: '/img/banners/amju-flexy.jpg',
 						},
 					},
 					{
@@ -266,6 +283,7 @@ export function createRouter() {
 						meta: {
 							title: 'Internet Banking - ' + APP_NAME,
 							breadcrumb: 'Internet Banking',
+							bgImg: '/img/banners/amju-internet-banking.jpg',
 						},
 					},
 					{
@@ -275,6 +293,7 @@ export function createRouter() {
 						meta: {
 							title: 'POS For Merchants - ' + APP_NAME,
 							breadcrumb: 'POS For Merchants',
+							bgImg: '/img/banners/amju-pos-services.jpg',
 						},
 					},
 					{
@@ -284,6 +303,7 @@ export function createRouter() {
 						meta: {
 							title: 'AMJU Eazybanking - ' + APP_NAME,
 							breadcrumb: 'AMJU Eazybanking',
+							bgImg: '/img/banners/amju-eazy-banking.jpg',
 						},
 					},
 					{
@@ -293,6 +313,7 @@ export function createRouter() {
 						meta: {
 							title: 'NIBSS Instant Payment (NIP) - ' + APP_NAME,
 							breadcrumb: 'NIP & Others',
+							bgImg: '/img/banners/amju-nip.jpg',
 						},
 					},
 					{
@@ -302,6 +323,7 @@ export function createRouter() {
 						meta: {
 							title: 'Products and Services - ' + APP_NAME,
 							breadcrumb: 'Products and Services',
+							bgImg: '/img/banners/amju-flexy.jpg',
 							navSkip: true
 						},
 					}
@@ -314,7 +336,8 @@ export function createRouter() {
 				name: 'site.media',
 				meta: {
 					title: 'Media - ' + APP_NAME,
-					breadcrumb: 'Media'
+					breadcrumb: 'Media',
+					bgImg: '/img/banners/amju-media.jpg',
 				},
 				children: [ {
 						path: siteMediaNews,
@@ -322,7 +345,8 @@ export function createRouter() {
 						name: 'site.media.news',
 						meta: {
 							title: 'News - ' + APP_NAME,
-							breadcrumb: 'News'
+							breadcrumb: 'News',
+							bgImg: '/img/banners/amju-news.jpg',
 						},
 					},
 					{
@@ -331,7 +355,9 @@ export function createRouter() {
 						name: 'site.media.videos',
 						meta: {
 							title: 'Videos - ' + APP_NAME,
-							breadcrumb: 'Videos'
+							breadcrumb: 'Videos',
+							bgImg: '/img/banners/amju-flexy.jpg',
+							navSkip: true
 						},
 					},
 					{
@@ -340,7 +366,9 @@ export function createRouter() {
 						name: 'site.media.gallery',
 						meta: {
 							title: 'Amju Gallery - ' + APP_NAME,
-							breadcrumb: 'Amju Gallery'
+							breadcrumb: 'Amju Gallery',
+							bgImg: '/img/banners/amju-flexy.jpg',
+							navSkip: true
 						},
 					},
 				]
@@ -352,6 +380,7 @@ export function createRouter() {
 				meta: {
 					title: 'Investor Relations - ' + APP_NAME,
 					breadcrumb: 'Investor Relations',
+					bgImg: '/img/banners/amju-flexy.jpg',
 					navSkip: true,
 				},
 				children: [ {
@@ -360,7 +389,8 @@ export function createRouter() {
 						name: 'site.ir.fin-info',
 						meta: {
 							title: 'Financial Information - ' + APP_NAME,
-							breadcrumb: 'Financial Information'
+							breadcrumb: 'Financial Information',
+							bgImg: '/img/banners/amju-flexy.jpg',
 						},
 					},
 					{
@@ -369,7 +399,8 @@ export function createRouter() {
 						name: 'site.ir.investor-news',
 						meta: {
 							title: 'Investor News - ' + APP_NAME,
-							breadcrumb: 'Investor News'
+							breadcrumb: 'Investor News',
+							bgImg: '/img/banners/amju-flexy.jpg',
 						},
 					},
 					{
@@ -378,7 +409,8 @@ export function createRouter() {
 						name: 'site.ir.outlook-insights',
 						meta: {
 							title: 'Outlook and Insight - ' + APP_NAME,
-							breadcrumb: 'Outlook and Insight'
+							breadcrumb: 'Outlook and Insight',
+							bgImg: '/img/banners/amju-flexy.jpg',
 						},
 					},
 					{
@@ -387,7 +419,8 @@ export function createRouter() {
 						name: 'site.ir.events',
 						meta: {
 							title: 'Investor Relation Events - ' + APP_NAME,
-							breadcrumb: 'Investor Relation Events'
+							breadcrumb: 'Investor Relation Events',
+							bgImg: '/img/banners/amju-flexy.jpg',
 						},
 					},
 					{
@@ -396,7 +429,8 @@ export function createRouter() {
 						name: 'site.ir.shareholders-info',
 						meta: {
 							title: 'Shareholder Information - ' + APP_NAME,
-							breadcrumb: 'Shareholder Information'
+							breadcrumb: 'Shareholder Information',
+							bgImg: '/img/banners/amju-flexy.jpg',
 						},
 					},
 				]
@@ -407,7 +441,8 @@ export function createRouter() {
 				name: 'site.about',
 				component: view( 'misc/EmptyComponent' ),
 				meta: {
-					breadcrumb: 'About Us'
+					breadcrumb: 'About Us',
+					bgImg: '/img/banners/amju-about-our-bank.jpg',
 				},
 				redirect: {
 					name: 'site.about.our-company',
@@ -418,7 +453,8 @@ export function createRouter() {
 						name: 'site.about.our-company',
 						meta: {
 							title: 'Our Company - ' + APP_NAME,
-							breadcrumb: 'About Our Bank'
+							breadcrumb: 'About Our Bank',
+							bgImg: '/img/banners/amju-about-our-bank.jpg',
 						},
 					},
 					{
@@ -427,7 +463,10 @@ export function createRouter() {
 						name: 'site.about.corp-gov',
 						meta: {
 							title: 'Corporate Governance - ' + APP_NAME,
-							breadcrumb: 'Corporate Governance'
+							breadcrumb: 'Corporate Governance',
+							bgImg: '/img/banners/amju-flexy.jpg',
+							navSkip: true
+
 						},
 					},
 					{
@@ -436,7 +475,9 @@ export function createRouter() {
 						name: 'site.about.bizfocus',
 						meta: {
 							title: 'Business Focus - ' + APP_NAME,
-							breadcrumb: 'Business Focus'
+							breadcrumb: 'Business Focus',
+							bgImg: '/img/banners/amju-flexy.jpg',
+							navSkip: true
 						},
 					},
 					{
@@ -445,7 +486,9 @@ export function createRouter() {
 						name: 'site.about.awards',
 						meta: {
 							title: 'Awards - ' + APP_NAME,
-							breadcrumb: 'Awards'
+							breadcrumb: 'Awards',
+							bgImg: '/img/banners/amju-flexy.jpg',
+							navSkip: true
 						},
 					},
 					{
@@ -455,6 +498,7 @@ export function createRouter() {
 						meta: {
 							title: 'Our Branches - ' + APP_NAME,
 							breadcrumb: 'Our Branches',
+							bgImg: '/img/banners/amju-flexy.jpg',
 							navSkip: true
 						},
 					},
@@ -464,7 +508,8 @@ export function createRouter() {
 						name: 'site.about.career',
 						meta: {
 							title: 'Career - ' + APP_NAME,
-							breadcrumb: 'Career'
+							breadcrumb: 'Career',
+							bgImg: '/img/banners/amju-careers.jpg',
 						},
 					},
 					{
@@ -474,6 +519,7 @@ export function createRouter() {
 						meta: {
 							title: 'Send Us Your Resume - ' + APP_NAME,
 							breadcrumb: 'Submit Resume',
+							bgImg: '/img/banners/amju-flexy.jpg',
 							navSkip: true
 						},
 					},
@@ -486,6 +532,7 @@ export function createRouter() {
 				meta: {
 					title: 'Contacts - ' + APP_NAME,
 					breadcrumb: 'Contact Us',
+					bgImg: '/img/banners/amju-flexy.jpg',
 					navSkip: true
 				},
 			},
@@ -496,6 +543,7 @@ export function createRouter() {
 				meta: {
 					title: 'Open New Account Instantly - ' + APP_NAME,
 					breadcrumb: 'Open New Account',
+					bgImg: '/img/banners/amju-new-account.jpg',
 					navSkip: true
 				},
 			},
@@ -506,6 +554,7 @@ export function createRouter() {
 				meta: {
 					title: 'Account Created - ' + APP_NAME,
 					breadcrumb: 'New Account Created',
+					bgImg: '/img/banners/amju-flexy.jpg',
 					navSkip: true
 				},
 			},
@@ -516,6 +565,7 @@ export function createRouter() {
 				meta: {
 					title: 'Privacy - ' + APP_NAME,
 					breadcrumb: 'Privacy',
+					bgImg: '/img/banners/amju-flexy.jpg',
 					navSkip: true
 				},
 			},
@@ -526,6 +576,7 @@ export function createRouter() {
 				meta: {
 					title: 'Terms - ' + APP_NAME,
 					breadcrumb: 'Terms',
+					bgImg: '/img/banners/amju-flexy.jpg',
 					navSkip: true
 				},
 			},

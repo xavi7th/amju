@@ -62,7 +62,7 @@
 					</nav>
 				</div>
 
-			<section class="section section-bredcrumbs" v-if="!isHome">
+			<section class="section section-bredcrumbs" v-if="!isHome" :style="`--bgImg: url(${bgImg});`">
 				<div class="container context-dark breadcrumb-wrapper">
 
 					<transition name="slide-left" mode="out-in">
@@ -94,6 +94,9 @@
     computed: {
       breadcrumb() {
         return this.$route.meta.breadcrumb;
+      },
+      bgImg() {
+        return this.$route.meta.bgImg;
       },
       routes() {
         return this.$router.options.routes.filter(x => !x.meta.navSkip);
@@ -151,5 +154,18 @@
       right: 0;
       padding-right: 0;
     }
+  }
+
+  .section-bredcrumbs:after {
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.3);
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bgImg);
+    position: absolute;
+    top: 0;
   }
 </style>

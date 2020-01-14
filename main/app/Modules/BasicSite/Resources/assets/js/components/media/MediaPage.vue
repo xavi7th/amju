@@ -32,7 +32,7 @@
               >Read News Articles</router-link>
             </div>
           </div>
-          <div class="row row-20 service-item">
+          <!-- <div class="row row-20 service-item">
             <div class="col-md-6">
               <img src="/img/amju-ceo.jpg" alt width="540" height="327" />
             </div>
@@ -67,7 +67,7 @@
                 :to="{name: 'site.media.videos'}"
               >Watch Videos</router-link>
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
     </section>

@@ -66,13 +66,13 @@
             </ul>
           </div>
         </div>
-        <img
+        <!-- <img
           class="img-bordered image-item"
           src="/img/about-1-470x312.jpg"
           alt
           width="470"
           height="312"
-        />
+        />-->
       </div>
     </section>
 

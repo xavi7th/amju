@@ -45,31 +45,6 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-9 col-md-6 col-lg-5 col-xl-4">
-          <div class="box-wrap-gray">
-            <div class="thumbnail-1">
-              <div class="media-wrap">
-                <img src="/img/avatar6.jpg" alt width="270" height="270" />
-              </div>
-              <div class="title">
-                <a href="#">Tope Alabi</a>
-              </div>
-              <div class="position">Amju Staff</div>
-              <p class="exeption">
-                Ever since I started saving with Amju Unique Micro Finance Bank I have been able to meet my target for
-                my marriage ceremony. It was a splash and everything went very easy
-              </p>
-              <div class="group group-middle social-items d-flex justify-content-around">
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-facebook" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-twitter" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-instagram" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-facebook-messenger" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-linkedin" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-snapchat" href="#"></a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>

@@ -34,15 +34,6 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-9 col-md-6 col-lg-5 col-xl-4">
-          <div class="box-wrap-gray">
-            <div class="thumbnail-1">
-              <div class="media-wrap">
-                <img src="/img/cash-count.jpeg" alt width="270" height="270" />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>

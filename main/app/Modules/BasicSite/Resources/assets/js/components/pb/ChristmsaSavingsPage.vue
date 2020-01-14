@@ -45,32 +45,6 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-9 col-md-6 col-lg-5 col-xl-4">
-          <div class="box-wrap-gray">
-            <div class="thumbnail-1">
-              <div class="media-wrap">
-                <img src="/img/avatar4.jpg" alt width="270" height="270" />
-              </div>
-              <div class="title">
-                <a href="#">Evi HarCourt</a>
-              </div>
-              <div class="position">Amju Staff</div>
-              <p class="exeption">
-                This year's Christmas is going to be very stress free for me. I satarted saving since January for the Christmas
-                and now I can smile as I cash out and go shopping. Amju Unique Micro Finance Bank christmas savings account is a real life
-                saver. I am definitely doing this again next year.
-              </p>
-              <div class="group group-middle social-items d-flex justify-content-around">
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-facebook" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-twitter" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-instagram" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-facebook-messenger" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-linkedin" href="#"></a>
-                <a class="icon icon-md icon-gray-400 novi-icon mdi mdi-snapchat" href="#"></a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>

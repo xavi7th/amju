@@ -41,7 +41,7 @@
                 <div class="form-wrap" v-if="otherAccTypes">
                   <select class="form-input" name="gender" v-model="details.acc_type">
                     <option value="others">Select Account Type</option>
-                    <option value="flexi">Amju Flexi Savings</option>
+                    <option value="flexy">Amju Flexy Savings</option>
                     <option value="edusave">Amju Edusave Savings</option>
                     <option value="thrift">Amju Thrift Savings</option>
                     <option value="marriage">Amju Marriage Savings</option>

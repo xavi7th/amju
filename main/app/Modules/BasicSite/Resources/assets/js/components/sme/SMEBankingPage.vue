@@ -110,7 +110,7 @@
             <div class="col-md-6">
               <h3 class="title">AMJU GROUP LEADING ACCOUNT</h3>
               <p class="exeption">
-                Amju Unique Micro Finance Bank flexi savings account is good For existing cooperatives societies Town union and group Trade union
+                Amju Unique Micro Finance Bank Flexy savings account is good For existing cooperatives societies Town union and group Trade union
                 and associate Others are: Garri Sellers, Fish Sellers, Yam Seller, Pepper Seller, Tomatoes Sellers, Vegetable Sellers, and
                 Plantain Seller etc.
               </p>

@@ -25,6 +25,25 @@
         </div>
       </div>
     </section>
+    <section class="section section-xs bg-primary-gradient">
+      <div class="container">
+        <div class="box-cta">
+          <div class="box-cta-inner">
+            <h3>
+              Submit Your
+              <span class="font-weight-bold">Resume</span> Online
+            </h3>
+          </div>
+          <div class="box-cta-inner">
+            <router-link
+              class="button button-lg button-primary-dark"
+              data-nav
+              :to="{name:'site.about.career.apply'}"
+            >Get Started</router-link>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- The Best Banking Choise-->
     <section class="section section-md bg-gray-100">
       <div class="container">
@@ -92,32 +111,13 @@
         </div>
       </div>
     </section>
-    <section class="section section-xs bg-primary-gradient">
-      <div class="container">
-        <div class="box-cta">
-          <div class="box-cta-inner">
-            <h3>
-              Submit Your
-              <span class="font-weight-bold">Resume</span> Online
-            </h3>
-          </div>
-          <div class="box-cta-inner">
-            <router-link
-              class="button button-lg button-primary-dark"
-              data-nav
-              :to="{name:'site.about.career.apply'}"
-            >Get Started</router-link>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-md bg-gray-100">
+
+    <!-- <section class="section section-md bg-gray-100">
       <div class="container text-center">
         <h3 class="custom-title">
           <span>Your Career Starts Here</span>
         </h3>
         <div class="row">
-          <!-- Isotope Filters-->
           <div class="col-lg-12">
             <div
               class="isotope-filters isotope-filters-horizontal isotope-filters-line isotope-inline-filters"
@@ -155,7 +155,6 @@
               </ul>
             </div>
           </div>
-          <!-- Isotope Content-->
           <div class="col-lg-12 text-left">
             <div class="isotope" data-isotope-layout="fitRows" data-isotope-group="gallery">
               <div class="row">
@@ -211,7 +210,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
   </div>
 </template>
 
