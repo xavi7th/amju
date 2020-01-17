@@ -212,7 +212,7 @@ export function createRouter() {
 						meta: {
 							title: 'AMJU Overdraft Account (Telecom) - ' + APP_NAME,
 							breadcrumb: 'AMJU Overdraft Account (Telecom)',
-							bgImg: '/img/banners/amju-current-account.jpg',
+							bgImg: '/img/banners/amju-overdraft-telecoms.jpg',
 						},
 					},
 					{
@@ -222,7 +222,7 @@ export function createRouter() {
 						meta: {
 							title: 'AMJU Divine Account (Churches) - ' + APP_NAME,
 							breadcrumb: 'AMJU Divine Account (Churches)',
-							bgImg: '/img/banners/amju-flexy.jpg',
+							bgImg: '/img/banners/amju-divine-savings.jpg',
 						},
 					},
 					{
@@ -273,7 +273,7 @@ export function createRouter() {
 						meta: {
 							title: 'Mobile Services - ' + APP_NAME,
 							breadcrumb: 'Mobile Banking Services',
-							bgImg: '/img/banners/amju-flexy.jpg',
+							bgImg: '/img/banners/amju-mobile-banking.jpg',
 						},
 					},
 					{
