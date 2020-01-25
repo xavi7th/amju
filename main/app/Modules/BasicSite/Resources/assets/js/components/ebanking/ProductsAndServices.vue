@@ -5,7 +5,7 @@
         <div class="col-md-6 col-xl-7">
           <ul class="list-xxl pl-5">
             <li>
-              <h5>AMJU ALTERNATIVE INCOME FOR WORKERS</h5>
+              <h5>AMJU UNIQUE MFB ALTERNATIVE INCOME FOR WORKERS</h5>
               <p>
                 Entrepreneurship is crucial to all economies.
                 Transforming the life of workers to an entrepreneur.

@@ -19,8 +19,8 @@
             <router-link
               data-nav
               class="button button-lg button-primary"
-              :to="{name:'site.contact'}"
-            >Contact Us</router-link>
+              :to="{name:'site.about.branches'}"
+            >Visit Us</router-link>
           </div>
         </div>
       </div>

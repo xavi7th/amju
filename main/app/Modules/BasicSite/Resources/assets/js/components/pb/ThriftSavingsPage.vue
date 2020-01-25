@@ -12,9 +12,9 @@
               <h5>Main Features</h5>
               <ul class="list-marked">
                 <li>Open with ₦1,000 Minimum</li>
-                <li>Available to individual clubs, Association,Coperatives,Group members,Cluster group etc</li>
+                <li>Available to individual clubs, Associations,Cooperatives,Group members,Cluster group etc</li>
                 <li>Group members make choice contributions daily,weekly or monthly</li>
-                <li>Save for a period for four months before withdraw</li>
+                <li>Save for a period of four months before withdrawal</li>
               </ul>
             </li>
             <li>
@@ -25,8 +25,8 @@
                 <li>Access to micro credit loan up to a maximum of two times of amount saved.</li>
                 <li>*322*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
-                <li>AMJU Mobile Banking App</li>
-                <li>AMJU Verve debit Card</li>
+                <li>AMJU Unique MFB Mobile Banking App</li>
+                <li>AMJU Unique MFB Verve debit Card</li>
                 <li>Email/SMS Alert</li>
               </ul>
             </li>

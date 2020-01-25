@@ -7,9 +7,9 @@
             <li>
               <h5>Overview</h5>
               <p>
-                For existing cooperatives societies, Town union and group
+                For existing cooperative societies, Town union and group
                 Trade union and associate
-                Others are: Garri Sellers, Fish Sellers, Yam Seller, Pepper Seller, Tomatoes Sellers, Vegetable Sellers, and Plantain Seller etc.
+                Others are: Garri Sellers, Fish Sellers, Yam Sellers, Pepper Sellers, Tomatoes Sellers, Vegetable Sellers, and Plantain Sellers etc.
               </p>
             </li>
             <li>
@@ -17,8 +17,8 @@
               <ul class="list-marked">
                 <li>*322*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
-                <li>AMJU Mobile Banking App</li>
-                <li>AMJU Verve debit Card</li>
+                <li>AMJU Unique MFB Mobile Banking App</li>
+                <li>AMJU Unique MFB Verve debit Card</li>
                 <li>Email/SMS Alert</li>
                 <li>Free access to a Chequebook, based on request at any of our branches nationwide</li>
               </ul>

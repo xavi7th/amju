@@ -11,7 +11,7 @@
               <div class="counter-boxed-title">
                 <div class="subtitle">More than</div>
                 <div class="counter-wrap">
-                  <div class="counter heading-2">23754</div>
+                  <div class="counter heading-2">5000</div>
                 </div>
                 <div class="title heading-5">Issued Cards</div>
               </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="counter-boxed-body">
               <div class="exeption">
-                AMJU POS solutions are made to all business customers to reduce the cost of doing business while increasing productivity,
+                AMJU Unique MFB POS solutions are made to all business customers to reduce the cost of doing business while increasing productivity,
                 improving your bottom line. Enjoy zero fees on POS usage.
               </div>
             </div>
@@ -56,7 +56,7 @@
               <div class="counter-boxed-title">
                 <div class="subtitle">As low as</div>
                 <div class="counter-wrap">
-                  <div class="counter heading-2">5</div>
+                  <div class="counter heading-2">3.5</div>
                   <div class="heading-2">%</div>
                 </div>
                 <div class="title heading-5">Interest on Loans</div>
@@ -65,7 +65,7 @@
             <div class="counter-boxed-body">
               <div class="exeption">
                 Amju Unique Micro Finance Bank offers various LOAN packages rates a very
-                minimal rate for all clients. Expand your business with AMJU
+                minimal rate for all clients. Expand your business with AMJU Unique MFB
               </div>
             </div>
           </div>

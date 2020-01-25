@@ -15,10 +15,10 @@
             </div>
             <p>
               We commenced banking operation as unit microfinance bank on 3rd May, 2010 with an authorized and paid-up capital of
-              N150 million respectively. In february 2013 we are granted approval by the Central Bank of Nigeria to operate as
-              a state microfiance bank having increased our capital base to N500 million fully paid. As at 31 December, 2017 our
-              management account shows shareholders fund unimpaired by losses stood at N1.188 billion with only six branches -
-              situated in Effurun, Warri, Asaba, Ughelli, Eku and Kurutie Delta State. Our total clientele base as at 30th of June, 2018
+              N150 million respectively. In february 2013 we were granted approval by the Central Bank of Nigeria to operate as
+              a state microfinance bank having increased our capital base to N500 million fully paid. As at 31 December 2017, our
+              management account shows shareholders fund unimpaired by losses stood at N1.188 billion with only three branches -
+              situated in Effurun, Warri and Asaba Delta State, our total clientele base as at 30th of June, 2018
               stood at 19,514 with balance sheet of over N10.2 BILLION.
             </p>
             <p>
@@ -26,12 +26,12 @@
               with many years of experience in the banking industry. All of them are certified microfinance bankers as required by the CBN.
             </p>
             <p>
-              We are one of the very few microfinance banks in Nigeria today that have “Acquirer” ATM, Internet Banking, POS, and other
-              E-channel in all her branches, including Airport Road Effurun, Main Market Warri, Asaba, Ughelli and Eku.
+              We are one of the very few microfinance banks in Nigeria today that have acquired ATM, Internet Banking, POS, and other
+              E-channels in (all our branches) Airport Road Effurun, Main Market Warri, Asaba, Ughelli and Eku.
             </p>
             <p>
-              Secondly, with our Ebanking platform our customers and the public can transfer and receive money electronically to and from any
-              bank in Nigeria through the Auto Pay and pay Direct platforms provided by interswitch.
+              Secondly, with our Ebanking platform, our customers and the public can transfer and receive money electronically to and from any
+              bank in Nigeria through the Auto Pay, Pay Direct and NIP platforms provided by interswitch and NIBSS respectively.
             </p>
             <p>
               Our Motto ”Easy Banking beyond the First” encapsulates our philosophy, services and products that meet the needs of all
@@ -44,7 +44,7 @@
               <li>
                 <h4>VISION STATEMENT</h4>
                 <ul class="list-marked">
-                  <li>To become the world leading financial institution that support customers needs through product and services</li>
+                  <li>To become the world leading financial institution that support customers' needs through product and services</li>
                   <li>To create superior returns to shareholders, Investors, government, depositors, employees and community</li>
                   <li>To bring good life to the employees good welfare</li>
                 </ul>
@@ -58,7 +58,7 @@
                 <ul class="list-marked">
                   <li>To be the best MFB in Nigeria with flexible quality services to our esteemed customers</li>
                   <li>To empower the powerless</li>
-                  <li>To enhance self actualization in those economic vision</li>
+                  <li>To enhance self actualization in those with economic vision</li>
                   <li>To reduce poverty in our environment of operation</li>
                   <li>To generate and provide investment advice</li>
                 </ul>

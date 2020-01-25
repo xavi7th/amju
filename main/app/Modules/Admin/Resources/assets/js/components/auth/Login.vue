@@ -5,7 +5,7 @@
         <div class="auth-logo">
           <div class="logo">
             <div class="logo-type logo-type-colored">
-              <img src="/img/logo-round-small.png" alt="Amju Unique Logo" class="loader-img" />
+              <img src="/img/logo-round-small.png" alt="Amju Unique MFB Logo" class="loader-img" />
               <a href="/">
                 <span>
                   amju

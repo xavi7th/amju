@@ -12,7 +12,7 @@
               <h5>Main Features</h5>
               <ul class="list-marked">
                 <li>We have unique finance independence MPCS ACCOUNT</li>
-                <li>Obtain from with N1000</li>
+                <li>Obtain form with N1000</li>
                 <li>Register with N5000 to become a member</li>
                 <li>Available to everyone globally</li>
               </ul>

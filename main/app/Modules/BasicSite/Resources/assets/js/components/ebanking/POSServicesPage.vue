@@ -7,8 +7,8 @@
             <li>
               <h5>Overview</h5>
               <p>
-                AMJU POS solutions are made to all business customers to reduce the cost of doing
-                business while increasing productivity, improving your bottom line. By enabling
+                AMJU Unique MFB POS solutions are made to all business customers to reduce the cost of doing
+                business while increasing productivity, improving your bottom line and by enabling
                 your customers to use different payment types, you can increase revenue as well
                 as customer satisfaction.
               </p>
@@ -27,20 +27,17 @@
             <li>
               <h5>How to Apply</h5>
               <ul class="list-marked">
-                <li>Open an individual or corporate current account with AMJU</li>
+                <li>Open an individual or corporate current account with AMJU Unique MFB</li>
                 <li>Write a letter of POS request with or without your letter head</li>
-                <li>Fill AMJU indemnity form completely and submit</li>
+                <li>Fill AMJU Unique MFB indemnity form completely and submit</li>
                 <li>You must have a minimum balance of #30,000 in your account</li>
               </ul>
             </li>
             <li>
               <h5>POS Payment and Settlement</h5>
               <ul class="list-marked">
-                <li>POS collection is #125,000</li>
-                <li>#20,000 will be charged at the point of collection</li>
-                <li>#10,000 will be charged every month for POS repayment till the completion of the sales.</li>
-                <li>POS charges is #5 on every #1000 (0.005 per transaction)</li>
-                <li>COT concession is available to all our merchant</li>
+                <li>POS charges is ₦5 on every ₦1000 (0.005 per transaction)</li>
+                <li>COT concession is available to all our merchants</li>
               </ul>
             </li>
           </ul>

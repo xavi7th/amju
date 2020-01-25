@@ -4,17 +4,14 @@
       <div class="row row-fix justify-content-center text-center">
         <div class="col-md-10 col-xl-7">
           <h2>
-            <span>AMJU Verve Card</span>
+            <span>AMJU Unique MFB Verve Card</span>
           </h2>
           <p>
-            The AMJU BANK VERVE Card is a Naira denominated debit card, it is sued in partners with secure id.
+            The AMJU Unique MFB Verve Card is a Naira denominated debit card, it is sued in partners with secure id.
             It is denominated in Naira, but can be used for ATM cash withdrawals and also to settle purchases/payments
             via POS terminals and Online anywhere in Nigeria.
           </p>
-          <p>
-            The AMJU BANK VERVE card is linked online, real-time to your Current or Savings account. The AMJU
-            BANK VERVE card is valid for 3 years.
-          </p>
+          <p>The AMJU Unique MFB Verve card is linked online, real-time to your Current or Savings account. The AMJU Unique MFB Verve card is valid for 3 years.</p>
         </div>
       </div>
       <h2 class="custom-title">
@@ -75,7 +72,7 @@
             <h5 class="title">Pick Up Your Card</h5>
             <p
               class="exeption"
-            >Walk into any AMJU branch with your duly completed forms to collect your card, activate it by changing your PIN and you can start using it immediately.</p>
+            >Walk into any AMJU Unique MFB branch with your duly completed forms to collect your card, activate it by changing your PIN and you can start using it immediately.</p>
           </div>
         </div>
       </div>

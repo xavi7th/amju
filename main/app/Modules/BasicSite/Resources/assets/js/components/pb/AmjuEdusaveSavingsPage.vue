@@ -6,7 +6,7 @@
           <ul class="list-xxl pl-5">
             <li>
               <h5>Overview</h5>
-              <p>Secure your child’s future with flexible quality accademics with Amju EDU SAVE</p>
+              <p>Secure your child’s future with flexible quality accademics with Amju Unique MFB EDUSAVE</p>
             </li>
             <li>
               <h5>Main Features</h5>
@@ -24,8 +24,8 @@
                 <li>Easy access to loan for school fess</li>
                 <li>*322*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
-                <li>AMJU Mobile Banking App</li>
-                <li>AMJU Verve debit Card</li>
+                <li>AMJU Unique MFB Mobile Banking App</li>
+                <li>AMJU Unique MFB Verve debit Card</li>
                 <li>Email/SMS Alert</li>
               </ul>
             </li>

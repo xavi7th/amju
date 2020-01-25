@@ -7,7 +7,7 @@
             <li>
               <h5>Overview</h5>
               <p>
-                Amju Bank has deployed a large network of ATMs in all our branches,
+                Amju Unique MFB Bank has deployed a large network of ATMs in all our branches,
                 to offer our customers painless, quick and convenient access to their funds 24/7 every day.
               </p>
             </li>

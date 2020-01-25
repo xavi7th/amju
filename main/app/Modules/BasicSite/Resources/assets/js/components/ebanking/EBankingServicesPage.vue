@@ -46,7 +46,7 @@
               <h3 class="title">Mobile Banking</h3>
               <p
                 class="exeption"
-              >Download AMJU app from play store, install the app, Register a new device (If you are just using it for the first time), input your OTP CODE, CREAT PASSWORD, CREATE PIN.START TRANSFER</p>
+              >Download AMJU Unique MFB app from play store, install the app, Register a new device (If you are just using it for the first time), input your OTP CODE, CREAT PASSWORD, CREATE PIN.START TRANSFER</p>
               <router-link
                 data-nav
                 class="button button-lg button-primary"

@@ -8,7 +8,7 @@
               <h5>Overview</h5>
               <p>
                 <b>CARRY YOUR BANK ROUND THE WORLD WITH *322*306#</b>.
-                <i>*322*306#</i> Amju EazyBanking is a convenient,
+                <i>*322*306#</i> Amju Unique MFB EazyBanking is a convenient,
                 fast, secure, and affordable way to access your bank account 24 hours a day, 7 days a week
                 through your mobile phone without internet data.
               </p>
@@ -20,7 +20,7 @@
                 <li>Transfer money</li>
                 <li>Purchase airtime and data</li>
                 <li>
-                  Bills &amp; Payments: Cable TV Bills, Electricity Payments, Toll Fees, Dubai &amp; US Visa Payments,
+                  Bills &amp; Payments: Cable TV Bills, Electricity Payments,
                   Sports and Gaming Payments, Taxes and Levies, etc.
                 </li>
               </ul>

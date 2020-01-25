@@ -56,7 +56,7 @@
             </div>
             <div class="quote-meta">
               <div class="author">
-                <cite>Ososuakpor Jonathan</cite>
+                <cite>Dr. Ososuakpor Jonathan</cite>
               </div>
               <div class="position">MD/CEO, Amju Unique Micro Finance Bank</div>
             </div>

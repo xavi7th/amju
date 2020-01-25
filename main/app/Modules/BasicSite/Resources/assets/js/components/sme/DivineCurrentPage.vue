@@ -6,7 +6,7 @@
           <ul class="list-xxl pl-5">
             <li>
               <h5>Overview</h5>
-              <p>Special current account that allow customers to ...</p>
+              <p>Special current account that allow customers ...</p>
             </li>
             <li>
               <h5>Main Features</h5>
@@ -14,8 +14,8 @@
                 <li>To open with N5000</li>
                 <li>Can be a current or savings accounts</li>
                 <li>Available to all churches</li>
-                <li>Save 30 percent of the amount of any assest eg Instrument,building equipment,generator,vehicle and other assest.</li>
-                <li>Bank purchase the assest for the church</li>
+                <li>Save 30 percent of the amount of any assets eg Instrument,building equipment,generator,vehicle and other assets.</li>
+                <li>Bank purchase the assets for the church</li>
                 <li>Building of parishes and branches</li>
               </ul>
             </li>
@@ -24,12 +24,12 @@
               <ul class="list-marked">
                 <li>To promote the gospel</li>
                 <li>Easy access to loans</li>
-                <li>Bank grant the church credit facility up to 70% of the cost of assest</li>
+                <li>Bank grant the church credit facility up to 70% of the cost of assets</li>
                 <li>Loan to be repaid within a maximum of 12 months</li>
                 <li>*322*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
-                <li>AMJU Mobile Banking App</li>
-                <li>AMJU Verve debit Card</li>
+                <li>AMJU Unique MFB Mobile Banking App</li>
+                <li>AMJU Unique MFB Verve debit Card</li>
                 <li>Email/SMS Alert</li>
                 <li>Free access to a Chequebook, based on request at any of our branches nationwide</li>
               </ul>

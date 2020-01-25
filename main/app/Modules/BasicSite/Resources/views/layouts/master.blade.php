@@ -4,15 +4,48 @@
 	<head>
 
 		<title>{{ env('APP_NAME') }}</title>
-		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="telephone=yes">
 		<meta name="viewport"
 			content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta charset="utf-8">
 		<meta name="csrf-token" content="{{ csrf_token() }}">
-		<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+		<link rel="shortcut icon" href="/img/favicon.png" type="image/png" />
 		<!-- Stylesheets-->
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700,900">
+
+		<meta name="robots" content="index,follow">
+
+		<meta name="description"
+			content="We at {{ env('APP_NAME') }} are right here to fund that great dream of yours in a way that you may never	imagine " />
+		<meta name="author" content="{{ env('APP_NAME') }}">
+		<meta name="abstract"
+			content="We at {{ env('APP_NAME') }} are right here to fund that great dream of yours in a way that you may never imagine " />
+
+		{{--
+<meta property="fb:admins" content="jovworie" />
+<meta property="fb:app_id" content="171894576842093" /> --}}
+
+		<meta itemprop="name" content="Homepage">
+		<link itemprop="url" href="{{ route('home') }}">
+		{{--
+<meta property="og:title" content="{{ env('APP_NAME') }}" />
+		<meta property="og:description"
+			content="Win up to N15, 000 every 20 minutes by answering 10 simple questions in just 10 minutes every day on {{ env('APP_NAME') }}" />
+		<meta property="og:type" content="games" />
+		<meta property="og:site_name" content="{{ env('APP_NAME') }}" />
+		<meta property="og:url" content="{{ route('home') }}" />
+		<meta property="og:image" content="{{ asset('/img/facebook.jpg') }}" />
+
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@fastplay24" />
+		<meta name="twitter:url" content="{{ route('home') }}" />
+		<meta name="twitter:title" content="{{ env('APP_NAME') }}" />
+		<meta name="twitter:description"
+			content="Win up to N15, 000 every 20 minutes by answering 10 simple questions in just 10 minutes every day on {{ env('APP_NAME') }}" />
+		<meta name="twitter:image" content="{{ asset('/img/twitter.jpg') }}" /> --}}
+
 		<style>
 			.preloader {
 				position: fixed;
@@ -106,7 +139,7 @@
 		<div class="preloader">
 			<div class="preloader-body">
 				<p>
-					<img src="/img/logo-round-small.png" alt="Amju Unique Logo" class="loader-img">
+					<img src="/img/logo-round-small.png" alt="Amju Unique MFB Logo" class="loader-img">
 					<span>Please wait. Loading ...</span>
 				</p>
 				<p></p>

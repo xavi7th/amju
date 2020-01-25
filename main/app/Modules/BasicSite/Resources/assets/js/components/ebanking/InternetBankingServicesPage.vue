@@ -7,7 +7,7 @@
             <li>
               <h5>Overview</h5>
               <p>
-                Amju Bank has deployed a large network of ATMs in all our branches,
+                Amju Unique MFB Bank has deployed a large network of ATMs in all our branches,
                 to offer our customers painless, quick and convenient access to their funds 24/7 every day.
               </p>
             </li>
@@ -26,10 +26,10 @@
                 <li>Attract interest rate of 2% income per annum</li>
                 <li>It attracts interest to customers</li>
                 <li>It allows lodgement of cheques from any bank</li>
-                <li>*322*306* AMJU EazyBanking</li>
+                <li>*322*306* AMJU Unique MFB EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
-                <li>AMJU Mobile Banking App</li>
-                <li>AMJU Verve debit Card</li>
+                <li>AMJU Unique MFB Mobile Banking App</li>
+                <li>AMJU Unique MFB Verve debit Card</li>
                 <li>Email/SMS Alert</li>
               </ul>
             </li>

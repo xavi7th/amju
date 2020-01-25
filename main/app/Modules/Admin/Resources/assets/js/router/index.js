@@ -13,7 +13,7 @@ function view( name ) {
 
 Vue.use( Router )
 
-const APP_NAME = 'Amju Unique Admin'
+const APP_NAME = 'Amju Unique MFB Admin'
 
 const allRoutes = [ {
 		path: '/',

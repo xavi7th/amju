@@ -85,7 +85,7 @@
                       <a data-nav>e-Channels Products</a>
                     </router-link>
                     <router-link :to="{name: 'site.contact'}" tag="li">
-                      <a data-nav>Amju Mobile App</a>
+                      <a data-nav>Amju Unique MFB Mobile App</a>
                     </router-link>
                     <router-link :to="{name: 'site.contact'}" tag="li">
                       <a data-nav>Verve Cards</a>

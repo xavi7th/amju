@@ -7,21 +7,21 @@
             <li>
               <h5>Overview</h5>
               <p>
-                In the era of growing unemployment AMJU will deliver through entrepreneurial start up capital account.
-                We train and provide feasibility support, we fund your business, provide management support and direction,
-                follow up to succeed in your business, finance agric project,factories,worshops,tools and equipment.
+                In the era of growing unemployment, AMJU Unique MFB will deliver through entrepreneurial start up capital account.
+                We train and provide feasibility support, fund your business, provide management support and direction,
+                follow up to succeed in your business, finance agric project, factories, workshops, tools and equipment.
               </p>
             </li>
             <li>
               <h5>Main Features</h5>
               <ul class="list-marked">
                 <li>Opening minimum balance of N2000</li>
-                <li>Make daily, weekily or monthly savings as agreed</li>
+                <li>Make daily, weekly or monthly savings as agreed</li>
                 <li>3% interest on your savings account balance</li>
                 <li>*322*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
-                <li>AMJU Mobile Banking App</li>
-                <li>AMJU Verve debit Card</li>
+                <li>AMJU Unique MFB Mobile Banking App</li>
+                <li>AMJU Unique MFB Verve debit Card</li>
                 <li>Email/SMS Alert</li>
               </ul>
             </li>

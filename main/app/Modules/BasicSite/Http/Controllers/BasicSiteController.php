@@ -60,7 +60,7 @@ class BasicSiteController extends Controller
 			});
 
 			Route::get('/download-pos-form', function () {
-				return download_file('pos.pdf', 'POS-Merchant-Application-Form.pdf');
+				return download_file('pos.rtf', 'POS-Merchant-Application-Form.rtf');
 			});
 
 			Route::get('/{subcat?}', function () {

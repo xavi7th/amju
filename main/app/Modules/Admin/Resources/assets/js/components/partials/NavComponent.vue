@@ -5,7 +5,7 @@
         <div class="logo">
           <div class="logo-type">
             <router-link :to="{name:'admin.root'}">
-              <img src="/img/logo-round-small.png" alt="Amju Unique Logo" class="loader-img" />
+              <img src="/img/logo-round-small.png" alt="Amju Unique MFB Logo" class="loader-img" />
               <span id="logo-caption">
                 amju
                 <span>unique</span>

@@ -8,11 +8,11 @@
 						<ul class="list-xxl">
               <li>
                 <ul class="list-marked">
-									<li>AMJU BANK opening a new branch at Udu road for the entire community inorder to reduce poverty in our environment of operation.</li>
-									<li>AMJU BANK debuts *320*308# for easy access to individual account. It helps you takes your bank everywhere you go.</li>
-									<li>AMJU BANK signed up on QUICK LOAN for the benefit of MICRO CREDIT. All SME/entrepreneur can access loan within 24hours and increase and expand their businesses.</li>
-									<li>AMJU BANK brought life/light to Ethiope east and EKU community. A community without any financial institution for over 10yrs .</li>
-									<li>AMJU BANK support CBN on financial inclusion scheme. Visit any AMJU bank branch to enroll and get a BVN.</li>
+									<li>AMJU Unique MFB opening a new branch at Udu road for the entire community inorder to reduce poverty in our environment of operation.</li>
+									<li>AMJU Unique MFB debuts *320*308# for easy access to individual account. It helps you takes your bank everywhere you go.</li>
+									<li>AMJU Unique MFB signed up on QUICK LOAN for the benefit of MICRO CREDIT. All SME/entrepreneur can access loan within 24hours and increase and expand their businesses.</li>
+									<li>AMJU Unique MFB brought life/light to Ethiope east and EKU community. A community without any financial institution for over 10yrs .</li>
+									<li>AMJU Unique MFB support CBN on financial inclusion scheme. Visit any AMJU Unique MFB bank branch to enroll and get a BVN.</li>
                 </ul>
               </li>
             </ul>
@@ -80,7 +80,7 @@
           <div class="col-md-12">
             <ul class="list-xxl">
               <li>
-                <h2>AMJU UNIQUE BANK YEARLY EVENT</h2>
+                <h2>AMJU UNIQUE MFB BANK YEARLY EVENT</h2>
                 <ul class="list-marked">
 									<li>Customer service week</li>
 									<li>Month thanksgiving(Every first working day of the month)</li>

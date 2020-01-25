@@ -12,7 +12,7 @@
               <h5>Main Features</h5>
               <ul class="list-marked">
                 <li>Open with ₦1,000 Minimum</li>
-                <li>Avalaible to those planning for marriage</li>
+                <li>Available to those planning for marriage</li>
                 <li>Save N100,000 for Six months to qualify for the benefits below</li>
               </ul>
             </li>
@@ -23,8 +23,8 @@
                 <li>2% interest per annum payable on average minimum balance of N100,000 for 6 month.</li>
                 <li>*322*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
-                <li>AMJU Mobile Banking App</li>
-                <li>AMJU Verve debit Card</li>
+                <li>AMJU Unique MFB Mobile Banking App</li>
+                <li>AMJU Unique MFB Verve debit Card</li>
                 <li>Email/SMS Alert</li>
               </ul>
             </li>

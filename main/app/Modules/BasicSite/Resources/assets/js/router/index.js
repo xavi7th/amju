@@ -39,6 +39,11 @@ import {
 	siteAboutBranches,
 	siteAboutOurCompany,
 	siteAboutCorpGov,
+	siteAboutMgtTeam,
+	siteAboutCEO,
+	siteAboutAuditor,
+	siteAboutED,
+	siteAboutDGM,
 	siteAboutBizFocus,
 	siteAboutAwards,
 	siteAboutCareer,
@@ -130,7 +135,7 @@ export function createRouter() {
 						name: 'site.pb.thrift',
 						meta: {
 							title: 'Thrift Savivgs - ' + APP_NAME,
-							breadcrumb: 'Thrift Savivgs',
+							breadcrumb: 'Thrift Savings',
 							bgImg: '/img/banners/amju-thrift-savings.jpg',
 						},
 					},
@@ -240,8 +245,8 @@ export function createRouter() {
 						component: view( 'sme/GroupLeadingCurrentPage' ),
 						name: 'site.sme.groupleading',
 						meta: {
-							title: 'AMJU Group Leading Account - ' + APP_NAME,
-							breadcrumb: 'AMJU Group Leading Account',
+							title: 'AMJU Group Lending Account - ' + APP_NAME,
+							breadcrumb: 'AMJU Group Lending Account',
 							bgImg: '/img/banners/amju-group-leading.jpg',
 						},
 					},
@@ -458,6 +463,56 @@ export function createRouter() {
 						},
 					},
 					{
+						path: siteAboutMgtTeam,
+						component: view( 'about/MgtTeamPage' ),
+						name: 'site.about.mgt-team',
+						meta: {
+							title: 'Management Team - ' + APP_NAME,
+							breadcrumb: 'Management Team',
+							bgImg: '/img/banners/amju-mgt-team.jpg'
+						},
+					},
+					{
+						path: siteAboutCEO,
+						component: view( 'about/team/CEOPage' ),
+						name: 'site.about.ceo',
+						meta: {
+							title: 'Management Team | CEO - ' + APP_NAME,
+							breadcrumb: 'About CEO',
+							bgImg: '/img/team/Amju-CEO-full.jpg'
+						},
+					},
+					{
+						path: siteAboutAuditor,
+						component: view( 'about/team/AuditorPage' ),
+						name: 'site.about.audit',
+						meta: {
+							title: 'Management Team | Auditor - ' + APP_NAME,
+							breadcrumb: 'About Auditor',
+							bgImg: '/img/team/Amju-Audit-full.jpg'
+						},
+					},
+					{
+						path: siteAboutED,
+						component: view( 'about/team/ExecutiveDirectorPage' ),
+						name: 'site.about.ed',
+						meta: {
+							title: 'Management Team | ED - ' + APP_NAME,
+							breadcrumb: 'About Executive Director',
+							bgImg: '/img/team/Amju-ED-full.jpg'
+						},
+					},
+					{
+						path: siteAboutDGM,
+						component: view( 'about/team/DGMPage' ),
+						name: 'site.about.dgm',
+						meta: {
+							title: 'Management Team | DGM - ' + APP_NAME,
+							breadcrumb: 'About DGM',
+							bgImg: '/img/team/Amju-DGM-full.jpg'
+						},
+					},
+					{
 						path: siteAboutCorpGov,
 						component: view( 'about/CorpGovPage' ),
 						name: 'site.about.corp-gov',
@@ -466,7 +521,6 @@ export function createRouter() {
 							breadcrumb: 'Corporate Governance',
 							bgImg: '/img/banners/amju-flexy.jpg',
 							navSkip: true
-
 						},
 					},
 					{
@@ -498,7 +552,7 @@ export function createRouter() {
 						meta: {
 							title: 'Our Branches - ' + APP_NAME,
 							breadcrumb: 'Our Branches',
-							bgImg: '/img/banners/amju-flexy.jpg',
+							bgImg: '/img/banners/amju-branches.jpg',
 							navSkip: true
 						},
 					},
@@ -527,7 +581,7 @@ export function createRouter() {
 			},
 			{
 				path: siteContactUs,
-				component: view( 'ContactUsPage' ),
+				component: view( 'OurBranchesPage' ),
 				name: 'site.contact',
 				meta: {
 					title: 'Contacts - ' + APP_NAME,

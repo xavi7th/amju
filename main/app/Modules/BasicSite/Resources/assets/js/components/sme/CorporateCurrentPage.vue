@@ -7,7 +7,7 @@
             <li>
               <h5>Overview</h5>
               <p>
-                AMJU Individual current account allows customers to withdraw with our cheque in any branch of our
+                AMJU Unique MFB Individual current account allows customers to withdraw with our cheque in any branch of our
                 correspondence commercial bank (Fidelity Bank) all over Nigeria.
               </p>
             </li>
@@ -25,8 +25,8 @@
                 <li>Free access to loan/facilities</li>
                 <li>*322*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
-                <li>AMJU Mobile Banking App</li>
-                <li>AMJU Verve debit Card</li>
+                <li>AMJU Unique MFB Mobile Banking App</li>
+                <li>AMJU Unique MFB Verve debit Card</li>
                 <li>Email/SMS Alert</li>
                 <li>Can withdraw at any branch of our correspondence bank all over Nigeria(Fidelity bank)</li>
                 <li>Free access to a Chequebook, based on request at any of our branches nationwide</li>

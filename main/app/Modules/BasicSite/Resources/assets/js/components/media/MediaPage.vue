@@ -37,7 +37,7 @@
               <img src="/img/amju-ceo.jpg" alt width="540" height="327" />
             </div>
             <div class="col-md-6">
-              <h3 class="title">Amju Gallery</h3>
+              <h3 class="title">Amju Unique MFB Gallery</h3>
               <p
                 class="exeption"
               >Amju Unique Micro Finance Bank in pictures. View our activitiies carried out ...</p>
