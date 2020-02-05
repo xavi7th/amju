@@ -56,7 +56,7 @@
               <div class="counter-boxed-title">
                 <div class="subtitle">As low as</div>
                 <div class="counter-wrap">
-                  <div class="counter heading-2">3.5</div>
+                  <div class="countr heading-2">1.6</div>
                   <div class="heading-2">%</div>
                 </div>
                 <div class="title heading-5">Interest on Loans</div>

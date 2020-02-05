@@ -9,7 +9,7 @@
                 <img src="/img/team/Amju-Audit-full.jpg" alt width="270" height="270" />
               </div>
               <div class="title">
-                <a href="#">Samuel Nwabugbogu Ikechukwu</a>
+                <a href="#">Samuel Nwabughogu Ikechukwu</a>
               </div>
               <div class="position">Head Audit, Internal Control and Risks Management</div>
               <div class="group group-middle social-items">
@@ -28,20 +28,22 @@
               <p class="lead-paragraph">
                 He holds an Associate Certificate of The Chartered Institute of Bankers of Nigeria (ACIB) and a Certified Microfinance Banker (MCIB).
                 He is also a Student Member of Chartered Institute of Secretaries and Administrators of Nigeria. He is a pioneer staff of AMJU
-                Unique MFB Limited. He has attended several courses, workshops and seminars which include Agricultural Lending Course, Credit Analysis and Project Evaluation and other related courses to microfinance banking.
+                Unique MFB Limited. He has attended several courses, workshops and seminars which include Agricultural Lending Course, Credit Analysis
+								and Project Evaluation and other related courses to microfinance banking.
               </p>
             </li>
             <li>
-              <p>He has over 30 years working experience most of which is in commercial and retail banking in Nigeria. He had worked as a Branch Manager, Head of Regional Credit Department at Afribank Nigeria PLC before his retirement from Afribank in 2006.</p>
+              <p>He has over 30 years working experience most of which is in commercial and retail banking in Nigeria. He had worked
+								as a Branch Manager, Head of Regional Credit Department at Afribank Nigeria PLC before his retirement from Afribank in 2006.</p>
             </li>
-
-            <li>
-              <p>
-                He holds an Associate Certificate of The Chartered Institute of Bankers of Nigeria (ACIB) and a Certified Microfinance Banker (MCIB).
-                He is also a Student Member of Chartered Institute of Secretaries and Administrators of Nigeria. He is a pioneer staff of AMJU
-                Unique MFB Limited. He has attended several courses, workshops and seminars which include Agricultural Lending Course, Credit Analysis and Project Evaluation and other related courses to microfinance banking.
-              </p>
-            </li>
+						<li>
+							<p>
+								He holds an Associate Certificate of The Chartered Institute of Bankers of Nigeria (ACIB) and a Certified Microfinance Banker (MCIB).
+								He is also a Student Member of Chartered Institute of Secretaries and Administrators of Nigeria. He is a pioneer staff of AMJU
+								Unique MFB Limited. He has attended several courses, workshops and seminars which include Agricultural Lending Course, Credit
+								 Analysis and Project Evaluation and other related courses to microfinance banking.
+							</p>
+						</li>
           </ul>
         </div>
       </div>

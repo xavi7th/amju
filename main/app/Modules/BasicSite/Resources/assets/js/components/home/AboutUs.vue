@@ -51,7 +51,7 @@
             <div class="quote-body">
               <q class="heading-6">
                 At Amju Unique Micro Finance Bank, we aim to provide top quality banking services to a greater number of
-                individual and corporate customers than any other microfinance bank in Nigeria.
+                individuals and corporate customers than any other microfinance bank in Nigeria.
               </q>
             </div>
             <div class="quote-meta">

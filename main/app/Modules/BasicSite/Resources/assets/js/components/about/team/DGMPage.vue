@@ -27,14 +27,22 @@
             <li>
               <p
                 class="lead-paragraph"
-              >He is the D.G.M (Deputy General Manager) Finance & Accounts of AMJU Unique Microfinance Bank, and possesses his first degree and Master’s degree in Banking and Finance from the University of Benin, Edo State, Nigeria.</p>
+              >He is the D.G.M (Deputy General Manager) Finance &amp; Accounts of AMJU Unique Microfinance Bank,
+							and possesses his first degree and Master’s degree in Banking and Finance from the University of Benin, Edo State, Nigeria.</p>
             </li>
 
             <li>
-              <p>
+              <!-- <p>
                 He is a Director and Shareholder of Amju Unique MFB Limited and he sits on the Board of Many companies including Top Rank Oil
                 Services Limited, Universal Finance Consult Ltd, V-Capital Consulting Limited.
-              </p>
+              </p> -->
+							<p>
+								He is a member of the Chartered Institute of Bankers of Nigeria (CIBN) foundation. He has worked as an Accountant, Auditor, Head Banking Operations,
+								head Credit Administration and Recovery and has worked in establishments like Microfinance banks and companies. He has attended a course in
+								<b><i>Credit Administration and Debt Recovery Techniques (CIBN)</i></b>, Introduction to Management (BBCB), Presentation of Audited Financial Statement (CBN),
+								Agricultural Credit Guarantee Scheme (ACGS), Fundamentals of Micro Finance Banks and Interim Capacity Building for Microfinance Banks in Nigeria and other
+								training courses and workshops.
+							</p>
             </li>
           </ul>
         </div>

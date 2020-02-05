@@ -6,30 +6,27 @@
           <ul class="list-xxl pl-5">
             <li>
               <h5>Overview</h5>
+							<p>
+								AMJU UNIQUE MFB secures way to access your accounts, manage payments and check your statement 24 hours a day.
+							</p>
               <p>
-                Amju Unique MFB Bank has deployed a large network of ATMs in all our branches,
-                to offer our customers painless, quick and convenient access to their funds 24/7 every day.
+                AMJU UNIQUE MFB Internet Banking launches you into a world without limits. It is a robust channel designed for
+								your accounts and allows you conveniently perform transactions online real-time.
               </p>
-            </li>
-            <li>
-              <h5>Main Features</h5>
-              <ul class="list-marked">
-                <li>Open with ₦2,000 Minimum</li>
-                <li>₦5,000 Minimum credit balance</li>
-                <li>Operate with a cheque book</li>
-                <li>Attract interest rate of 2% income per annum</li>
-              </ul>
+							<p>
+								With Internet Banking, you can, enjoy the convenience of managing your finances quickly and easily at a time that
+								suits you. You can bank safely and securely – at work, home or abroad.
+							</p>
             </li>
             <li>
               <h5>Benefits</h5>
               <ul class="list-marked">
-                <li>Attract interest rate of 2% income per annum</li>
-                <li>It attracts interest to customers</li>
-                <li>It allows lodgement of cheques from any bank</li>
-                <li>*322*306* AMJU Unique MFB EazyBanking</li>
-                <li>24/7 Internet Banking Services</li>
-                <li>AMJU Unique MFB Mobile Banking App</li>
-                <li>AMJU Unique MFB Verve debit Card</li>
+                <li>Easy access to your account(s) from anywhere in the world.</li>
+                <li>Online real-time account monitoring facility.</li>
+                <li>Convenience of conducting banking transactions from comfort of home/office.</li>
+                <li>Guaranteed security for all your online transactions.</li>
+                <li>Easy Access to bank information and products.</li>
+                <li>Allows 24/7 access to account.</li>
                 <li>Email/SMS Alert</li>
               </ul>
             </li>

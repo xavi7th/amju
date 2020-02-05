@@ -26,8 +26,8 @@
           <ul class="list-xxl">
             <li>
               <p class="lead-paragraph">
-                Mr Uche Ogelle is an Executive Director of AMJU Unique Micro Finance Bank Ltd. With great wealth of
-                Banking experience in the commercial Banks as Intercontinental Bank and Access Bank where he was a Branch Manager.
+                Mr Uche Ogelle is an Executive Director of AMJU Unique Micro Finance Bank Ltd with great wealth of banking experiences in the
+								commercial Banks which are Intercontinental Bank and Access Bank where he was a Branch Manager.
               </p>
             </li>
           </ul>

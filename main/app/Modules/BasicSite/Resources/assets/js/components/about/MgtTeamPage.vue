@@ -6,8 +6,9 @@
           <div class="col-md-12 col-xl-10">
             <!-- <h2>Management Team</h2> -->
             <div class="heading-6 block-lg">
-              The Bank has a formidable Board and Management Team made up seasoned and successful professionals in their various endeavors.
+              The Bank has a formidable Board and Management Team made up of seasoned and successful professionals in their various endeavors.
               The Bank guarantees all her esteemed customers first class banking services, easy banking beyond the first.
+							<br>
               We at AMJU Unique Micro Finance Bank Limited are set out to give qualitative and superior banking services to our clients
             </div>
           </div>
