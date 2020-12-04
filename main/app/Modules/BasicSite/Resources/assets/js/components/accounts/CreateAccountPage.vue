@@ -6,9 +6,14 @@
           <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-4">
               <h3>Complete this form</h3>
-              <form class="rd-form form-lg rd-mailform" @submit.prevent="createAccount">
+              <form
+                class="rd-form form-lg rd-mailform"
+                @submit.prevent="createAccount"
+              >
                 <div class="form-wrap radio-group">
-                  <label for="account-type" class="radio-group-label">Choose Account Type</label>
+                  <label for="account-type" class="radio-group-label"
+                    >Choose Account Type</label
+                  >
 
                   <div>
                     <input
@@ -39,7 +44,11 @@
                   </div>
                 </div>
                 <div class="form-wrap" v-if="otherAccTypes">
-                  <select class="form-input" name="gender" v-model="details.acc_type">
+                  <select
+                    class="form-input"
+                    name="gender"
+                    v-model="details.acc_type"
+                  >
                     <option value="others">Select Account Type</option>
                     <option value="flexy">Amju Flexy Savings</option>
                     <option value="edusave">Amju Edusave Savings</option>
@@ -47,12 +56,18 @@
                     <option value="marriage">Amju Marriage Savings</option>
                     <option value="christmas">Amju Christmas Savings</option>
                     <option value="esusu">Amju Esusu Savings</option>
-                    <option value="entrepreneur">Amju Entrepreneur Savings</option>
+                    <option value="entrepreneur">
+                      Amju Entrepreneur Savings
+                    </option>
                     <option value="platinum">Amju Platinum Account</option>
                     <option value="overdraft">Amju Overdraft Account</option>
                     <option value="divine">Amju Divine Account</option>
-                    <option value="cooperative">Amju Cooperative Account</option>
-                    <option value="groupleading">Amju Group Leading Account</option>
+                    <option value="cooperative">
+                      Amju Cooperative Account
+                    </option>
+                    <option value="groupleading">
+                      Amju Group Leading Account
+                    </option>
                   </select>
                 </div>
                 <div class="form-wrap">
@@ -75,7 +90,9 @@
                     data-constraints=" @PhoneNumber @Required"
                     v-model="details.phone"
                   />
-                  <label class="form-label" for="user-phone">Phone Number</label>
+                  <label class="form-label" for="user-phone"
+                    >Phone Number</label
+                  >
                 </div>
                 <div class="form-wrap">
                   <input
@@ -86,18 +103,22 @@
                     data-constraints="@Email @Required"
                     v-model="details.email"
                   />
-                  <label class="form-label" for="user-email">E-mail Address</label>
+                  <label class="form-label" for="user-email"
+                    >E-mail Address</label
+                  >
                 </div>
                 <div class="form-wrap">
                   <input
                     class="form-input"
                     id="date-of-birth"
-                    type="text"
+                    type="date"
                     name="date-of-birth"
                     :data-constraints="dateOfBirthConstraint"
                     v-model="details.dob"
                   />
-                  <label class="form-label" for="date-of-birth">Date of Birth</label>
+                  <label class="form-label" for="date-of-birth"
+                    >Date of Birth</label
+                  >
                 </div>
                 <div class="form-wrap">
                   <select
@@ -149,13 +170,22 @@
                   <label
                     class="form-label input-file-label"
                     for="upload-passport"
-                  >{{ fileUploadName || 'Upload Passport'}}</label>
+                    >{{ fileUploadName || "Upload Passport" }}</label
+                  >
                 </div>
                 <button
                   class="button button-lg button-round button-block button-primary"
                   type="submit"
-                  :disabled="!details.full_name || !details.gender || !details.user_passport || !details.acc_type || details.acc_type == 'others'"
-                >Register</button>
+                  :disabled="
+                    !details.full_name ||
+                    !details.gender ||
+                    !details.user_passport ||
+                    !details.acc_type ||
+                    details.acc_type == 'others'
+                  "
+                >
+                  Register
+                </button>
               </form>
             </div>
           </div>
@@ -172,11 +202,17 @@
     data: () => ({
       fileUploadName: null,
       details: {
-        gender: null
-      }
+        gender: null,
+      },
     }),
     mounted() {
       this.$emit("page-loaded");
+
+      let dobInput = document.getElementById("date-of-birth");
+
+      dobInput.addEventListener("input", function () {
+        this.style.color = "inherit";
+      });
     },
     beforeDestroy() {
       this.$unloadScript("/js/main.js");
@@ -186,7 +222,7 @@
         return '@HTML5Required(message = "Select an account type")';
       },
       dateOfBirthConstraint() {
-        return '@Above18Years @Past(format="MDY",message = "Date of Birth must be a date in the past") @Date @NotEmpty';
+        return '@Above18Years @Past(format="YMD", label="", message = "Date of Birth must be a date in the past") @NotEmpty';
       },
       genderConstraint() {
         return '@Required(message = "Select your gender")';
@@ -203,7 +239,7 @@
           this.details.acc_type != "current" &&
           this.details.acc_type != "savings"
         );
-      }
+      },
     },
     methods: {
       attachFile() {
@@ -215,11 +251,11 @@
           Toast.fire({
             type: "error",
             text: "There are errors in the form",
-            title: "Oops! "
+            title: "Oops! ",
           });
         } else {
           BlockToast.fire({
-            text: "Setting up your new account ..."
+            text: "Setting up your new account ...",
           });
           this.details.dob = new Date(this.details.dob).toDateString();
           let formData = new FormData();
@@ -231,8 +267,8 @@
           axios
             .post(siteCreateAccountApi, formData, {
               headers: {
-                "Content-Type": "multipart/form-data"
-              }
+                "Content-Type": "multipart/form-data",
+              },
             })
             .then(({ status, data: { acc_num, full_name } }) => {
               if (status && status == 201) {
@@ -242,18 +278,18 @@
                 );
                 this.details = { gender: null };
                 swal.fire({
-                  title: "Success",
+                  title: "Congrats!",
                   text: `Account Number is ${acc_num}`,
                   type: "success",
                   showConfirmButton: false,
                   footer:
-                    '<a href="/account/create/success">What am I to do next?</a>'
+                    '<a href="/account/create/success">What am I to do next?</a>',
                 });
               }
             });
         }
-      }
-    }
+      },
+    },
   };
 </script>
 
@@ -261,7 +297,6 @@
   .radio-group {
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 15px;
     text-align: center;
     padding-bottom: 15px;
     color: black;
@@ -304,5 +339,9 @@
 
   [disabled] {
     cursor: not-allowed;
+  }
+
+  #date-of-birth {
+    color: transparent;
   }
 </style>

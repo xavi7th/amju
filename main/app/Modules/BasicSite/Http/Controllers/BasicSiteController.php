@@ -18,6 +18,7 @@ use App\Modules\BasicSite\Transformers\TeamMemberTransformer;
 use App\Modules\BasicSite\Http\Requests\ContactFormValidation;
 use App\Modules\BasicSite\Transformers\TestimonialTransformer;
 use App\Modules\BasicSite\Http\Requests\AccountCreationFormValidation;
+use Illuminate\Support\Str;
 
 class BasicSiteController extends Controller
 {
@@ -100,7 +101,7 @@ class BasicSiteController extends Controller
 				// Storage::setVisibility($url, 'public');
 
 				/** Replace the public part of the url with storage to make it accessible on the frontend */
-				$url = str_replace_first('public', '/storage', $url);
+        $url = Str::replaceFirst('public', '/storage', $url);
 
 				//Create an entry into the documents database
 
@@ -115,12 +116,7 @@ class BasicSiteController extends Controller
 					'address' => $request->address,
 					'dob' => Carbon::parse($request->dob),
 					'user_passport' => $url
-				]);
-
-				/**
-				 * Calculate account Number
-				 */
-				return response()->json(['status' => true], 201);
+        ]);
 			});
 		});
 	}

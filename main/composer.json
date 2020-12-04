@@ -54,6 +54,50 @@
         }
     },
     "scripts": {
+       "compile": [
+         "@php artisan config:clear",
+         "@php artisan debugbar:clear",
+         "@php artisan route:clear",
+         "@php artisan cache:clear",
+         "@php artisan view:clear",
+         "@php artisan event:clear",
+         "@php artisan key:generate",
+         "@php artisan storage:link",
+         "@php artisan migrate:fresh --force",
+         "@php artisan module:seed",
+         "@php artisan auth:clear-resets",
+         "@php artisan route:cache",
+         "@php artisan config:cache",
+         "@php artisan optimize",
+         "composer dumpautoload",
+         "npm run prod"
+       ],
+       "recompile": [
+         "@php artisan config:clear",
+         "@php artisan debugbar:clear",
+         "@php artisan route:clear",
+         "@php artisan cache:clear",
+         "@php artisan view:clear",
+         "@php artisan log:delete",
+         "@php artisan storage:link",
+         "@php artisan auth:clear-resets",
+         "@php artisan route:cache",
+         "@php artisan config:cache",
+         "@php artisan optimize",
+         "composer dumpautoload"
+       ],
+       "reseed": [
+         "@php artisan config:clear",
+         "@php artisan debugbar:clear",
+         "@php artisan route:clear",
+         "@php artisan cache:clear",
+         "@php artisan view:clear",
+         "@php artisan event:clear",
+         "@php artisan migrate:fresh",
+         "@php artisan module:seed",
+         "composer dumpautoload"
+
+       ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
