@@ -14,18 +14,6 @@ if ( modules && modules.length > 0 ) {
 		}
 	} )
 }
-
-/*
-|--------------------------------------------------------------------------
-| Mix Asset Management
-|--------------------------------------------------------------------------
-|
-| Mix provides a clean, fluent API for defining some Webpack build steps
-| for your Laravel application. By default, we are compiling the Sass
-| file for the application as well as bundling up all the JS files.
-|
-*/
-
 mix
 	// .sourceMaps()
 	.options( {
@@ -34,7 +22,10 @@ mix
 			// fonts: 'web-fonts'
 		},
 		postCss: [
-			require( 'postcss-fixes' )(), // add fallbacks for rem units and other fixes
+			require( 'postcss-fixes' )(),
+			  require( 'cssnano' )( {
+			    'calc': false
+			  } ),
 		],
 	} )
 	.extract( [ 'vue', 'sweetalert2', 'axios', 'lodash', 'vue-plugin-load-script', 'vue-router' ] )
@@ -49,21 +40,4 @@ if ( !mix.inProduction() ) {
 
 // mix.webpackConfig( {
 // 	devtool: 'source-map',
-// } )
-
-// mix.browserSync( {
-// 	injectChanges: true,
-// 	ghostMode: {
-// 		clicks: false,
-// 		forms: false,
-// 		scroll: false,
-// 	},
-// 	proxy: {
-// 		target: 'localhost:8000',
-// 		reqHeaders: function () {
-// 			return {
-// 				host: 'localhost:3000',
-// 			}
-// 		},
-// 	},
 // } )
