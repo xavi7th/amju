@@ -21,12 +21,13 @@
             <li>
               <h5>Benefits</h5>
               <ul class="list-marked">
-                <li>Easy access to your account(s) from anywhere in the world.</li>
-                <li>Online real-time account monitoring facility.</li>
-                <li>Convenience of conducting banking transactions from comfort of home/office.</li>
-                <li>Guaranteed security for all your online transactions.</li>
-                <li>Easy Access to bank information and products.</li>
-                <li>Allows 24/7 access to account.</li>
+                <li>Attract interest rate of 2% income per annum</li>
+                <li>It attracts interest to customers</li>
+                <li>It allows lodgement of cheques from any bank</li>
+                <li>*723*306* AMJU EazyBanking</li>
+                <li>24/7 Internet Banking Services</li>
+                <li>AMJU Mobile Banking App</li>
+                <li>AMJU Verve debit Card</li>
                 <li>Email/SMS Alert</li>
               </ul>
             </li>

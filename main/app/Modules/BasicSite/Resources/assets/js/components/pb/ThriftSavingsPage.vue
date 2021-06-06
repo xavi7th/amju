@@ -23,7 +23,7 @@
                 <li>Easy access to micro credit loans within 24hrs</li>
                 <li>2.5% interest paid into savings per annum</li>
                 <li>Access to micro credit loan up to a maximum of two times of amount saved.</li>
-                <li>*322*306* AMJU EazyBanking</li>
+                <li>*723*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
                 <li>AMJU Unique MFB Mobile Banking App</li>
                 <li>AMJU Unique MFB Verve debit Card</li>

@@ -1,0 +1,71 @@
+[2021-06-06 06:39:24] production.ERROR: Undefined index: name {"exception":"[object] (ErrorException(code: 0): Undefined index: name at C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php:122)
+[stacktrace]
+#0 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(122): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined index...', 'C:\\\\Users\\\\Falowo...', 122, Array)
+#1 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php(1197): Illuminate\\Foundation\\PackageManifest->Illuminate\\Foundation\\{closure}(Array, 'packages')
+#2 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(123): Illuminate\\Support\\Collection->mapWithKeys(Object(Closure))
+#3 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(97): Illuminate\\Foundation\\PackageManifest->build()
+#4 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(80): Illuminate\\Foundation\\PackageManifest->getManifest()
+#5 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterFacades.php(26): Illuminate\\Foundation\\PackageManifest->aliases()
+#6 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterFacades->bootstrap(Object(Illuminate\\Foundation\\Application))
+#7 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#8 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#9 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\artisan(51): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2021-06-06 06:39:24] production.ERROR: Call to a member function connection() on null {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Call to a member function connection() on null at C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php:1253)
+[stacktrace]
+#0 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1219): Illuminate\\Database\\Eloquent\\Model::resolveConnection('mysql')
+#1 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1051): Illuminate\\Database\\Eloquent\\Model->getConnection()
+#2 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(968): Illuminate\\Database\\Eloquent\\Model->newBaseQueryBuilder()
+#3 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(646): Illuminate\\Database\\Eloquent\\Model->newModelQuery()
+#4 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\danielme85\\laravel-log-to-db\\src\\LogToDB.php(244): Illuminate\\Database\\Eloquent\\Model->save()
+#5 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\danielme85\\laravel-log-to-db\\src\\LogToDbCustomLoggingHandler.php(113): danielme85\\LaravelLogToDB\\LogToDB->newFromMonolog(Array)
+#6 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\monolog\\monolog\\src\\Monolog\\Handler\\AbstractProcessingHandler.php(39): danielme85\\LaravelLogToDB\\LogToDbCustomLoggingHandler->write(Array)
+#7 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\monolog\\monolog\\src\\Monolog\\Logger.php(344): Monolog\\Handler\\AbstractProcessingHandler->handle(Array)
+#8 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\monolog\\monolog\\src\\Monolog\\Logger.php(707): Monolog\\Logger->addRecord(400, 'Undefined index...', Array)
+#9 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\Logger.php(176): Monolog\\Logger->error('Undefined index...', Array)
+#10 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\Logger.php(87): Illuminate\\Log\\Logger->writeLog('error', 'Undefined index...', Array)
+#11 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(500): Illuminate\\Log\\Logger->error('Undefined index...', Array)
+#12 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(118): Illuminate\\Log\\LogManager->error('Undefined index...', Array)
+#13 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\app\\Exceptions\\Handler.php(42): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(ErrorException))
+#14 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(378): App\\Exceptions\\Handler->report(Object(ErrorException))
+#15 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(135): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(ErrorException))
+#16 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\artisan(51): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
+[2021-06-06 06:39:24] production.ERROR: Uncaught Error: Call to a member function connection() on null in C:\Users\Falowo Olamide\Documents\GitHub\amju\main\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php:1253
+Stack trace:
+#0 C:\Users\Falowo Olamide\Documents\GitHub\amju\main\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1219): Illuminate\Database\Eloquent\Model::resolveConnection('mysql')
+#1 C:\Users\Falowo Olamide\Documents\GitHub\amju\main\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1051): Illuminate\Database\Eloquent\Model->getConnection()
+#2 C:\Users\Falowo Olamide\Documents\GitHub\amju\main\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(968): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#3 C:\Users\Falowo Olamide\Documents\GitHub\amju\main\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(646): Illuminate\Database\Eloquent\Model->newModelQuery()
+#4 C:\Users\Falowo Olamide\Documents\GitHub\amju\main\vendor\danielme85\laravel-lo {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught Error: Call to a member function connection() on null in C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php:1253
+Stack trace:
+#0 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1219): Illuminate\\Database\\Eloquent\\Model::resolveConnection('mysql')
+#1 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1051): Illuminate\\Database\\Eloquent\\Model->getConnection()
+#2 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(968): Illuminate\\Database\\Eloquent\\Model->newBaseQueryBuilder()
+#3 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(646): Illuminate\\Database\\Eloquent\\Model->newModelQuery()
+#4 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\danielme85\\laravel-lo at C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php:1253)
+[stacktrace]
+#0 {main}
+"} 
+[2021-06-06 07:05:53] local.ERROR: chdir(): No such file or directory (errno 2) {"exception":"[object] (ErrorException(code: 0): chdir(): No such file or directory (errno 2) at C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\ServeCommand.php:42)
+[stacktrace]
+#0 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'chdir(): No suc...', 'C:\\\\Users\\\\Falowo...', 42, Array)
+#1 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\ServeCommand.php(42): chdir('C:\\\\Users\\\\Falowo...')
+#2 [internal function]: Illuminate\\Foundation\\Console\\ServeCommand->handle()
+#3 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#4 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#5 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#6 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#7 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#8 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#9 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\symfony\\console\\Application.php(1009): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\symfony\\console\\Application.php(273): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\ServeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\symfony\\console\\Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 C:\\Users\\Falowo Olamide\\Documents\\GitHub\\amju\\main\\artisan(51): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 {main}
+"} 

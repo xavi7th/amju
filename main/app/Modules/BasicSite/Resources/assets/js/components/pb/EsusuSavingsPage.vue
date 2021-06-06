@@ -25,7 +25,7 @@
                 <li>Security of customers fund is guaranteed as the money is with a reliable financial institution rather than an individual</li>
                 <li>Customers balance can be converted to normal savings account or any other type of account</li>
                 <li>Access to loan facility</li>
-                <li>*322*306* AMJU EazyBanking</li>
+                <li>*723*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
                 <li>AMJU Unique MFB Mobile Banking App</li>
                 <li>AMJU Unique MFB Verve debit Card</li>

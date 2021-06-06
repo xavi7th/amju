@@ -24,7 +24,7 @@
               <ul class="list-marked">
                 <li>Free access to loan/facilities</li>
                 <li>Can withdraw at any branch of our correspondence bank all over Nigeria(Fidelity bank)</li>
-                <li>*322*306* AMJU EazyBanking</li>
+                <li>*723*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
                 <li>AMJU Unique MFB Mobile Banking App</li>
                 <li>AMJU Unique MFB Verve debit Card</li>

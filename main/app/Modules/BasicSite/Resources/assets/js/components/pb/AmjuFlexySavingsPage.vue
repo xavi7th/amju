@@ -22,7 +22,7 @@
               <ul class="list-marked">
                 <li>Attract interest rate of 2% income per annum</li>
                 <li>It allows lodgement of cheques from any bank</li>
-                <li>*322*306* AMJU EazyBanking</li>
+                <li>*723*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
                 <li>AMJU Unique MFB Mobile Banking App</li>
                 <li>AMJU Unique MFB Verve debit Card</li>

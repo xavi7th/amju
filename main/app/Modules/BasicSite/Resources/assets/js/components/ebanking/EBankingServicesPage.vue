@@ -98,12 +98,12 @@
               <h3 class="title">USSD Codes</h3>
               <p class="exeption">Proceed with testing using code</p>
               <ul class="list-marked">
-                <li>*322*306*0# - Balance Inquiry</li>
-                <li>*322*306*amount# - Self Recharge</li>
-                <li>*322*306*phone number*amount# - Others Recharge</li>
-                <li>*322*306*account number*amount# - Transfer</li>
-                <li>*322*306*biller code*amount# - Bills Payment</li>
-                <li>*322*306*biller code*customer id*amount# - Bills Payment</li>
+                <li>*723*306*0# - Balance Inquiry</li>
+                <li>*723*306*amount# - Self Recharge</li>
+                <li>*723*306*phone number*amount# - Others Recharge</li>
+                <li>*723*306*account number*amount# - Transfer</li>
+                <li>*723*306*biller code*amount# - Bills Payment</li>
+                <li>*723*306*biller code*customer id*amount# - Bills Payment</li>
               </ul>
               <router-link
                 data-nav

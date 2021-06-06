@@ -22,7 +22,7 @@
               <ul class="list-marked">
                 <li>3% Interest per anum payable on average minimum balance of N100,000 for 6 months</li>
                 <li>Easy access to loan for school fess</li>
-                <li>*322*306* AMJU EazyBanking</li>
+                <li>*723*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
                 <li>AMJU Unique MFB Mobile Banking App</li>
                 <li>AMJU Unique MFB Verve debit Card</li>

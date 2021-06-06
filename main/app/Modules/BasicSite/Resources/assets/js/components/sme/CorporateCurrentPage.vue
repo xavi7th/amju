@@ -23,7 +23,7 @@
               <h5>Benefits</h5>
               <ul class="list-marked">
                 <li>Free access to loan/facilities</li>
-                <li>*322*306* AMJU EazyBanking</li>
+                <li>*723*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
                 <li>AMJU Unique MFB Mobile Banking App</li>
                 <li>AMJU Unique MFB Verve debit Card</li>

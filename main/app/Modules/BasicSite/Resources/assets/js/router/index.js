@@ -306,9 +306,8 @@ export function createRouter() {
 						name: 'site.services.ussd-codes',
 						component: view( 'ebanking/USSDServicesPage' ),
 						meta: {
-							title: 'AMJU Eazybanking - ' + APP_NAME,
-							breadcrumb: 'AMJU Eazybanking',
-							bgImg: '/img/banners/amju-eazy-banking.jpg',
+							title: 'USSD Code - ' + APP_NAME,
+							breadcrumb: 'USSD Code',
 						},
 					},
 					{

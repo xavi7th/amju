@@ -26,7 +26,7 @@
                 <li>Easy access to loans</li>
                 <li>Bank grant the church credit facility up to 70% of the cost of assets</li>
                 <li>Loan to be repaid within a maximum of 12 months</li>
-                <li>*322*306* AMJU EazyBanking</li>
+                <li>*723*306* AMJU EazyBanking</li>
                 <li>24/7 Internet Banking Services</li>
                 <li>AMJU Unique MFB Mobile Banking App</li>
                 <li>AMJU Unique MFB Verve debit Card</li>
