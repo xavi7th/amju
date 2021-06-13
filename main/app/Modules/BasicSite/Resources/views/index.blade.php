@@ -2,6 +2,7 @@
 @section('contents')
 @stop
 @section('customCSS')
+
 <style>
 	.slide-left-enter-active,
 	.slide-left-leave-active,

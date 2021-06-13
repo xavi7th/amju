@@ -6,11 +6,12 @@
     data-simulate-touch="false"
     data-slide-effect="fade"
   >
+
     <div class="swiper-wrapper">
       <div
         class="swiper-slide context-dark"
         :data-slide-bg="`/img/slides/slide-${n}.jpg`"
-        v-for="n in 9"
+        v-for="n in 8"
         :key="n"
       ></div>
       <div class="swiper-slide context-dark" data-slide-bg="img/slider-1-1920x879.jpg">

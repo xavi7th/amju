@@ -152,6 +152,8 @@
       </div>
 
       <p class="rights">
+        <span>&nbsp;</span>
+        <span>Orion Tech.</span>
         <span>&copy;&nbsp;</span>
         <span class="copyright-year"></span>
         <span>&nbsp;</span>

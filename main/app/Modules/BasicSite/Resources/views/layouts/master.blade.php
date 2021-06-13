@@ -45,7 +45,7 @@
 		<meta name="twitter:description"
 			content="Win up to N15, 000 every 20 minutes by answering 10 simple questions in just 10 minutes every day on {{ env('APP_NAME') }}" />
 		<meta name="twitter:image" content="{{ asset('/img/twitter.jpg') }}" /> --}}
-
+		
 		<style>
 			.preloader {
 				position: fixed;
@@ -148,7 +148,18 @@
 				</div>
 			</div>
 		</div>
-
+		<div class="container">
+			<div class="row">
+					<div class="modal fade" id="myModal"   style="padding-top:50px;">
+						<div class="modal-dialog">
+							<div class="modal-content D-flex align-items-center justify-content-center">
+								<img src="img/amju_covid.jpg" alt="Corona Virus" style="max-width:900px; !important; height:506.25px !important;">
+							</div>
+						</div>
+					</div>
+					<a href="#" data-toggle="modal" data-target="#myModal"></a>
+			</div>
+		</div>
 		<div id="app">
 			@yield('contents')
 		</div>
@@ -157,6 +168,23 @@
 		<script src="{{ mix('js/manifest.js') }}"></script>
 		<script src="{{ mix('js/vendor.js') }}"></script>
 		<script src="{{ mix('js/app.js') }}"></script>
+		<script
+		  src="https://code.jquery.com/jquery-3.5.1.js"
+		  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+		  crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+			  setTimeout(function () {
+				 $("#myModal").modal('show'); 
+				  
+				//   setTimeout(function () {
+				// 	  $("#myModal").modal('hide'); 
+				//   }, 10000);
+			  }, 1000); 
+			});
+		</script>
 
 		@yield('customJS')
 

@@ -1,6 +1,7 @@
 <?php $__env->startSection('contents'); ?>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('customCSS'); ?>
+
 <style>
 	.slide-left-enter-active,
 	.slide-left-leave-active,

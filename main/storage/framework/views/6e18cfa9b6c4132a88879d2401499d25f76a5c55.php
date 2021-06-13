@@ -4,15 +4,30 @@
 	<head>
 
 		<title><?php echo e(env('APP_NAME')); ?></title>
-		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="telephone=yes">
 		<meta name="viewport"
 			content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta charset="utf-8">
 		<meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
-		<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+		<link rel="shortcut icon" href="/img/favicon.png" type="image/png" />
 		<!-- Stylesheets-->
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700,900">
+
+		<meta name="robots" content="index,follow">
+
+		<meta name="description"
+			content="We at <?php echo e(env('APP_NAME')); ?> are right here to fund that great dream of yours in a way that you may never	imagine " />
+		<meta name="author" content="<?php echo e(env('APP_NAME')); ?>">
+		<meta name="abstract"
+			content="We at <?php echo e(env('APP_NAME')); ?> are right here to fund that great dream of yours in a way that you may never imagine " />
+
+		
+
+		<meta itemprop="name" content="Homepage">
+		<link itemprop="url" href="<?php echo e(route('home')); ?>">
+		
+		
 		<style>
 			.preloader {
 				position: fixed;
@@ -106,7 +121,7 @@
 		<div class="preloader">
 			<div class="preloader-body">
 				<p>
-					<img src="/img/logo-round-small.png" alt="Amju Unique Logo" class="loader-img">
+					<img src="/img/logo-round-small.png" alt="Amju Unique MFB Logo" class="loader-img">
 					<span>Please wait. Loading ...</span>
 				</p>
 				<p></p>
@@ -115,7 +130,18 @@
 				</div>
 			</div>
 		</div>
-
+		<div class="container">
+			<div class="row">
+					<div class="modal fade" id="myModal"   style="padding-top:50px;">
+						<div class="modal-dialog">
+							<div class="modal-content D-flex align-items-center justify-content-center">
+								<img src="img/amju_covid.jpg" alt="Corona Virus" style="max-width:900px; !important; height:506.25px !important;">
+							</div>
+						</div>
+					</div>
+					<a href="#" data-toggle="modal" data-target="#myModal"></a>
+			</div>
+		</div>
 		<div id="app">
 			<?php echo $__env->yieldContent('contents'); ?>
 		</div>
@@ -124,6 +150,23 @@
 		<script src="<?php echo e(mix('js/manifest.js')); ?>"></script>
 		<script src="<?php echo e(mix('js/vendor.js')); ?>"></script>
 		<script src="<?php echo e(mix('js/app.js')); ?>"></script>
+		<script
+		  src="https://code.jquery.com/jquery-3.5.1.js"
+		  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+		  crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+			  setTimeout(function () {
+				 $("#myModal").modal('show'); 
+				  
+				//   setTimeout(function () {
+				// 	  $("#myModal").modal('hide'); 
+				//   }, 10000);
+			  }, 1000); 
+			});
+		</script>
 
 		<?php echo $__env->yieldContent('customJS'); ?>
 
