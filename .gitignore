@@ -34,3 +34,4 @@ _ide_helper_models.php
 .phpstorm.meta.php
 *.tgz
 node_modules/
+main/vendor/
