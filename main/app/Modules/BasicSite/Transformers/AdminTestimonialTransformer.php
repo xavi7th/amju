@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Transformers;
+namespace App\Modules\BasicSite\Transformers;
 
 use App\Modules\BasicSite\Models\Testimonial;
 

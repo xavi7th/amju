@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Modules\AppUser\Transformers;
+namespace App\Modules\BasicSite\Transformers;
 
 use App\Modules\AppUser\Models\AppUser;
 
-class AppuserTransformer
+class AppUserTransformer
 {
 	public function collectionTransformer($collection, $transformerMethod)
 	{
