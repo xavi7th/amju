@@ -1,11 +1,11 @@
 {
-    "/js/admin-app.js": "/js/admin-app.js?id=a47b8416d69b184b6442",
-    "/js/vendor.js": "/js/vendor.js?id=80e179157dda229ffc39",
-    "/js/admin-auth-app.js": "/js/admin-auth-app.js?id=3555366c7b2f9b8e1136",
-    "/js/app.js": "/js/app.js?id=25a48ac67ad7c56b366f",
+    "/js/admin-app.js": "/js/admin-app.js?id=8f3e3dbff0b2bcb71427",
+    "/js/vendor.js": "/js/vendor.js?id=68000c269ed73540d376",
+    "/js/admin-auth-app.js": "/js/admin-auth-app.js?id=049112481772c0501d73",
+    "/js/app.js": "/js/app.js?id=4faa632c6a26e96d6df0",
     "/js/manifest.js": "/js/manifest.js?id=f88c059d93d49c01c1ef",
-    "/js/dashboard-app-vendor.js": "/js/dashboard-app-vendor.js?id=bcd32ce5242aef190379",
-    "/js/dashboard-main.js": "/js/dashboard-main.js?id=208b1850734ff9720b1a",
-    "/js/app-vendor.js": "/js/app-vendor.js?id=f2d735c98a22af8a2b0d",
-    "/js/main.js": "/js/main.js?id=29c4ba928fb0c7c8a57c"
+    "/js/dashboard-app-vendor.js": "/js/dashboard-app-vendor.js?id=04f6e86d3348a2ad7a08",
+    "/js/dashboard-main.js": "/js/dashboard-main.js?id=88f8a8f7fa0be6357c4b",
+    "/js/app-vendor.js": "/js/app-vendor.js?id=51030601bb2f12a38ee8",
+    "/js/main.js": "/js/main.js?id=1073a39010e43043165f"
 }
