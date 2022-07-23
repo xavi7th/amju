@@ -153,7 +153,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-content">
-              <img src="img/amju_covid.jpg" alt="Corona Virus" style="max-width:900px !important; height:506.25px !important;">
+              <img src="/img/amju_covid.jpg" alt="Corona Virus" style="max-width:900px !important; height:506.25px !important;">
             </div>
           </div>
         </div>
