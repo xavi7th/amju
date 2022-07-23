@@ -9,10 +9,7 @@
  |
  */
 
-const {
-	mix
-} = require( 'laravel-mix' )
-require( 'laravel-mix-merge-manifest' )
+const mix = require( 'laravel-mix' );
 
 mix.webpackConfig( {
 	resolve: {
@@ -44,8 +41,8 @@ mix.scripts( [
 mix.copyDirectory( __dirname + '/Resources/assets/img', 'public_html/img' );
 mix.copyDirectory( __dirname + '/Resources/assets/fonts', 'public_html/fonts' );
 
-mix.js( __dirname + '/Resources/assets/js/app.js', 'js/admin-app.js' )
-mix.js( __dirname + '/Resources/assets/js/auth.js', 'js/admin-auth-app.js' )
+mix.js( __dirname + '/Resources/assets/js/app.js', 'js/admin-app.js' ).vue()
+mix.js( __dirname + '/Resources/assets/js/auth.js', 'js/admin-auth-app.js' ).vue()
 
 if ( mix.inProduction() ) {
 	mix.version()

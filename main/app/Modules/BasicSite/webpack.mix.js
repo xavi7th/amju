@@ -1,7 +1,4 @@
-const {
-	mix
-} = require( 'laravel-mix' );
-require( 'laravel-mix-merge-manifest' );
+const mix = require( 'laravel-mix' );
 
 mix.webpackConfig( {
 	resolve: {
@@ -26,7 +23,7 @@ mix.copy( __dirname + '/Resources/assets/js/vendor/script.js', 'public_html/js/m
 mix.copyDirectory( __dirname + '/Resources/assets/img', 'public_html/img' );
 mix.copyDirectory( __dirname + '/Resources/assets/fonts', 'public_html/fonts' );
 
-mix.js( __dirname + '/Resources/assets/js/app.js', 'js/app.js' );
+mix.js( __dirname + '/Resources/assets/js/app.js', 'js/app.js' ).vue();
 
 if ( mix.inProduction() ) {
 	mix.version();

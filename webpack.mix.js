@@ -7,33 +7,33 @@ let fs = require( 'fs-extra' )
 let modules = fs.readdirSync( './main/app/Modules' ) // Make sure the path of your modules are correct
 
 if ( modules && modules.length > 0 ) {
-	modules.forEach( module => {
-		let path = `./main/app/Modules/${module}/webpack.mix.js`
-		if ( fs.existsSync( path ) ) {
-			require( path )
-		}
-	} )
+  modules.forEach( module => {
+    let path = `./main/app/Modules/${module}/webpack.mix.js`
+    if ( fs.existsSync( path ) ) {
+      require( path )
+    }
+  } )
 }
 mix
-	// .sourceMaps()
-	.options( {
-		fileLoaderDirs: {
-			images: 'img',
-			// fonts: 'web-fonts'
-		},
-		postCss: [
-			require( 'postcss-fixes' )(),
-			  require( 'cssnano' )( {
-			    'calc': false
-			  } ),
-		],
-	} )
-	.extract( [ 'vue', 'sweetalert2', 'axios', 'lodash', 'vue-plugin-load-script', 'vue-router' ] )
-	.version()
+  // .sourceMaps()
+  .options({
+    fileLoaderDirs: {
+      images: 'img',
+      // fonts: 'web-fonts'
+    },
+    postCss: [
+      require( 'postcss-fixes' )(),
+      require( 'cssnano' )({
+        'calc': false
+      }),
+    ],
+  })
+  .extract()
+  .version()
 
 
 if ( !mix.inProduction() ) {
-	mix.sourceMaps();
+  mix.sourceMaps();
 }
 
 
