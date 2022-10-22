@@ -4,6 +4,7 @@ namespace App\Modules\BasicSite\Http\Controllers;
 
 use Exception;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use App\Modules\Admin\Models\Admin;
@@ -18,7 +19,6 @@ use App\Modules\BasicSite\Transformers\TeamMemberTransformer;
 use App\Modules\BasicSite\Http\Requests\ContactFormValidation;
 use App\Modules\BasicSite\Transformers\TestimonialTransformer;
 use App\Modules\BasicSite\Http\Requests\AccountCreationFormValidation;
-use Illuminate\Support\Str;
 
 class BasicSiteController extends Controller
 {
@@ -58,6 +58,14 @@ class BasicSiteController extends Controller
 			Route::get('/download-bank-forms', function () {
 				// return response()->file('storage/amju-account-opening-forms.zip');
 				return download_file('amju-account-opening-forms.zip', 'amju-account-opening-forms.zip');
+			});
+
+			Route::get('/download-current-account-bank-forms', function () {
+				return download_file('current-account-opening-form.pdf', 'CURRENT ACCOUNT OPENING FORM.pdf');
+			});
+
+			Route::get('/download-individual-bank-forms', function () {
+				return download_file('individual-account-opening-form.pdf', 'INDIVIDUAL ACCOUNT OPENING FORM.pdf');
 			});
 
 			Route::get('/download-pos-form', function () {

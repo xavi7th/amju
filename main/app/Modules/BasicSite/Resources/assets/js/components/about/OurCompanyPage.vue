@@ -65,6 +65,9 @@
               </li>
             </ul>
           </div>
+          <div class="col-md-12">
+            <router-link  class="button button-lg button-primary"  :to="{name:'site.account.create'}">Open Account</router-link>
+          </div>
         </div>
         <!-- <img
           class="img-bordered image-item"

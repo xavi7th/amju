@@ -5,35 +5,19 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-4">
-              <h3>Complete this form</h3>
-              <form
-                class="rd-form form-lg rd-mailform"
-                @submit.prevent="createAccount"
-              >
+              <h3>Choose Account Type</h3>
+              <form class="rd-form form-lg rd-mailform" @submit.prevent="createAccount">
                 <div class="form-wrap radio-group">
-                  <label for="account-type" class="radio-group-label"
-                    >Choose Account Type</label
-                  >
-
+                  <!-- <label for="current-account-type" class="radio-group-label"  style="margin-bottom:20px;">Choose Account Type</label> -->
                   <div>
-                    <input
-                      type="radio"
-                      name="account-type"
-                      v-model="details.acc_type"
-                      value="current"
-                    />
-                    <label for="account-type">Current</label>
+                    <input type="radio" id="current-account-type" name="account-type" v-model="details.acc_type" value="current"/>
+                    <label for="current-account-type">Current</label>
                   </div>
                   <div>
-                    <input
-                      type="radio"
-                      name="account-type"
-                      v-model="details.acc_type"
-                      value="savings"
-                    />
-                    <label for="account-type">Savings</label>
+                    <input type="radio" id="individual-account-type" name="account-type" v-model="details.acc_type" value="individual"/>
+                    <label for="individual-account-type">Individual</label>
                   </div>
-                  <div>
+                  <div v-if="false">
                     <input
                       type="radio"
                       name="account-type"
@@ -70,122 +54,128 @@
                     </option>
                   </select>
                 </div>
-                <div class="form-wrap">
-                  <input
-                    class="form-input"
-                    id="user-name"
-                    type="text"
-                    name="user-name"
-                    :data-constraints="fullnameConstraint"
-                    v-model="details.full_name"
-                  />
-                  <label class="form-label" for="user-name">Full Name</label>
-                </div>
-                <div class="form-wrap">
-                  <input
-                    class="form-input"
-                    id="user-phone"
-                    type="text"
-                    name="user-phone"
-                    data-constraints=" @PhoneNumber @Required"
-                    v-model="details.phone"
-                  />
-                  <label class="form-label" for="user-phone"
-                    >Phone Number</label
+                <template v-if="false">
+                  <div class="form-wrap">
+                    <input
+                      class="form-input"
+                      id="user-name"
+                      type="text"
+                      name="user-name"
+                      :data-constraints="fullnameConstraint"
+                      v-model="details.full_name"
+                    />
+                    <label class="form-label" for="user-name">Full Name</label>
+                  </div>
+                  <div class="form-wrap">
+                    <input
+                      class="form-input"
+                      id="user-phone"
+                      type="text"
+                      name="user-phone"
+                      data-constraints=" @PhoneNumber @Required"
+                      v-model="details.phone"
+                    />
+                    <label class="form-label" for="user-phone"
+                      >Phone Number</label
+                    >
+                  </div>
+                  <div class="form-wrap">
+                    <input
+                      class="form-input"
+                      id="user-email"
+                      type="email"
+                      name="user-email"
+                      data-constraints="@Email @Required"
+                      v-model="details.email"
+                    />
+                    <label class="form-label" for="user-email"
+                      >E-mail Address</label
+                    >
+                  </div>
+                  <div class="form-wrap">
+                    <input
+                      class="form-input"
+                      id="date-of-birth"
+                      type="date"
+                      name="date-of-birth"
+                      :data-constraints="dateOfBirthConstraint"
+                      v-model="details.dob"
+                    />
+                    <label class="form-label" for="date-of-birth"
+                      >Date of Birth</label
+                    >
+                  </div>
+                  <div class="form-wrap">
+                    <select
+                      class="form-input"
+                      name="gender"
+                      id="gender"
+                      :data-constraints="genderConstraint"
+                      v-model="details.gender"
+                    >
+                      <option :value="null">Gender</option>
+                      <option value="female">Female</option>
+                      <option value="male">Male</option>
+                    </select>
+                  </div>
+                  <div class="form-wrap">
+                    <input
+                      class="form-input"
+                      id="bvn"
+                      type="text"
+                      name="bvn"
+                      :data-constraints="bvnConstraint"
+                      v-model="details.bvn"
+                    />
+                    <label class="form-label" for="bvn">BVN (if any)</label>
+                  </div>
+                  <div class="form-wrap">
+                    <textarea
+                      class="form-input"
+                      id="home-address"
+                      type="text"
+                      name="home-address"
+                      data-constraints="@Required"
+                      v-model="details.address"
+                    ></textarea>
+                    <label class="form-label" for="home-address">Address</label>
+                  </div>
+                  <div class="form-wrap">
+                    <input
+                      class="form-input"
+                      id="upload-passport"
+                      type="file"
+                      name="upload-passport"
+                      data-constraints="@Required"
+                      v-show="false"
+                      @change="attachFile"
+                      ref="user_passport"
+                      accept="image/*"
+                    />
+                    <label
+                      class="form-label input-file-label"
+                      for="upload-passport"
+                      >{{ fileUploadName || "Upload Passport" }}</label
+                    >
+                  </div>
+                  <button
+                    class="button button-lg button-round button-block button-primary"
+                    type="submit"
+                    :disabled="
+                      !details.full_name ||
+                      !details.gender ||
+                      !details.user_passport ||
+                      !details.acc_type ||
+                      details.acc_type == 'others'
+                    "
                   >
+                    Register
+                  </button>
+                </template>
+                <div class="button-wrap-lg text-center col-12">
+                  <a v-if="details.acc_type == 'current'" data-nav="false" class="button button-lg button-primary" href="/download-current-account-bank-forms" target="_blank">Download Current Bank Forms</a>
+                  <a v-if="details.acc_type == 'individual'" data-nav="false" class="button button-lg button-primary" href="/download-individual-bank-forms" target="_blank">Download Individual Bank Forms</a>
                 </div>
-                <div class="form-wrap">
-                  <input
-                    class="form-input"
-                    id="user-email"
-                    type="email"
-                    name="user-email"
-                    data-constraints="@Email @Required"
-                    v-model="details.email"
-                  />
-                  <label class="form-label" for="user-email"
-                    >E-mail Address</label
-                  >
-                </div>
-                <div class="form-wrap">
-                  <input
-                    class="form-input"
-                    id="date-of-birth"
-                    type="date"
-                    name="date-of-birth"
-                    :data-constraints="dateOfBirthConstraint"
-                    v-model="details.dob"
-                  />
-                  <label class="form-label" for="date-of-birth"
-                    >Date of Birth</label
-                  >
-                </div>
-                <div class="form-wrap">
-                  <select
-                    class="form-input"
-                    name="gender"
-                    id="gender"
-                    :data-constraints="genderConstraint"
-                    v-model="details.gender"
-                  >
-                    <option :value="null">Gender</option>
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                  </select>
-                </div>
-                <div class="form-wrap">
-                  <input
-                    class="form-input"
-                    id="bvn"
-                    type="text"
-                    name="bvn"
-                    :data-constraints="bvnConstraint"
-                    v-model="details.bvn"
-                  />
-                  <label class="form-label" for="bvn">BVN (if any)</label>
-                </div>
-                <div class="form-wrap">
-                  <textarea
-                    class="form-input"
-                    id="home-address"
-                    type="text"
-                    name="home-address"
-                    data-constraints="@Required"
-                    v-model="details.address"
-                  ></textarea>
-                  <label class="form-label" for="home-address">Address</label>
-                </div>
-                <div class="form-wrap">
-                  <input
-                    class="form-input"
-                    id="upload-passport"
-                    type="file"
-                    name="upload-passport"
-                    data-constraints="@Required"
-                    v-show="false"
-                    @change="attachFile"
-                    ref="user_passport"
-                    accept="image/*"
-                  />
-                  <label
-                    class="form-label input-file-label"
-                    for="upload-passport"
-                    >{{ fileUploadName || "Upload Passport" }}</label
-                  >
-                </div>
-                <button
-                  class="button button-lg button-round button-block button-primary"
-                  type="submit"
-                  :disabled="
-                    !details.full_name ||
-                    !details.gender ||
-                    !details.user_passport ||
-                    !details.acc_type ||
-                    details.acc_type == 'others'
-                  "
-                >
-                  Register
-                </button>
               </form>
             </div>
           </div>
@@ -198,11 +188,12 @@
 <script>
   import { siteCreateAccountApi } from "@assets/js/config";
   export default {
-    name: "CreateNewAccountPage",
+    name: "CreateAccountPage",
     data: () => ({
       fileUploadName: null,
       details: {
         gender: null,
+        acc_type: 'current'
       },
     }),
     mounted() {
@@ -237,7 +228,7 @@
         return (
           this.details.acc_type &&
           this.details.acc_type != "current" &&
-          this.details.acc_type != "savings"
+          this.details.acc_type != "individual"
         );
       },
     },

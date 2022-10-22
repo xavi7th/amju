@@ -1,6 +1,7 @@
 <?php
 use Carbon\Carbon;
 
+use Illuminate\Support\Facades\Storage;
 use League\Flysystem\FileNotFoundException as FileDownloadException;
 use Illuminate\Contracts\Filesystem\FileNotFoundException as FileGetException;
 
