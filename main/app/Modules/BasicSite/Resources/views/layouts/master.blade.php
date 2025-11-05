@@ -146,20 +146,20 @@
 
 
   <div class="container">
-      <div class="row">
-        <div class="modal fade" id="myModal">
-          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="modal-content">
-              <img src="/img/amju_covid.jpg" alt="Corona Virus" style="max-width:900px !important; height:506.25px !important;">
-            </div>
+    <div class="row">
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-content">
+            <img src="/img/amju_covid.jpg" alt="Corona Virus" style="max-width:900px !important; height:506.25px !important;">
           </div>
         </div>
-        <a href="#" data-toggle="modal" data-target="#myModal"></a>
       </div>
+      <a href="#" data-toggle="modal" data-target="#myModal"></a>
     </div>
+  </div>
 
   <div id="app">
     @yield('contents')
@@ -172,8 +172,35 @@
 
   <script type="text/javascript">
     $(function() {
+      // Check if we should show the modal
+      function shouldShowModal() {
+        const lastShown = localStorage.getItem('modalLastShown');
+
+        // If never shown before, show it
+        if (!lastShown) {
+          return true;
+        }
+
+        // Check if an hour has passed since last shown
+        const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
+        const timeSinceLastShown = Date.now() - parseInt(lastShown);
+
+        return timeSinceLastShown > oneHour;
+      }
+
+      function showModal() {
+        setTimeout(function() {
+          $("#myModal").modal('show');
+
+          localStorage.setItem('modalLastShown', Date.now().toString());
+        }, 1000);
+
+      }
+
       setTimeout(function() {
-        $("#myModal").modal('show');
+        if (shouldShowModal()) {
+          showModal();
+        }
       }, 1000);
     });
   </script>

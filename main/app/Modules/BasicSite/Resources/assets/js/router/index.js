@@ -44,6 +44,7 @@ import {
 	siteAboutAuditor,
 	siteAboutED,
 	siteAboutDGM,
+	siteAboutISMS,
 	siteAboutBizFocus,
 	siteAboutAwards,
 	siteAboutCareer,
@@ -507,8 +508,18 @@ export function createRouter() {
 						name: 'site.about.dgm',
 						meta: {
 							title: 'Management Team | DGM - ' + APP_NAME,
-							breadcrumb: 'About DGM',
+							breadcrumb: 'About GM',
 							bgImg: '/img/team/Amju-DGM-full.jpg'
+						},
+					},
+					{
+						path: siteAboutISMS,
+						component: view( 'about/ISMSPolicyPage' ),
+						name: 'site.about.isms',
+						meta: {
+							title: 'AMJU ISMS Policy Statement - ' + APP_NAME,
+							breadcrumb: 'About ISMS Policy',
+							bgImg: '/img/isms.png'
 						},
 					},
 					{
