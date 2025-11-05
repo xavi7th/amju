@@ -22,12 +22,12 @@ ifeq ($(OS),Darwin)
 	fi
 	export SAIL_XDEBUG_MODE=off
 
-	./vendor/bin/sail up
+	./vendor/bin/sail up -d
 else
 	@echo "Starting development environment for other operating systems..."
 	export SAIL_XDEBUG_MODE=off
 
-	./vendor/bin/sail up
+	./vendor/bin/sail up -d
 endif
 	@echo " "
 	@echo " "

@@ -74,17 +74,34 @@ extract_date_header() {
     fi
 }
 
+# Get safe sender address (prevents SPF issues)
+get_safe_sender() {
+    local original_from="$1"
+
+    # If sender is from our own domain, use it directly
+    if [[ "$original_from" =~ @amjuuniquemfbng\.com$ ]]; then
+        echo "$original_from"
+    else
+        # For external domains, use our domain to avoid SPF issues
+        echo "amju.unique@amjuuniquemfbng.com"
+    fi
+}
+
 # Send email using the detected mail command
 send_email_with_command() {
     local mail_cmd="$1"
     local from_address="$2"
     local dest_email="$3"
     local email_content="$4"
+    local original_sender="$5"
 
     case "$mail_cmd" in
         /usr/sbin/sendmail|/usr/sbin/exim|/usr/lib/sendmail)
-            # Use system MTA with original sender
-            echo "$email_content" | $mail_cmd -f "$from_address" "$dest_email" 2>> "$LOG_FILE"
+            # Use safe sender address to avoid SPF issues
+            local safe_sender=$(get_safe_sender "$from_address")
+            log "Using safe sender: $safe_sender (original: $from_address)"
+
+            echo "$email_content" | $mail_cmd -f "$safe_sender" "$dest_email" 2>> "$LOG_FILE"
             return $?
             ;;
         /usr/bin/mail)
@@ -96,6 +113,8 @@ send_email_with_command() {
         "php_mail")
             # Use PHP's mail function
             local php_script="/home/amjubygt/send_email.php"
+            local safe_sender=$(get_safe_sender "$from_address")
+
             cat > "$php_script" << EOF
 <?php
 \$email_content = <<<EOT
@@ -111,7 +130,8 @@ if (preg_match('/^Subject:\s*(.*)$/im', \$email_content, \$matches)) {
 }
 
 \$headers = [
-    'From: $from_address',
+    'From: $safe_sender',
+    'Reply-To: $from_address',
     'Content-Type: text/plain; charset=utf-8'
 ];
 
@@ -134,7 +154,7 @@ EOF
     esac
 }
 
-# Simple version that passes through the original email with correct sender
+# Simple version that passes through the original email with safe sender
 forward_email_simple() {
     local email_file=$1
     local mail_cmd="$2"
@@ -145,10 +165,10 @@ forward_email_simple() {
     local email_content=$(cat "$email_file")
 
     for dest_email in "${DEST_EMAILS[@]}"; do
-        log "Forwarding to: $dest_email using sender: $original_from with command: $mail_cmd"
+        log "Forwarding to: $dest_email (original sender: $original_from) with command: $mail_cmd"
 
-        # Use the original From address as sender
-        if send_email_with_command "$mail_cmd" "$original_from" "$dest_email" "$email_content"; then
+        # Use safe sender to avoid SPF issues
+        if send_email_with_command "$mail_cmd" "$original_from" "$dest_email" "$email_content" "$original_from"; then
             ((success_count++))
             log "Successfully forwarded to $dest_email"
         else
@@ -164,7 +184,7 @@ forward_email_simple() {
     fi
 }
 
-# Advanced version that reconstructs headers better
+# Advanced version that reconstructs headers better and includes original sender info
 forward_email_advanced() {
     local email_file=$1
     local mail_cmd="$2"
@@ -173,6 +193,7 @@ forward_email_advanced() {
     # Extract original headers
     local original_from=$(extract_from_address "$email_file")
     local original_date=$(extract_date_header "$email_file")
+    local original_subject=$(grep -i '^Subject:' "$email_file" | head -1 | sed 's/^Subject:[[:space:]]*//I')
 
     # Create a temporary file for the reconstructed email
     local temp_file="/tmp/email_advanced_$$.eml"
@@ -191,7 +212,7 @@ forward_email_advanced() {
     # Filter out problematic headers
     local filtered_headers=$(echo "$headers" | grep -v -i -e '^To:' -e '^Received:' -e '^Return-Path:' -e '^Delivered-To:' -e '^Envelope-to:' -e '^Delivery-date:')
 
-    # Reconstruct email with proper headers
+    # Reconstruct email with proper headers and original sender info
     {
         # Preserve filtered headers
         echo "$filtered_headers"
@@ -199,10 +220,27 @@ forward_email_advanced() {
         # Add proper To header
         echo "To: uchechukwu.ogelle@amjuuniquemfbng.com, emmanuel.ogbeide@amjuuniquemfbng.com"
 
+        # Add X-Original-From header to preserve original sender info
+        echo "X-Original-From: $original_from"
+
+        # Add note to body about forwarding
+        echo "X-Forwarded-By: amju.unique@amjuuniquemfbng.com"
+
         # Empty line separating headers from body
         echo ""
 
-        # Email body
+        # Add forwarding notice to the body
+        echo "--- Forwarded message ---"
+        echo "From: $original_from"
+        if [ -n "$original_date" ]; then
+            echo "Date: $original_date"
+        fi
+        if [ -n "$original_subject" ]; then
+            echo "Subject: $original_subject"
+        fi
+        echo ""
+
+        # Original email body
         echo "$body"
     } > "$temp_file"
 
@@ -210,9 +248,9 @@ forward_email_advanced() {
 
     # Send the reconstructed email
     for dest_email in "${DEST_EMAILS[@]}"; do
-        log "Sending reconstructed email to: $dest_email using sender: $original_from with command: $mail_cmd"
+        log "Sending reconstructed email to: $dest_email (original sender: $original_from) with command: $mail_cmd"
 
-        if send_email_with_command "$mail_cmd" "$original_from" "$dest_email" "$reconstructed_content"; then
+        if send_email_with_command "$mail_cmd" "$original_from" "$dest_email" "$reconstructed_content" "$original_from"; then
             ((success_count++))
             log "Successfully sent reconstructed email to $dest_email"
         else
@@ -294,7 +332,7 @@ process_emails() {
             log "Simple method failed, trying advanced method..."
             if forward_email_advanced "$email_file" "$mail_cmd"; then
                 rm -f "$email_file"
-                log "Successfully processed with advanced method: $(basename "$email_file")"
+                log "Successfully processed adn deleted with advanced method: $(basename "$email_file")"
                 ((success_count++))
             else
                 log "All methods failed: $(basename "$email_file") - keeping for retry"
