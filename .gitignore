@@ -35,3 +35,4 @@ _ide_helper_models.php
 *.tgz
 node_modules/
 main/vendor/
+main/.docker-sync/*

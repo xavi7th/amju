@@ -1,0 +1,26 @@
+version: '2'
+options:
+  verbose: true
+syncs:
+  amju-unique-app-sync:
+    src: '../'
+    sync_excludes: [
+      ".git",
+      ".vscode",
+      "node_modules",
+      "public_html/storage/*",
+      "mix-manifest.json",
+      "public_html/css/*",
+      "public_html/js/*",
+      "public_html/img/*",
+      "public_html/fonts/*",
+      ".DS_Store",
+      "main/storage/framework/**/*",
+      "main/storage/app/backup-temp/*",
+      "main/vendor/**/*",
+    ]
+    sync_userid: '501'
+    sync_group: 'sail'
+    sync_groupid: '20'
+    sync_strategy: 'native_osx'
+    notify_terminal: true

@@ -1,0 +1,81 @@
+services:
+  laravel.test:
+    build:
+      context: './docker/7.4'
+      dockerfile: Dockerfile
+      args:
+        WWWGROUP: '${WWWGROUP}'
+        NODE_VERSION: '14'
+    image: 'amju-unique/app'
+    container_name: amju-unique-app
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    ports:
+      - '8004:80'
+    environment:
+      WWWUSER: '${WWWUSER}'
+      LARAVEL_SAIL: 1
+      XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'
+      XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
+      IGNITION_LOCAL_SITES_PATH: '${PWD}'
+    volumes:
+      # Comment out the next line and uncomment the line below to enable docker-sync
+      # - '.:/var/www/html'
+      - 'amju-unique-app-sync:/var/www/html:nocopy'
+    networks:
+      - amju-unique-network
+    depends_on:
+      - mysql
+      - mailpit
+
+  mysql:
+    image: 'mysql:8.0'
+    container_name: amju-unique-mysql
+    ports:
+      - '${FORWARD_DB_PORT:-3304}:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: '${DB_DATABASE}'
+      MYSQL_USER: '${DB_USERNAME}'
+      MYSQL_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - 'amju-unique-mysql:/var/lib/mysql'
+      - './docker/mysql/create-testing-database.sh:/docker-entrypoint-initdb.d/10-create-testing-database.sh'
+    networks:
+      - amju-unique-network
+    healthcheck:
+      test:
+        - CMD
+        - mysqladmin
+        - ping
+        - '-p${DB_PASSWORD}'
+      retries: 3
+      timeout: 5s
+
+  mailpit:
+    image: 'axllent/mailpit:latest'
+    container_name: amju-unique-mailpit
+    environment:
+      MP_DATABASE: '/data/mailpit-emails.db'
+      MP_MAX_MESSAGES: '${MP_MAX_MESSAGES:-5000}'
+    volumes:
+      - 'amju-unique-mailpit:/data'
+    ports:
+      - '${FORWARD_MAILPIT_PORT:-1024}:1025'
+      - '${FORWARD_MAILPIT_DASHBOARD_PORT:-8024}:8025'
+    networks:
+      - amju-unique-network
+
+networks:
+  amju-unique-network:
+    driver: bridge
+
+volumes:
+  amju-unique-mysql:
+    driver: local
+  amju-unique-mailpit:
+    driver: local
+  amju-unique-app-sync:
+    external: true
