@@ -95,7 +95,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                         <div class="col-span-1 md:col-span-2">
                             <a href="/" class="flex items-center mb-6">
-                                <img src="{{ asset('img/logo.jpg') }}" alt="Amju Unique MFB Logo" class="h-10 w-auto brightness-0 invert">
+                                <img src="{{ asset('img/logo.png') }}" alt="Amju Unique MFB Logo" class="h-10 w-auto">
                             </a>
                             <p class="text-sm leading-relaxed max-w-sm">
                                 Providing unique financial solutions tailored for your growth and stability. Join thousands of Nigerians achieving their dreams with Amju.
@@ -118,6 +118,7 @@
                                 <li><a href="{{ route('terms') }}" class="hover:text-white transition">Terms of Service</a></li>
                                 <li><a href="{{ route('site.media', ['type' => 'news']) }}" class="hover:text-white transition">Regulatory Reports</a></li>
                             </ul>
+                            <!-- <img src="/img/logo-round.png" class="w-12 h-12 mb-4 rounded-xl shadow-lg bg-white p-1" alt="Amju App"> -->
                             <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-xs">Mobile App</h4>
                             <div class="flex flex-col space-y-3">
                                 <a href="https://apps.apple.com/us/app/amju-mfb/id1537937432" target="_blank" class="inline-flex items-center px-4 py-2 bg-white rounded-xl hover:bg-slate-100 transition border border-slate-200 group">

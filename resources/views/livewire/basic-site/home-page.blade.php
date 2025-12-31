@@ -1,4 +1,36 @@
-<div class="overflow-x-hidden" x-data="{ currentSlide: 1, slideCount: 8 }">
+<div class="overflow-x-hidden" x-data="{ currentSlide: 1, slideCount: 8, showPromo: true }">
+    <!-- Promo Modal -->
+    <div x-show="showPromo" 
+         class="fixed inset-0 z-50 flex items-center justify-center p-4"
+         style="display: none;">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0"
+             x-transition:enter-end="opacity-100"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100"
+             x-transition:leave-end="opacity-0"
+             @click="showPromo = false"></div>
+        
+        <!-- Modal Content -->
+        <div class="relative bg-transparent max-w-4xl w-full mx-auto"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-90 translate-y-4"
+             x-transition:enter-end="opacity-100 scale-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-200"
+             x-transition:leave-start="opacity-100 scale-100 translate-y-0"
+             x-transition:leave-end="opacity-0 scale-90 translate-y-4">
+            
+            <button @click="showPromo = false" class="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-900 shadow-xl hover:bg-slate-100 z-50 transition">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            
+            <img src="/img/promos/christmas-promo.jpg" alt="Merry Christmas from Amju Unique MFB" class="w-full h-auto rounded-3xl shadow-2xl">
+        </div>
+    </div>
     <!-- Hero Section -->
     <section class="relative h-[80vh] min-h-[600px] overflow-hidden bg-slate-900">
         <div class="absolute inset-0 z-0">
