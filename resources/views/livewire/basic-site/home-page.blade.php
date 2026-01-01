@@ -1,4 +1,4 @@
-<div class="overflow-x-hidden" x-data="{ currentSlide: 1, slideCount: 8, showPromo: true }">
+<div class="overflow-x-hidden" x-data="{ currentSlide: 1, slideCount: 5, showPromo: true }" x-init="setInterval(() => { currentSlide = currentSlide < slideCount ? currentSlide + 1 : 1 }, 5000)">
     <!-- Promo Modal -->
     <div x-show="showPromo" 
          class="fixed inset-0 z-50 flex items-center justify-center p-4"
@@ -32,42 +32,51 @@
         </div>
     </div>
     <!-- Hero Section -->
-    <section class="relative h-[80vh] min-h-[600px] overflow-hidden bg-slate-900">
-        <div class="absolute inset-0 z-0">
+    <section class="relative h-[50vh] min-h-[400px] md:h-[80vh] md:min-h-[600px] overflow-hidden bg-slate-900">
+        <!-- Static Mobile Background -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center md:hidden" style="background-image: url('/img/slider-1.jpg')">
+            <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        <!-- Desktop Slider Background -->
+        <div class="absolute inset-0 z-0 hidden md:block">
             <template x-for="n in slideCount" :key="n">
                 <div x-show="currentSlide === n" 
                      x-transition:enter="transition ease-out duration-1000"
                      x-transition:enter-start="opacity-0 scale-110"
                      x-transition:enter-end="opacity-100 scale-100"
                      class="absolute inset-0 w-full h-full bg-cover bg-center"
-                     :style="`background-image: url('/img/slides/slide-${n}.jpg')`">
-                    <div class="absolute inset-0 bg-black/50"></div>
+                     :style="`background-image: url('/img/slider-${n}.jpg')`">
+                    <div class="absolute inset-0 bg-black/40"></div>
                 </div>
             </template>
         </div>
 
         <div class="relative z-10 container mx-auto px-6 h-full flex items-center">
             <div class="max-w-2xl text-white">
-                <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight animate-in slide-in-from-bottom-10 duration-700">
-                    #1 Choice for Your <span class="text-blue-400">Banking Needs</span>
-                </h1>
-                <p class="text-lg text-slate-200 mb-12 leading-relaxed animate-in slide-in-from-bottom-10 duration-1000 delay-200 max-w-lg">
-                    Our Accounts are tailor made financial companions and are the best options if you are looking for high-quality and reliable banking services.
-                </p>
+                <div class="space-y-6">
+                    <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight animate-in slide-in-from-bottom-10 duration-700">
+                        #1 Choice for Your <span class="text-amju-primary">Banking Needs</span>
+                    </h1>
+                    <p class="hidden md:block text-base md:text-lg text-slate-200 mb-12 leading-relaxed animate-in slide-in-from-bottom-10 duration-1000 delay-200 max-w-lg">
+                        Our Accounts are tailor made financial companions and are the best options if you are looking for high-quality and reliable banking services.
+                    </p>
+                </div>
+                <!-- Call to Action (Visible on both) -->
                 <div class="flex flex-wrap gap-4 animate-in slide-in-from-bottom-10 duration-1000 delay-500">
-                    <a href="{{ route('account.open') }}" class="px-8 py-4 bg-blue-600 rounded-2xl text-white font-black hover:bg-blue-700 transition shadow-xl shadow-blue-600/30">
-                        Find out more
+                    <a href="{{ route('account.open') }}" class="px-8 py-4 bg-amju-primary rounded-2xl text-white font-black hover:bg-amju-dark transition shadow-xl shadow-amju-primary/30 text-sm md:text-base">
+                        Open Account Today
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- Slider Navigation -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
+        <!-- Slider Navigation (Desktop Only) -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden md:flex space-x-3">
             <template x-for="n in slideCount" :key="n">
                 <button @click="currentSlide = n" 
                         class="w-3 h-3 rounded-full transition-all duration-300"
-                        :class="currentSlide === n ? 'bg-blue-600 w-8' : 'bg-white/30 hover:bg-white/50'"></button>
+                        :class="currentSlide === n ? 'bg-amju-primary w-8' : 'bg-white/30 hover:bg-white/50'"></button>
             </template>
         </div>
     </section>
@@ -79,13 +88,13 @@
                 <!-- Issued Cards -->
                 <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 hover:scale-[1.02] transition-transform duration-300">
                     <div class="flex items-center space-x-6 mb-6">
-                        <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <div class="w-20 h-20 bg-amju-primary/10 rounded-2xl flex items-center justify-center">
                             <img src="/img/progress-1-92x84.png" class="w-12" alt="">
                         </div>
                         <div>
                             <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">More than</div>
                             <div class="text-3xl font-black text-slate-900">5,000</div>
-                            <div class="text-sm font-bold text-blue-600">Issued Cards</div>
+                            <div class="text-sm font-bold text-amju-primary">Issued Cards</div>
                         </div>
                     </div>
                     <p class="text-slate-600 leading-relaxed">
@@ -161,7 +170,7 @@
     <section class="py-32 bg-slate-900 text-white mt-16 overflow-hidden" id="banking">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-24">
-                <h2 class="text-3xl md:text-4xl font-black mb-8">We <span class="text-blue-400 underline decoration-blue-400/30 underline-offset-8">fund your dream</span></h2>
+                <h2 class="text-3xl md:text-4xl font-black mb-8">We <span class="text-amju-primary underline decoration-amju-primary/30 underline-offset-8">fund your dream</span></h2>
                 <p class="text-slate-400 text-lg leading-relaxed">
                     We are right here to fund that great dream of yours in a way that you may never imagine. We assist in creating the right mental environment and funds to get your dream business come to life.
                 </p>
@@ -171,7 +180,7 @@
                 <!-- Left Features -->
                 <div class="space-y-12">
                     <div class="flex items-start space-x-6">
-                        <div class="flex-shrink-0 w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-blue-400">
+                        <div class="flex-shrink-0 w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-amju-primary">
                             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                         </div>
                         <div>
@@ -180,8 +189,8 @@
                         </div>
                     </div>
                     <div class="flex items-start space-x-6">
-                        <div class="flex-shrink-0 w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-blue-400">
-                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                        <div class="flex-shrink-0 w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-amju-primary">
+                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         </div>
                         <div>
                             <h4 class="text-xl font-bold mb-2">Internet Banking</h4>
@@ -189,7 +198,7 @@
                         </div>
                     </div>
                     <div class="flex items-start space-x-6">
-                        <div class="flex-shrink-0 w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-blue-400">
+                        <div class="flex-shrink-0 w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-amju-primary">
                             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
                         </div>
                         <div>
@@ -201,14 +210,14 @@
 
                 <!-- Center App Mockup -->
                 <div class="hidden lg:block relative text-center">
-                    <div class="absolute inset-0 bg-blue-600/20 blur-[100px] rounded-full"></div>
+                    <div class="absolute inset-0 bg-amju-primary/20 blur-[100px] rounded-full"></div>
                     <img src="/img/amju-mobile-banking.png" class="relative z-10 w-[300px] mx-auto hover:rotate-3 transition-transform duration-500" alt="Mobile App">
                 </div>
 
                 <!-- Right Features -->
                 <div class="space-y-12 text-left">
                     <div class="flex items-start space-x-6">
-                        <div class="flex-shrink-0 w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-blue-400">
+                        <div class="flex-shrink-0 w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-amju-primary">
                             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                         </div>
                         <div>
@@ -217,7 +226,7 @@
                         </div>
                     </div>
                     <div class="flex items-start space-x-6">
-                        <div class="flex-shrink-0 w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-blue-400">
+                        <div class="flex-shrink-0 w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-amju-primary">
                             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
                         </div>
                         <div>
@@ -245,7 +254,7 @@
             <div class="flex flex-col lg:flex-row items-center gap-20">
                 <!-- Video Section -->
                 <div class="lg:w-1/2 relative">
-                    <div class="absolute -inset-10 bg-blue-50 rounded-full blur-[80px]"></div>
+                    <div class="absolute -inset-10 bg-amju-primary/10 rounded-full blur-[80px]"></div>
                     <div class="relative rounded-[3rem] overflow-hidden shadow-2xl bg-slate-900 border-4 border-white group">
                         <video class="w-full aspect-video" poster="/img/amju-intro-video-poster.png" controls>
                             <source src="/img/amju-intro-video.mp4" type="video/mp4">
@@ -256,11 +265,11 @@
 
                 <!-- Text Content -->
                 <div class="lg:w-1/2">
-                    <div class="inline-block px-4 py-2 bg-blue-50 rounded-xl text-blue-600 font-bold text-sm tracking-widest uppercase mb-6">
+                    <div class="inline-block px-4 py-2 bg-amju-primary/10 rounded-xl text-amju-primary font-bold text-sm tracking-widest uppercase mb-6">
                         Who We Are
                     </div>
                     <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8 leading-tight">
-                        Dedicated to the <span class="text-blue-600">success</span> of our clients since 2009.
+                        Dedicated to the <span class="text-amju-primary">success</span> of our clients since 2009.
                     </h2>
                     <div class="space-y-8 text-slate-600 text-lg leading-relaxed">
                         <p class="font-bold text-slate-900">
@@ -274,7 +283,7 @@
                         </p>
                     </div>
                     <div class="mt-10">
-                        <a href="{{ route('about') }}" class="inline-flex items-center space-x-2 text-blue-600 font-black text-lg hover:underline decoration-2 underline-offset-8">
+                        <a href="{{ route('about') }}" class="inline-flex items-center space-x-2 text-amju-primary font-black text-lg hover:underline decoration-2 underline-offset-8">
                             <span>Learn More About Us</span>
                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </a>
@@ -285,14 +294,14 @@
             <!-- MD/CEO Quote Section -->
             <div class="mt-24 grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-1">
-                    <div class="bg-blue-600 p-10 rounded-[2.5rem] text-white shadow-xl shadow-blue-600/20 relative overflow-hidden group">
+                    <div class="bg-amju-primary p-10 rounded-[2.5rem] text-white shadow-xl shadow-amju-primary/20 relative overflow-hidden group">
                         <svg class="w-20 h-20 text-white/10 absolute top-0 left-0" fill="currentColor" viewBox="0 0 32 32"><path d="M10 8v8h6v8H8V16H4V8h6zm14 0v8h6v8h-8V16h-4V8h6z" /></svg>
                         <p class="relative z-10 text-lg italic leading-relaxed mb-8">
                             At AMJU Unique MFB, we aim to provide top quality banking services to a greater number of individuals and corporate customers.
                         </p>
                         <div>
                             <div class="font-black text-white">Dr. Ososuakpor Jonathan</div>
-                            <div class="text-sm text-blue-200">MD/CEO, Amju Unique MFB</div>
+                            <div class="text-sm text-amju-deep">MD/CEO, Amju Unique MFB</div>
                         </div>
                     </div>
                 </div>
@@ -312,18 +321,18 @@
     <!-- Open Account CTA -->
     <section class="py-16">
         <div class="container mx-auto px-6">
-            <div class="bg-gradient-to-r from-slate-900 to-blue-900 rounded-[3rem] p-12 md:p-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12 text-center md:text-left">
+            <div class="bg-gradient-to-r from-slate-900 to-amju-deep rounded-[3rem] p-12 md:p-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12 text-center md:text-left">
                 <div class="relative z-10 max-w-xl">
                     <h2 class="text-3xl md:text-4xl font-black text-white mb-6">
-                        Open Your New <span class="text-blue-400">Bank Account</span> Now!
+                        Open Your New <span class="text-amju-primary">Bank Account</span> Now!
                     </h2>
-                    <p class="text-blue-200 text-lg">It takes less than 5 minutes to join the bank of the future.</p>
+                    <p class="text-white/70 text-lg">It takes less than 5 minutes to join the bank of the future.</p>
                 </div>
                 <a href="{{ route('account.open') }}" class="relative z-10 px-10 py-5 bg-white rounded-2xl text-slate-900 font-black text-xl hover:bg-slate-100 transition shadow-2xl">
                     Get Started »
                 </a>
                 <!-- Decorative elements -->
-                <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full -mr-32 -mt-32"></div>
+                <div class="absolute top-0 right-0 w-64 h-64 bg-amju-primary/10 rounded-full -mr-32 -mt-32"></div>
                 <div class="absolute bottom-0 left-0 w-64 h-64 bg-slate-500/10 rounded-full -ml-32 -mb-32"></div>
             </div>
         </div>
@@ -333,7 +342,7 @@
     <section class="py-32 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-24">
-                <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8">AMJU Unique MFB <span class="text-blue-600">Verve Card</span></h2>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-8">AMJU Unique MFB <span class="text-amju-primary">Verve Card</span></h2>
                 <p class="text-slate-600 text-lg leading-relaxed mb-6">
                     The AMJU Unique MFB Verve Card is a Naira denominated debit card. It can be used for ATM cash withdrawals and to settle purchases/payments via POS terminals and Online anywhere in Nigeria.
                 </p>
@@ -345,7 +354,7 @@
             <h3 class="text-3xl font-black text-center text-slate-900 mb-16">How to Order a New Card</h3>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div class="text-center group">
-                    <div class="w-24 h-24 bg-blue-50 rounded-[2rem] flex items-center justify-center text-blue-600 mx-auto mb-6 relative group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                    <div class="w-24 h-24 bg-amju-primary/10 rounded-[2rem] flex items-center justify-center text-amju-primary mx-auto mb-6 relative group-hover:bg-amju-primary group-hover:text-white transition-all duration-300">
                         <span class="absolute -top-2 -right-2 w-8 h-8 bg-slate-900 text-white text-sm font-black rounded-xl flex items-center justify-center">1</span>
                         <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4" /></svg>
                     </div>
@@ -353,7 +362,7 @@
                     <p class="text-slate-500">Everything starts with free online registration. Only basic data is needed.</p>
                 </div>
                 <div class="text-center group">
-                    <div class="w-24 h-24 bg-blue-50 rounded-[2rem] flex items-center justify-center text-blue-600 mx-auto mb-6 relative group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                    <div class="w-24 h-24 bg-amju-primary/10 rounded-[2rem] flex items-center justify-center text-amju-primary mx-auto mb-6 relative group-hover:bg-amju-primary group-hover:text-white transition-all duration-300">
                         <span class="absolute -top-2 -right-2 w-8 h-8 bg-slate-900 text-white text-sm font-black rounded-xl flex items-center justify-center">2</span>
                         <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
                     </div>
@@ -361,7 +370,7 @@
                     <p class="text-slate-500">Download and fill out the complete form to enable us know you better.</p>
                 </div>
                 <div class="text-center group">
-                    <div class="w-24 h-24 bg-blue-50 rounded-[2rem] flex items-center justify-center text-blue-600 mx-auto mb-6 relative group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                    <div class="w-24 h-24 bg-amju-primary/10 rounded-[2rem] flex items-center justify-center text-amju-primary mx-auto mb-6 relative group-hover:bg-amju-primary group-hover:text-white transition-all duration-300">
                         <span class="absolute -top-2 -right-2 w-8 h-8 bg-slate-900 text-white text-sm font-black rounded-xl flex items-center justify-center">3</span>
                         <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
@@ -369,7 +378,7 @@
                     <p class="text-slate-500">All signatories are required to append their signature and include passports.</p>
                 </div>
                 <div class="text-center group">
-                    <div class="w-24 h-24 bg-blue-50 rounded-[2rem] flex items-center justify-center text-blue-600 mx-auto mb-6 relative group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                    <div class="w-24 h-24 bg-amju-primary/10 rounded-[2rem] flex items-center justify-center text-amju-primary mx-auto mb-6 relative group-hover:bg-amju-primary group-hover:text-white transition-all duration-300">
                         <span class="absolute -top-2 -right-2 w-8 h-8 bg-slate-900 text-white text-sm font-black rounded-xl flex items-center justify-center">4</span>
                         <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
                     </div>
@@ -383,7 +392,7 @@
     <!-- FAQ Section -->
     <section class="py-32 bg-slate-900 text-white" id="faq">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-black text-center mb-24 text-blue-400">Frequently Asked Questions</h2>
+            <h2 class="text-3xl md:text-4xl font-black text-center mb-24 text-amju-primary">Frequently Asked Questions</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
                 <div class="space-y-12">
                     <div>
@@ -429,11 +438,11 @@
             ></iframe>
         </div>
         <div class="w-full md:w-2/5 p-12 md:p-20 bg-white flex flex-col justify-center">
-            <div class="inline-block px-4 py-2 bg-blue-50 rounded-xl text-blue-600 font-bold text-sm uppercase mb-8 self-start">Contact Us</div>
+            <div class="inline-block px-4 py-2 bg-amju-primary/10 rounded-xl text-amju-primary font-bold text-sm uppercase mb-8 self-start">Contact Us</div>
             <h2 class="text-4xl font-black text-slate-900 mb-10">Get in Touch</h2>
             <div class="space-y-8">
                 <div class="flex items-start space-x-6">
-                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 flex-shrink-0">
+                    <div class="w-12 h-12 bg-amju-primary/10 rounded-xl flex items-center justify-center text-amju-primary flex-shrink-0">
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                     </div>
                     <div>
@@ -442,7 +451,7 @@
                     </div>
                 </div>
                 <div class="flex items-start space-x-6">
-                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 flex-shrink-0">
+                    <div class="w-12 h-12 bg-amju-primary/10 rounded-xl flex items-center justify-center text-amju-primary flex-shrink-0">
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                     </div>
                     <div>
@@ -452,7 +461,7 @@
                     </div>
                 </div>
                 <div class="flex items-start space-x-6">
-                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 flex-shrink-0">
+                    <div class="w-12 h-12 bg-amju-primary/10 rounded-xl flex items-center justify-center text-amju-primary flex-shrink-0">
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                     </div>
                     <div>

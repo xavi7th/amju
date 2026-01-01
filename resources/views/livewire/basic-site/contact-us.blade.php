@@ -6,11 +6,11 @@
             <div class="absolute inset-0 bg-slate-900/60"></div>
         </div>
         <div class="container mx-auto px-6 text-center lg:text-left relative z-10">
-            <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Get In <span class="text-blue-500">Touch</span></h1>
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Get In <span class="text-amju-primary">Touch</span></h1>
             <nav class="flex justify-center lg:justify-start text-sm font-bold text-slate-400 uppercase tracking-widest">
-                <a href="{{ route('home') }}" class="hover:text-blue-500 transition">Home</a>
+                <a href="{{ route('home') }}" class="hover:text-amju-primary transition">Home</a>
                 <span class="mx-3">/</span>
-                <span class="text-blue-500">Contact Us</span>
+                <span class="text-amju-primary">Contact Us</span>
             </nav>
         </div>
     </div>
@@ -22,13 +22,13 @@
                 <!-- Info Section -->
                 <div class="lg:w-1/3 space-y-12">
                     <div>
-                        <h2 class="text-3xl font-black text-slate-900 mb-6 font-display">Contact <span class="text-blue-600">Information</span></h2>
+                        <h2 class="text-3xl font-black text-slate-900 mb-6 font-display">Contact <span class="text-amju-primary">Information</span></h2>
                         <p class="text-slate-500 text-lg leading-relaxed">Have questions or need assistance? Our team is here to help you with all your banking needs.</p>
                     </div>
 
                     <div class="space-y-8">
                         <div class="flex items-start space-x-6 group">
-                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                            <div class="w-14 h-14 bg-amju-primary/10 rounded-2xl flex items-center justify-center text-amju-primary group-hover:bg-amju-primary group-hover:text-white transition-all duration-300">
                                 <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                             </div>
                             <div>
@@ -38,32 +38,32 @@
                         </div>
 
                         <div class="flex items-start space-x-6 group">
-                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                            <div class="w-14 h-14 bg-amju-primary/10 rounded-2xl flex items-center justify-center text-amju-primary group-hover:bg-amju-primary group-hover:text-white transition-all duration-300">
                                 <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                             </div>
                             <div>
                                 <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-1">Phone Support</h4>
                                 <div class="space-y-1">
-                                    <a href="tel:+2348045678996" class="block text-lg font-bold text-slate-700 hover:text-blue-600 transition">+234 804 567 8996</a>
-                                    <a href="tel:+2348056249328" class="block text-lg font-bold text-slate-700 hover:text-blue-600 transition">+234 805 624 9328</a>
+                                    <a href="tel:+2348045678996" class="block text-lg font-bold text-slate-700 hover:text-amju-primary transition">+234 804 567 8996</a>
+                                    <a href="tel:+2348056249328" class="block text-lg font-bold text-slate-700 hover:text-amju-primary transition">+234 805 624 9328</a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-6 group">
-                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                            <div class="w-14 h-14 bg-amju-primary/10 rounded-2xl flex items-center justify-center text-amju-primary group-hover:bg-amju-primary group-hover:text-white transition-all duration-300">
                                 <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                             </div>
                             <div>
                                 <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest mb-1">Email Inquiry</h4>
-                                <a href="mailto:support@amjuuniquemfbng.com" class="text-lg font-bold text-slate-700 hover:text-blue-600 transition">support@amjuuniquemfbng.com</a>
+                                <a href="mailto:support@amjuuniquemfbng.com" class="text-lg font-bold text-slate-700 hover:text-amju-primary transition">support@amjuuniquemfbng.com</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Social Icons -->
                     <div class="pt-8 flex flex-wrap gap-4">
-                        <a href="https://www.facebook.com/share/17YujNFH7V/" target="_blank" class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white hover:shadow-xl hover:shadow-blue-600/20 transition-all duration-300">
+                        <a href="https://www.facebook.com/share/17YujNFH7V/" target="_blank" class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 hover:bg-amju-primary hover:text-white hover:shadow-xl hover:shadow-amju-primary/20 transition-all duration-300">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </a>
                         <a href="https://x.com/Amjuuniquemfb?s=09" target="_blank" class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 hover:bg-black hover:text-white hover:shadow-xl hover:shadow-black/20 transition-all duration-300">
@@ -93,30 +93,30 @@
                         <form wire:submit.prevent="submit" class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="space-y-2">
                                 <label class="text-sm font-black text-slate-400 uppercase tracking-widest ml-4">Full Name</label>
-                                <input type="text" wire:model="name" placeholder="John Doe" class="w-full px-8 py-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all outline-none font-bold text-slate-700">
+                                <input type="text" wire:model="name" placeholder="John Doe" class="w-full px-8 py-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-amju-primary/20 focus:border-amju-primary transition-all outline-none font-bold text-slate-700">
                                 @error('name') <span class="text-red-500 text-xs font-bold ml-4">{{ $message }}</span> @enderror
                             </div>
 
                             <div class="space-y-2">
                                 <label class="text-sm font-black text-slate-400 uppercase tracking-widest ml-4">Email Address</label>
-                                <input type="email" wire:model="email" placeholder="john@example.com" class="w-full px-8 py-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all outline-none font-bold text-slate-700">
+                                <input type="email" wire:model="email" placeholder="john@example.com" class="w-full px-8 py-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-amju-primary/20 focus:border-amju-primary transition-all outline-none font-bold text-slate-700">
                                 @error('email') <span class="text-red-500 text-xs font-bold ml-4">{{ $message }}</span> @enderror
                             </div>
 
                             <div class="md:col-span-2 space-y-2">
                                 <label class="text-sm font-black text-slate-400 uppercase tracking-widest ml-4">Subject</label>
-                                <input type="text" wire:model="subject" placeholder="What's this about?" class="w-full px-8 py-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all outline-none font-bold text-slate-700">
+                                <input type="text" wire:model="subject" placeholder="What's this about?" class="w-full px-8 py-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-amju-primary/20 focus:border-amju-primary transition-all outline-none font-bold text-slate-700">
                                 @error('subject') <span class="text-red-500 text-xs font-bold ml-4">{{ $message }}</span> @enderror
                             </div>
 
                             <div class="md:col-span-2 space-y-2">
                                 <label class="text-sm font-black text-slate-400 uppercase tracking-widest ml-4">Your Message</label>
-                                <textarea wire:model="message" rows="6" placeholder="Message details..." class="w-full px-8 py-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all outline-none font-bold text-slate-700"></textarea>
+                                <textarea wire:model="message" rows="6" placeholder="Message details..." class="w-full px-8 py-4 bg-white border border-slate-200 rounded-2xl focus:ring-4 focus:ring-amju-primary/20 focus:border-amju-primary transition-all outline-none font-bold text-slate-700"></textarea>
                                 @error('message') <span class="text-red-500 text-xs font-bold ml-4">{{ $message }}</span> @enderror
                             </div>
 
                             <div class="md:col-span-2 pt-4">
-                                <button type="submit" wire:loading.attr="disabled" class="w-full py-6 bg-blue-600 text-white font-black text-xl rounded-2xl hover:bg-blue-700 transition shadow-2xl shadow-blue-600/40 flex items-center justify-center disabled:opacity-50">
+                                <button type="submit" wire:loading.attr="disabled" class="w-full py-6 bg-amju-primary text-white font-black text-xl rounded-2xl hover:bg-amju-dark transition shadow-2xl shadow-amju-primary/40 flex items-center justify-center disabled:opacity-50">
                                     <span wire:loading.remove>Send Message</span>
                                     <span wire:loading><svg class="animate-spin h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></span>
                                 </button>

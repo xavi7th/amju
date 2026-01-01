@@ -2,11 +2,11 @@
     <!-- Breadcrumb/Header -->
     <div class="bg-slate-900 border-b border-white/5 py-12">
         <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Legal <span class="text-blue-500">Information</span></h1>
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Legal <span class="text-amju-primary">Information</span></h1>
             <nav class="flex text-sm font-bold text-slate-400 uppercase tracking-widest">
-                <a href="{{ route('home') }}" class="hover:text-blue-500 transition">Home</a>
+                <a href="{{ route('home') }}" class="hover:text-amju-primary transition">Home</a>
                 <span class="mx-3">/</span>
-                <span class="text-blue-500 uppercase">{{ str_replace('-', ' ', $type) }}</span>
+                <span class="text-amju-primary uppercase">{{ str_replace('-', ' ', $type) }}</span>
             </nav>
         </div>
     </div>
@@ -34,7 +34,7 @@
                         <p>Our web site uses the data we collect for three basic purposes: to operate our business and provide (including improving and personalizing) the services we offer, to send communications, including promotional communications, and to display advertising. In carrying out these purposes, we combine data we collect through the various web site services you use to give you a more seamless, consistent and personalized experience.</p>
 
                         <div class="mt-16 p-8 bg-slate-50 rounded-2xl border border-slate-100 italic font-medium text-slate-600">
-                            For any inquiries regarding your data, please contact us at: <a href="mailto:privacy@amjuuniquemfbng.com" class="text-blue-600 font-bold">privacy@amjuuniquemfbng.com</a>
+                            For any inquiries regarding your data, please contact us at: <a href="mailto:privacy@amjuuniquemfbng.com" class="text-amju-primary font-bold">privacy@amjuuniquemfbng.com</a>
                         </div>
                     @else
                         <h2 class="text-4xl font-black text-slate-900 mb-8 font-display">Terms and Conditions</h2>

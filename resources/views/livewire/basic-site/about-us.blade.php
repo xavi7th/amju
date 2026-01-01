@@ -2,18 +2,18 @@
     <!-- Breadcrumb/Header -->
     <div class="bg-slate-900 border-b border-white/5 py-12">
         <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-5xl font-black text-white mb-4">About <span class="text-blue-500">Amju Unique</span></h1>
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-4">About <span class="text-amju-primary">Amju Unique</span></h1>
             <nav class="flex text-sm font-bold text-slate-400 uppercase tracking-widest">
-                <a href="{{ route('home') }}" class="hover:text-blue-500 transition">Home</a>
+                <a href="{{ route('home') }}" class="hover:text-amju-primary transition">Home</a>
                 <span class="mx-3">/</span>
-                <a href="{{ route('about') }}" class="{{ $type === 'main' ? 'text-blue-500' : 'hover:text-blue-500 transition' }}">About Us</a>
+                <a href="{{ route('about') }}" class="{{ $type === 'main' ? 'text-amju-primary' : 'hover:text-amju-primary transition' }}">About Us</a>
                 @if($type !== 'main')
                     <span class="mx-3">/</span>
-                    <span class="text-blue-500 uppercase">{{ str_replace(['-', 'page'], ' ', $type) }}</span>
+                    <span class="text-amju-primary uppercase">{{ str_replace(['-', 'page'], ' ', $type) }}</span>
                 @endif
                 @if($person)
                     <span class="mx-3">/</span>
-                    <span class="text-blue-500 uppercase">{{ str_replace(['-', 'page'], ' ', $person) }}</span>
+                    <span class="text-amju-primary uppercase">{{ str_replace(['-', 'page'], ' ', $person) }}</span>
                 @endif
             </nav>
         </div>
@@ -44,7 +44,7 @@
         
                                 @foreach($links as $linkType => $label)
                                     <a href="{{ $linkType === 'main' ? route('about') : route('about.us', ['type' => $linkType]) }}" 
-                                       class="flex items-center px-6 py-4 rounded-2xl font-bold transition-all duration-300 whitespace-nowrap lg:whitespace-normal {{ ($type === $linkType || ($linkType === 'management-team' && $person)) ? 'bg-blue-600 text-white shadow-xl shadow-blue-600/20' : 'bg-slate-50 lg:bg-transparent text-slate-600 hover:bg-slate-100 hover:text-blue-600' }}">
+                                       class="flex items-center px-6 py-4 rounded-2xl font-bold transition-all duration-300 whitespace-nowrap lg:whitespace-normal {{ ($type === $linkType || ($linkType === 'management-team' && $person)) ? 'bg-amju-primary text-white shadow-xl shadow-amju-primary/20' : 'bg-slate-50 lg:bg-transparent text-slate-600 hover:bg-slate-100 hover:text-amju-primary' }}">
                                         <span>{{ $label }}</span>
                                     </a>
                                 @endforeach
@@ -54,7 +54,7 @@
                         <div class="mt-12 p-8 bg-slate-900 rounded-[2rem] text-white hidden lg:block">
                             <h4 class="font-black text-xl mb-4">Careers</h4>
                             <p class="text-slate-400 text-sm mb-6">Join a team of professionals dedicated to excellence.</p>
-                            <a href="{{ route('careers') }}" class="inline-flex items-center text-blue-400 font-bold hover:text-blue-300 transition">
+                            <a href="{{ route('careers') }}" class="inline-flex items-center text-amju-primary font-bold hover:text-amju-dark transition">
                                 <span>View Vacancies</span>
                                 <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                             </a>
@@ -72,14 +72,14 @@
                                     <div class="flex flex-col md:flex-row gap-12 mb-12">
                                         <div class="md:w-1/3">
                                             <div class="sticky top-40">
-                                                <div class="p-1 bg-gradient-to-tr from-blue-600 to-blue-400 rounded-[2rem] shadow-2xl mb-8">
+                                                <div class="p-1 bg-gradient-to-tr from-amju-dark to-amju-primary rounded-[2rem] shadow-2xl mb-8">
                                                     <img src="/img/team/Osoluakpor-Jonathan.jpg" class="w-full rounded-[1.9rem]" alt="Dr. Jonathan Ososuakpor">
                                                 </div>
                                                 <h3 class="text-2xl font-black text-slate-900 mb-1">Dr. Jonathan Ososuakpor</h3>
-                                                <p class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-6">MD / CEO</p>
+                                                <p class="text-amju-primary font-bold uppercase tracking-widest text-sm mb-6">MD / CEO</p>
                                                 <div class="flex space-x-4">
-                                                    <a href="#" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-                                                    <a href="#" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                                                    <a href="#" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 hover:bg-amju-primary hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                                                    <a href="#" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 hover:bg-amju-primary hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -101,11 +101,11 @@
                                     <div class="flex flex-col md:flex-row gap-12 mb-12">
                                         <div class="md:w-1/3">
                                             <div class="sticky top-40">
-                                                <div class="p-1 bg-gradient-to-tr from-blue-600 to-blue-400 rounded-[2rem] shadow-2xl mb-8">
+                                                <div class="p-1 bg-gradient-to-tr from-amju-dark to-amju-primary rounded-[2rem] shadow-2xl mb-8">
                                                     <img src="/img/team/Executive-Director.jpg" class="w-full rounded-[1.9rem]" alt="Henry Onojakpor">
                                                 </div>
                                                 <h3 class="text-2xl font-black text-slate-900 mb-1">Henry Onojakpor</h3>
-                                                <p class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-6">Executive Director</p>
+                                                <p class="text-amju-primary font-bold uppercase tracking-widest text-sm mb-6">Executive Director</p>
                                             </div>
                                         </div>
                                         <div class="md:w-2/3 space-y-8 prose prose-lg prose-blue max-w-none">
@@ -118,11 +118,11 @@
                                     <div class="flex flex-col md:flex-row gap-12 mb-12">
                                         <div class="md:w-1/3">
                                             <div class="sticky top-40">
-                                                <div class="p-1 bg-gradient-to-tr from-blue-600 to-blue-400 rounded-[2rem] shadow-2xl mb-8">
+                                                <div class="p-1 bg-gradient-to-tr from-amju-dark to-amju-primary rounded-[2rem] shadow-2xl mb-8">
                                                     <img src="/img/team/Ogbeide-Ebhozele.jpg" class="w-full rounded-[1.9rem]" alt="Ogbeide E. Ebhozele">
                                                 </div>
                                                 <h3 class="text-2xl font-black text-slate-900 mb-1">Ogbeide E. Ebhozele</h3>
-                                                <p class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-6">General Manager</p>
+                                                <p class="text-amju-primary font-bold uppercase tracking-widest text-sm mb-6">General Manager</p>
                                             </div>
                                         </div>
                                         <div class="md:w-2/3 space-y-8 prose prose-lg prose-blue max-w-none">
@@ -137,11 +137,11 @@
                                     <div class="flex flex-col md:flex-row gap-12 mb-12">
                                         <div class="md:w-1/3">
                                             <div class="sticky top-40">
-                                                <div class="p-1 bg-gradient-to-tr from-blue-600 to-blue-400 rounded-[2rem] shadow-2xl mb-8">
+                                                <div class="p-1 bg-gradient-to-tr from-amju-dark to-amju-primary rounded-[2rem] shadow-2xl mb-8">
                                                     <img src="/img/team/Internal-Auditor.jpg" class="w-full rounded-[1.9rem]" alt="Samuel N. Ikechukwu">
                                                 </div>
                                                 <h3 class="text-2xl font-black text-slate-900 mb-1">Samuel N. Ikechukwu</h3>
-                                                <p class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-6">Internal Auditor</p>
+                                                <p class="text-amju-primary font-bold uppercase tracking-widest text-sm mb-6">Internal Auditor</p>
                                             </div>
                                         </div>
                                         <div class="md:w-2/3 space-y-8 prose prose-lg prose-blue max-w-none">
@@ -159,7 +159,7 @@
                                         </div>
                                         <h2 class="text-3xl font-black text-slate-900">Profile Loading...</h2>
                                         <p class="text-slate-500 mt-4">We are currently updating our leadership profiles. Please check back soon.</p>
-                                        <a href="{{ route('about.us', ['type' => 'management-team']) }}" class="inline-block mt-8 font-black text-blue-600 hover:underline">Back to Team</a>
+                                        <a href="{{ route('about.us', ['type' => 'management-team']) }}" class="inline-block mt-8 font-black text-amju-primary hover:underline">Back to Team</a>
                                     </div>
                             @endswitch
                         </div>
@@ -178,8 +178,8 @@
                                             <p>Our bank is a hybrid microfinance institution, combining traditional personalized service with modern digital solutions. We are one of the very few microfinance banks in Nigeria to offer full ATM, Internet Banking, POS, and mobile channels across all our branches.</p>
                                             
                                             <div class="my-16 grid grid-cols-1 md:grid-cols-2 gap-8 not-prose">
-                                                <div class="p-10 bg-blue-600 rounded-[3rem] text-white">
-                                                    <h4 class="text-2xl font-black mb-6 uppercase tracking-widest text-blue-200">Vision</h4>
+                                                <div class="p-10 bg-amju-primary rounded-[3rem] text-white">
+                                                    <h4 class="text-2xl font-black mb-6 uppercase tracking-widest text-white/50">Vision</h4>
                                                     <p class="text-lg leading-relaxed">To become the world leading financial institution that support customers' needs through product and services, creating superior returns for all stakeholders.</p>
                                                 </div>
                                                 <div class="p-10 bg-slate-900 rounded-[3rem] text-white">
@@ -211,12 +211,12 @@
                                             @foreach($mgtTeam as $member)
                                                 <a href="{{ route('about.team', ['person' => $member['slug']]) }}" class="group block p-6 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-2xl transition-all duration-500 text-center">
                                                     <div class="relative w-32 h-32 mx-auto mb-6">
-                                                        <div class="absolute inset-0 bg-blue-600 rounded-full scale-0 group-hover:scale-110 transition-transform duration-500 opacity-10"></div>
+                                                        <div class="absolute inset-0 bg-amju-primary rounded-full scale-0 group-hover:scale-110 transition-transform duration-500 opacity-10"></div>
                                                         <img src="{{ $member['img'] }}" class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg" alt="{{ $member['name'] }}">
                                                     </div>
-                                                    <h4 class="text-xl font-black text-slate-900 group-hover:text-blue-600 transition-colors">{{ $member['name'] }}</h4>
+                                                    <h4 class="text-xl font-black text-slate-900 group-hover:text-amju-primary transition-colors">{{ $member['name'] }}</h4>
                                                     <p class="text-slate-500 font-bold text-sm uppercase tracking-widest mt-1">{{ $member['role'] }}</p>
-                                                    <span class="inline-flex mt-6 text-blue-600 font-black text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">View Bio &rarr;</span>
+                                                    <span class="inline-flex mt-6 text-amju-primary font-black text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">View Bio &rarr;</span>
                                                 </a>
                                             @endforeach
                                         </div>
@@ -240,11 +240,11 @@
                                                     <h4 class="text-xl font-black text-slate-900 mb-4">{{ $branch['name'] }}</h4>
                                                     <div class="space-y-3 text-slate-600">
                                                         <p class="flex items-start">
-                                                            <svg class="w-5 h-5 mr-3 text-blue-500 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                                            <svg class="w-5 h-5 mr-3 text-amju-primary mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                                                             {{ $branch['address'] }}
                                                         </p>
                                                         <p class="flex items-center">
-                                                            <svg class="w-5 h-5 mr-3 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                                                            <svg class="w-5 h-5 mr-3 text-amju-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                                                             {{ $branch['phone'] }}
                                                         </p>
                                                     </div>
